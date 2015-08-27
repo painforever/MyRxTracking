@@ -7,8 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ServerConstants.h"
-#import "ClientConstants.h"
 @interface Post : NSObject
 +(NSString*)postRequest:(NSString*)url withParams:(NSString*)params;
 +(void)postAsyncRequest: (NSString *)url withParams:(NSString *)params;

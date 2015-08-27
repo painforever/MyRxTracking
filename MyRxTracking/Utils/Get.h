@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ServerConstants.h"
 @interface Get : NSObject
 +(NSString*)getRequest:(NSString*)url withParams:(NSString*)params;
 @end
