@@ -11,7 +11,7 @@
 @implementation SideBarMenuController
 -(void)viewDidLoad{
     [super viewDidLoad];
-    self.menuItems = @[@"logo", @"profile", @"medications"];
+    self.menuItems = @[@"logo", @"profile", @"medications", @"alerts", @"my_doctors", @"rx_history", @"settings", @"logout"];
 }
 #pragma mark - Table view data source
 
