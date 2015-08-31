@@ -11,6 +11,8 @@
 #import "Get.h"
 #import "Post.h"
 #import "JSONHandler.h"
+#import "User.h"
+#import "AFNetwork.h"
 @interface Manifest : NSObject
 
 @end

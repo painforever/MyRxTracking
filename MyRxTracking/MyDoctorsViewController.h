@@ -14,6 +14,6 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *add_new_doctor;
 
-- (IBAction)add_new_doctor_action:(id)sender;
+//- (IBAction)add_new_doctor_action:(id)sender;
 
 @end

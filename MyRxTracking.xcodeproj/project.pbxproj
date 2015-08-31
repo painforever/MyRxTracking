@@ -38,6 +38,9 @@
 		CFA165841B8BB59500507D11 /* SideBarMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA165831B8BB59500507D11 /* SideBarMenuController.m */; };
 		CFA165871B8BB75D00507D11 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA165861B8BB75D00507D11 /* ProfileViewController.m */; };
 		CFA1658A1B8BBCAF00507D11 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA165891B8BBCAF00507D11 /* menu.png */; };
+		CFC259561B94D9A600328D8B /* DoctorSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC259551B94D9A600328D8B /* DoctorSearchCell.m */; };
+		CFC259591B94E2BE00328D8B /* AFNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC259581B94E2BE00328D8B /* AFNetwork.m */; };
+		CFC2595C1B94E6F700328D8B /* DoctorDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC2595B1B94E6F700328D8B /* DoctorDetailsViewController.m */; };
 		F220824BA3D047BEBFBB2A4D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6928CCCCCB01ACA7FD60C5F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +109,12 @@
 		CFA165851B8BB75D00507D11 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		CFA165861B8BB75D00507D11 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		CFA165891B8BBCAF00507D11 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = Images/menu.png; sourceTree = SOURCE_ROOT; };
+		CFC259541B94D9A600328D8B /* DoctorSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorSearchCell.h; sourceTree = "<group>"; };
+		CFC259551B94D9A600328D8B /* DoctorSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorSearchCell.m; sourceTree = "<group>"; };
+		CFC259571B94E2BE00328D8B /* AFNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetwork.h; sourceTree = "<group>"; };
+		CFC259581B94E2BE00328D8B /* AFNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetwork.m; sourceTree = "<group>"; };
+		CFC2595A1B94E6F700328D8B /* DoctorDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorDetailsViewController.h; sourceTree = "<group>"; };
+		CFC2595B1B94E6F700328D8B /* DoctorDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorDetailsViewController.m; sourceTree = "<group>"; };
 		D6928CCCCCB01ACA7FD60C5F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -150,6 +159,8 @@
 			children = (
 				CF7210661B8F51AE0042CB54 /* NewDoctorViewController.h */,
 				CF7210671B8F51AE0042CB54 /* NewDoctorViewController.m */,
+				CFC2595A1B94E6F700328D8B /* DoctorDetailsViewController.h */,
+				CFC2595B1B94E6F700328D8B /* DoctorDetailsViewController.m */,
 			);
 			name = MyDoctors;
 			sourceTree = "<group>";
@@ -159,6 +170,8 @@
 			children = (
 				CF72106B1B8F59F10042CB54 /* User.h */,
 				CF72106C1B8F59F10042CB54 /* User.m */,
+				CFC259571B94E2BE00328D8B /* AFNetwork.h */,
+				CFC259581B94E2BE00328D8B /* AFNetwork.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -222,6 +235,7 @@
 		CFA165511B8BB16100507D11 /* MyRxTracking */ = {
 			isa = PBXGroup;
 			children = (
+				CFC259531B94D97F00328D8B /* Cells */,
 				CF72106A1B8F59BD0042CB54 /* Utils */,
 				CF7210691B8F59B90042CB54 /* Models */,
 				CF7210651B8F518D0042CB54 /* MyDoctors */,
@@ -323,6 +337,15 @@
 				CFA165891B8BBCAF00507D11 /* menu.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		CFC259531B94D97F00328D8B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CFC259541B94D9A600328D8B /* DoctorSearchCell.h */,
+				CFC259551B94D9A600328D8B /* DoctorSearchCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -475,10 +498,13 @@
 				CF8397B71B8E50D40014EF19 /* AlertFormViewController.m in Sources */,
 				CF72107D1B8F5C4A0042CB54 /* JSONHandler.m in Sources */,
 				CFA165551B8BB16100507D11 /* main.m in Sources */,
+				CFC2595C1B94E6F700328D8B /* DoctorDetailsViewController.m in Sources */,
 				CFA1657B1B8BB28000507D11 /* SWRevealViewController.m in Sources */,
 				CF7210701B8F5A5C0042CB54 /* Constants.m in Sources */,
 				CF7210681B8F51AE0042CB54 /* NewDoctorViewController.m in Sources */,
+				CFC259561B94D9A600328D8B /* DoctorSearchCell.m in Sources */,
 				CFA165841B8BB59500507D11 /* SideBarMenuController.m in Sources */,
+				CFC259591B94E2BE00328D8B /* AFNetwork.m in Sources */,
 				CFA165871B8BB75D00507D11 /* ProfileViewController.m in Sources */,
 				CF8397BB1B8E51870014EF19 /* NewMedFormViewController.m in Sources */,
 				CF8397A51B8E49690014EF19 /* MyDoctorsViewController.m in Sources */,

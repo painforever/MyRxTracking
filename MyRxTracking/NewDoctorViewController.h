@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DoctorSearchCell.h"
+#import "Manifest.h"
+#import "DoctorDetailsViewController.h"
 
-@interface NewDoctorViewController : UIViewController
+@interface NewDoctorViewController : UITableViewController <UISearchBarDelegate,UISearchDisplayDelegate>
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (strong, nonatomic) NSMutableArray *table_data;
+@property (strong, nonatomic) NSMutableDictionary *selected_doctor;
 
 @end

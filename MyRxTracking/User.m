@@ -12,4 +12,11 @@
 -(User *)login:(NSString *)email withPassword:(NSString *)password{
     return nil;
 }
+
++(NSMutableArray *)searchUsers:(NSString *)searchText{
+    NSString *params = [NSString stringWithFormat:@"input=%@", searchText];
+    NSString *res_str = [Get getRequest:[SERVER_URL stringByAppendingString:@"npis/search_doctor?"] withParams: params];
+    NSMutableArray *res_arr = [NSJSONSerialization JSONObjectWithData:[JSONHandler StringToData: res_str] options:NSJSONReadingMutableContainers error:nil];
+    return res_arr;
+}
 @end

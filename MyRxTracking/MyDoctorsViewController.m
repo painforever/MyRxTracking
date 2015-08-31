@@ -21,8 +21,8 @@
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
 }
-- (IBAction)add_new_doctor_action:(id)sender {
-    NewDoctorViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"NewDoctorViewController"];
-    [self.navigationController pushViewController:view animated:YES];
-}
+//- (IBAction)add_new_doctor_action:(id)sender {
+//    NewDoctorViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"NewDoctorViewController"];
+//    [self.navigationController pushViewController:view animated:YES];
+//}
 @end

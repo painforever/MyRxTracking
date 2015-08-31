@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AlertFormViewController : UIViewController
+@interface AlertFormViewController : UIViewController <UITextFieldDelegate>
+@property (strong, nonatomic) IBOutlet UITextField *reminder_name;
+@property (strong, nonatomic) IBOutlet UITextField *medication_name;
+@property (strong, nonatomic) IBOutlet UITextField *time;
+- (IBAction)add_action:(id)sender;
 
 @end

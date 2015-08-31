@@ -14,4 +14,9 @@
     [super viewDidLoad];
     self.title = @"New Medication";
 }
+- (IBAction)take_photo_action:(id)sender {
+}
+
+- (IBAction)add_action:(id)sender {
+}
 @end

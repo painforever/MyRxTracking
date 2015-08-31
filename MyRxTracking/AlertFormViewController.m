@@ -14,4 +14,6 @@
     [super viewDidLoad];
     self.title = @"New Alert";
 }
+- (IBAction)add_action:(id)sender {
+}
 @end

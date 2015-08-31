@@ -11,4 +11,5 @@
 
 @interface User : NSObject
 -(User*)login: (NSString *)email withPassword:(NSString *)password;
++(NSMutableArray *)searchUsers:(NSString *)searchText;
 @end
