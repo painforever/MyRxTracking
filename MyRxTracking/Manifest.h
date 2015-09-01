@@ -13,6 +13,7 @@
 #import "JSONHandler.h"
 #import "User.h"
 #import "AFNetwork.h"
+#import "UIViewController+SharedUIMethods.h"
 @interface Manifest : NSObject
 
 @end

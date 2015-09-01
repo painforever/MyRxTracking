@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF2DE64C1B95F91F00FA93AC /* UIViewController+SharedUIMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2DE64B1B95F91F00FA93AC /* UIViewController+SharedUIMethods.m */; };
 		CF7210681B8F51AE0042CB54 /* NewDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7210671B8F51AE0042CB54 /* NewDoctorViewController.m */; };
 		CF72106D1B8F59F10042CB54 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = CF72106C1B8F59F10042CB54 /* User.m */; };
 		CF7210701B8F5A5C0042CB54 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = CF72106F1B8F5A5C0042CB54 /* Constants.m */; };
@@ -57,6 +58,8 @@
 /* Begin PBXFileReference section */
 		5BE6299D3F2509542918CEC6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7C3D9EBA66B598BA69FD3323 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CF2DE64A1B95F91F00FA93AC /* UIViewController+SharedUIMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+SharedUIMethods.h"; path = "Categories/UIViewController+SharedUIMethods.h"; sourceTree = "<group>"; };
+		CF2DE64B1B95F91F00FA93AC /* UIViewController+SharedUIMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+SharedUIMethods.m"; path = "Categories/UIViewController+SharedUIMethods.m"; sourceTree = "<group>"; };
 		CF7210661B8F51AE0042CB54 /* NewDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewDoctorViewController.h; sourceTree = "<group>"; };
 		CF7210671B8F51AE0042CB54 /* NewDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewDoctorViewController.m; sourceTree = "<group>"; };
 		CF72106B1B8F59F10042CB54 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -154,6 +157,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CF2DE6491B95F8D100FA93AC /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				CF2DE64A1B95F91F00FA93AC /* UIViewController+SharedUIMethods.h */,
+				CF2DE64B1B95F91F00FA93AC /* UIViewController+SharedUIMethods.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		CF7210651B8F518D0042CB54 /* MyDoctors */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +247,7 @@
 		CFA165511B8BB16100507D11 /* MyRxTracking */ = {
 			isa = PBXGroup;
 			children = (
+				CF2DE6491B95F8D100FA93AC /* Categories */,
 				CFC259531B94D97F00328D8B /* Cells */,
 				CF72106A1B8F59BD0042CB54 /* Utils */,
 				CF7210691B8F59B90042CB54 /* Models */,
@@ -500,6 +513,7 @@
 				CFA165551B8BB16100507D11 /* main.m in Sources */,
 				CFC2595C1B94E6F700328D8B /* DoctorDetailsViewController.m in Sources */,
 				CFA1657B1B8BB28000507D11 /* SWRevealViewController.m in Sources */,
+				CF2DE64C1B95F91F00FA93AC /* UIViewController+SharedUIMethods.m in Sources */,
 				CF7210701B8F5A5C0042CB54 /* Constants.m in Sources */,
 				CF7210681B8F51AE0042CB54 /* NewDoctorViewController.m in Sources */,
 				CFC259561B94D9A600328D8B /* DoctorSearchCell.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Manifest.h"
 
 @interface AlertFormViewController : UIViewController <UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *reminder_name;
