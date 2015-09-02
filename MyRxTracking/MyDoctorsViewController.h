@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "SWRevealViewController.h"
 #import "NewDoctorViewController.h"
+#import "DoctorCell.h"
 
 @interface MyDoctorsViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *add_new_doctor;
+@property (strong, nonatomic) NSMutableArray *table_data;
 
 //- (IBAction)add_new_doctor_action:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @end

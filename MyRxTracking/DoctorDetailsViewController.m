@@ -47,6 +47,7 @@
     NSDictionary *params = [PatientProviderAssignment constructParams: [userDefaults stringForKey:@"patient_id"] withProviderNPI: self.selected_doctor[@"NPI"]];
     [[AFNetwork getAFManager] POST:[SERVER_URL stringByAppendingString:@"patient_provider_assignments"] parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [self showAlert:@"Add doctor success" withMessage:@"Doctor added!"];
+        [self.add_btn setEnabled:NO];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"failed");
     }];
