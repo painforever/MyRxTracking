@@ -14,6 +14,8 @@
 #import "User.h"
 #import "AFNetwork.h"
 #import "UIViewController+SharedUIMethods.h"
+#import "Reminder.h"
+#import "PatientProviderAssignment.h"
 @interface Manifest : NSObject
 
 @end

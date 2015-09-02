@@ -34,4 +34,14 @@
         text_field.text = @"";
     }
 }
+
+-(BOOL)globallyValidateUserInputs:(NSArray *)inputs{
+    for (UITextField *input in inputs) {
+        if ([[self trim: input.text] length] == 0) {
+            [self showAlert:[NSString stringWithFormat:@"%@ is blank", input.placeholder] withMessage:[NSString stringWithFormat:@"%@ cannot be blank!", input.placeholder]];
+            return NO;
+        }
+    }
+    return YES;
+}
 @end

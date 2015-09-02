@@ -39,6 +39,9 @@
 		CFA165841B8BB59500507D11 /* SideBarMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA165831B8BB59500507D11 /* SideBarMenuController.m */; };
 		CFA165871B8BB75D00507D11 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA165861B8BB75D00507D11 /* ProfileViewController.m */; };
 		CFA1658A1B8BBCAF00507D11 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA165891B8BBCAF00507D11 /* menu.png */; };
+		CFBB27CF1B972CC50034545C /* Reminder.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBB27CE1B972CC50034545C /* Reminder.m */; };
+		CFBB27D21B973E110034545C /* PatientProviderAssignment.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBB27D11B973E110034545C /* PatientProviderAssignment.m */; };
+		CFBB27D51B9746650034545C /* AlertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBB27D41B9746650034545C /* AlertCell.m */; };
 		CFC259561B94D9A600328D8B /* DoctorSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC259551B94D9A600328D8B /* DoctorSearchCell.m */; };
 		CFC259591B94E2BE00328D8B /* AFNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC259581B94E2BE00328D8B /* AFNetwork.m */; };
 		CFC2595C1B94E6F700328D8B /* DoctorDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC2595B1B94E6F700328D8B /* DoctorDetailsViewController.m */; };
@@ -112,6 +115,12 @@
 		CFA165851B8BB75D00507D11 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		CFA165861B8BB75D00507D11 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		CFA165891B8BBCAF00507D11 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = Images/menu.png; sourceTree = SOURCE_ROOT; };
+		CFBB27CD1B972CC50034545C /* Reminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reminder.h; sourceTree = "<group>"; };
+		CFBB27CE1B972CC50034545C /* Reminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reminder.m; sourceTree = "<group>"; };
+		CFBB27D01B973E110034545C /* PatientProviderAssignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientProviderAssignment.h; sourceTree = "<group>"; };
+		CFBB27D11B973E110034545C /* PatientProviderAssignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientProviderAssignment.m; sourceTree = "<group>"; };
+		CFBB27D31B9746650034545C /* AlertCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertCell.h; sourceTree = "<group>"; };
+		CFBB27D41B9746650034545C /* AlertCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertCell.m; sourceTree = "<group>"; };
 		CFC259541B94D9A600328D8B /* DoctorSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorSearchCell.h; sourceTree = "<group>"; };
 		CFC259551B94D9A600328D8B /* DoctorSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorSearchCell.m; sourceTree = "<group>"; };
 		CFC259571B94E2BE00328D8B /* AFNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetwork.h; sourceTree = "<group>"; };
@@ -184,6 +193,10 @@
 				CF72106C1B8F59F10042CB54 /* User.m */,
 				CFC259571B94E2BE00328D8B /* AFNetwork.h */,
 				CFC259581B94E2BE00328D8B /* AFNetwork.m */,
+				CFBB27CD1B972CC50034545C /* Reminder.h */,
+				CFBB27CE1B972CC50034545C /* Reminder.m */,
+				CFBB27D01B973E110034545C /* PatientProviderAssignment.h */,
+				CFBB27D11B973E110034545C /* PatientProviderAssignment.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -357,6 +370,8 @@
 			children = (
 				CFC259541B94D9A600328D8B /* DoctorSearchCell.h */,
 				CFC259551B94D9A600328D8B /* DoctorSearchCell.m */,
+				CFBB27D31B9746650034545C /* AlertCell.h */,
+				CFBB27D41B9746650034545C /* AlertCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -520,13 +535,16 @@
 				CFA165841B8BB59500507D11 /* SideBarMenuController.m in Sources */,
 				CFC259591B94E2BE00328D8B /* AFNetwork.m in Sources */,
 				CFA165871B8BB75D00507D11 /* ProfileViewController.m in Sources */,
+				CFBB27D21B973E110034545C /* PatientProviderAssignment.m in Sources */,
 				CF8397BB1B8E51870014EF19 /* NewMedFormViewController.m in Sources */,
 				CF8397A51B8E49690014EF19 /* MyDoctorsViewController.m in Sources */,
 				CF72107E1B8F5C4A0042CB54 /* Post.m in Sources */,
 				CF8397A21B8E48440014EF19 /* MedicationsViewController.m in Sources */,
+				CFBB27D51B9746650034545C /* AlertCell.m in Sources */,
 				CF83979F1B8E48060014EF19 /* SelfAlertsViewController.m in Sources */,
 				CFA165801B8BB34700507D11 /* LoginViewController.m in Sources */,
 				CF7210731B8F5B570042CB54 /* Manifest.m in Sources */,
+				CFBB27CF1B972CC50034545C /* Reminder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

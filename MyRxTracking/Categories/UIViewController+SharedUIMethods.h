@@ -19,4 +19,6 @@
 -(BOOL)isNnumber: (NSString *)input;
 //clear all the inputs fields
 -(void)clearAllTextFields: (NSArray *)text_fields;
+
+-(BOOL)globallyValidateUserInputs:(NSArray *)inputs;
 @end

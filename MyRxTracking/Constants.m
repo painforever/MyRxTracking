@@ -10,4 +10,5 @@
 
 @implementation Constants
 NSString *SERVER_URL = @"http://127.0.0.1:3000/my_rx_tracking/";
+NSUserDefaults *userDefaults;
 @end

@@ -10,4 +10,5 @@
 
 @interface Constants : NSObject
 extern NSString *SERVER_URL;
+extern NSUserDefaults *userDefaults;
 @end

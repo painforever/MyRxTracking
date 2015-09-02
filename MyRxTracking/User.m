@@ -9,6 +9,7 @@
 #import "User.h"
 
 @implementation User
+
 -(User *)login:(NSString *)email withPassword:(NSString *)password{
     return nil;
 }

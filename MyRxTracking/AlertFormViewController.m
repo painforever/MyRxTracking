@@ -15,9 +15,15 @@
     self.title = @"New Alert";
 }
 - (IBAction)add_action:(id)sender {
-    if ([self validateInput])
+    if (![self validateInput])
         return;
-    
+    NSDictionary *params = [Reminder constructParams:self.reminder_name.text withMedicationName:self.medication_name.text withTime:self.time.text withUserID:[userDefaults stringForKey:@"user_id"]];
+    [[AFNetwork getAFManager] POST:[SERVER_URL stringByAppendingString:@"reminders"] parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self showAlert:@"Add alert success" withMessage:@"Alert added success!"];
+        self.medication_name.text = @"";self.time.text = @"";self.reminder_name.text = @"";
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"failed");
+    }];
 }
 
 -(BOOL)validateInput{

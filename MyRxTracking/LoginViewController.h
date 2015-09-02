@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SideBarMenuController.h"
+#import "Manifest.h"
 
 @interface LoginViewController : UIViewController<UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *email;
@@ -15,6 +16,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *login_btn;
 @property (strong, nonatomic) IBOutlet UIButton *signup_btn;
 @property (strong, nonatomic) IBOutlet UISwitch *remember_me;
+
+@property (strong, nonatomic) NSArray *userInputs;
 
 - (IBAction)login_action:(id)sender;
 - (IBAction)signup_action:(id)sender;

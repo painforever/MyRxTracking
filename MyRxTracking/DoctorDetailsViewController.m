@@ -16,9 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.gender.text = @"M";
-    self.address.text = self.selected_doctor[@"prvd_First_Line_Business_Practice_loc_addr"];
-    self.full_name.text = [NSString stringWithFormat:@"%@ %@", self.selected_doctor[@"prvd_First_Name"], self.selected_doctor[@"prvd_Last_Name_Legal_Name"]];
+    self.gender.text = [NSString stringWithFormat:@"Gender: %@", @"M"];
+    self.address.text = [NSString stringWithFormat:@"Address: %@", self.selected_doctor[@"prvd_First_Line_Business_Practice_loc_addr"]];
+    self.full_name.text = [NSString stringWithFormat:@"Full name: %@ %@", self.selected_doctor[@"prvd_First_Name"], self.selected_doctor[@"prvd_Last_Name_Legal_Name"]];
     
     NSString *location = self.address.text;
     CLGeocoder *geocoder = [[CLGeocoder alloc] init];
@@ -33,7 +33,6 @@
                          region.span.latitudeDelta /= 1200.0;
                          [self.mapView setRegion:region animated:YES];
                          [self.mapView addAnnotation:placemark];
-                         
                      }
                  }
      ];
@@ -44,16 +43,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)add_btn_action:(id)sender {
+    NSDictionary *params = [PatientProviderAssignment constructParams: [userDefaults stringForKey:@"patient_id"] withProviderNPI: self.selected_doctor[@"NPI"]];
+    [[AFNetwork getAFManager] POST:[SERVER_URL stringByAppendingString:@"patient_provider_assignments"] parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self showAlert:@"Add doctor success" withMessage:@"Doctor added!"];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"failed");
+    }];
 }
 @end
