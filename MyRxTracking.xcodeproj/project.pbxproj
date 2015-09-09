@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CF2DE64C1B95F91F00FA93AC /* UIViewController+SharedUIMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2DE64B1B95F91F00FA93AC /* UIViewController+SharedUIMethods.m */; };
+		CF57575A1BA0BFF600869C44 /* DrugCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5757591BA0BFF600869C44 /* DrugCell.m */; };
+		CF57575D1BA0C09200869C44 /* Drug.m in Sources */ = {isa = PBXBuildFile; fileRef = CF57575C1BA0C09200869C44 /* Drug.m */; };
 		CF7210681B8F51AE0042CB54 /* NewDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7210671B8F51AE0042CB54 /* NewDoctorViewController.m */; };
 		CF72106D1B8F59F10042CB54 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = CF72106C1B8F59F10042CB54 /* User.m */; };
 		CF7210701B8F5A5C0042CB54 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = CF72106F1B8F5A5C0042CB54 /* Constants.m */; };
@@ -64,6 +66,10 @@
 		7C3D9EBA66B598BA69FD3323 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CF2DE64A1B95F91F00FA93AC /* UIViewController+SharedUIMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+SharedUIMethods.h"; path = "Categories/UIViewController+SharedUIMethods.h"; sourceTree = "<group>"; };
 		CF2DE64B1B95F91F00FA93AC /* UIViewController+SharedUIMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+SharedUIMethods.m"; path = "Categories/UIViewController+SharedUIMethods.m"; sourceTree = "<group>"; };
+		CF5757581BA0BFF600869C44 /* DrugCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugCell.h; sourceTree = "<group>"; };
+		CF5757591BA0BFF600869C44 /* DrugCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugCell.m; sourceTree = "<group>"; };
+		CF57575B1BA0C09200869C44 /* Drug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drug.h; sourceTree = "<group>"; };
+		CF57575C1BA0C09200869C44 /* Drug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drug.m; sourceTree = "<group>"; };
 		CF7210661B8F51AE0042CB54 /* NewDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewDoctorViewController.h; sourceTree = "<group>"; };
 		CF7210671B8F51AE0042CB54 /* NewDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewDoctorViewController.m; sourceTree = "<group>"; };
 		CF72106B1B8F59F10042CB54 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -200,6 +206,8 @@
 				CFBB27CE1B972CC50034545C /* Reminder.m */,
 				CFBB27D01B973E110034545C /* PatientProviderAssignment.h */,
 				CFBB27D11B973E110034545C /* PatientProviderAssignment.m */,
+				CF57575B1BA0C09200869C44 /* Drug.h */,
+				CF57575C1BA0C09200869C44 /* Drug.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -377,6 +385,8 @@
 				CFBB27D41B9746650034545C /* AlertCell.m */,
 				CFBB27D61B9799ED0034545C /* DoctorCell.h */,
 				CFBB27D71B9799ED0034545C /* DoctorCell.m */,
+				CF5757581BA0BFF600869C44 /* DrugCell.h */,
+				CF5757591BA0BFF600869C44 /* DrugCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -547,10 +557,12 @@
 				CF72107E1B8F5C4A0042CB54 /* Post.m in Sources */,
 				CF8397A21B8E48440014EF19 /* MedicationsViewController.m in Sources */,
 				CFBB27D51B9746650034545C /* AlertCell.m in Sources */,
+				CF57575A1BA0BFF600869C44 /* DrugCell.m in Sources */,
 				CF83979F1B8E48060014EF19 /* SelfAlertsViewController.m in Sources */,
 				CFA165801B8BB34700507D11 /* LoginViewController.m in Sources */,
 				CF7210731B8F5B570042CB54 /* Manifest.m in Sources */,
 				CFBB27CF1B972CC50034545C /* Reminder.m in Sources */,
+				CF57575D1BA0C09200869C44 /* Drug.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

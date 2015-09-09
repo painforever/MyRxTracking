@@ -16,6 +16,7 @@
 #import "UIViewController+SharedUIMethods.h"
 #import "Reminder.h"
 #import "PatientProviderAssignment.h"
+#import "Drug.h"
 @interface Manifest : NSObject
 
 @end

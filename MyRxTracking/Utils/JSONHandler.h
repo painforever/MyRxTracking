@@ -16,4 +16,6 @@
 +(NSString *)ConvertBOOLToString: (BOOL)val;
 +(NSMutableArray *)handleNilForArray: (NSData *)data;
 +(NSMutableDictionary *)handleNilForHashs: (NSData *)data;
++(BOOL)isNnumber:(NSString *)input;
 @end
+

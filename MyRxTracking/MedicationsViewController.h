@@ -13,5 +13,8 @@
 @interface MedicationsViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *add_med_btn;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *table_data;
+
 - (IBAction)add_med_action:(id)sender;
 @end

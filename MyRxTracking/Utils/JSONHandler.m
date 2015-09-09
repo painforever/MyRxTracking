@@ -54,4 +54,10 @@
     }
     else return [[NSMutableDictionary alloc] init];
 }
+
++(BOOL)isNnumber:(NSString *)input{
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\d+" options:NSRegularExpressionCaseInsensitive error:nil];
+    NSTextCheckingResult *matches = [regex firstMatchInString:input options:0 range:NSMakeRange(0, input.length)];
+    return matches != nil;
+}
 @end

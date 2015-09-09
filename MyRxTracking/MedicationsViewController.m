@@ -8,6 +8,9 @@
 //
 
 #import "MedicationsViewController.h"
+#import "AFNetwork.h"
+#import "Constants.h"
+#import "DrugCell.h"
 
 @implementation MedicationsViewController
 -(void)viewDidLoad{
@@ -20,9 +23,37 @@
         [self.sidebarButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    [[AFNetwork getAFManager] GET:[SERVER_URL stringByAppendingString:@"medications"] parameters:@{@"patient_id": [userDefaults valueForKey:@"patient_id"]} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        self.table_data = (NSMutableArray *)responseObject;
+        [self.tableView reloadData];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *responseObject) {
+        NSLog(@"failed");
+    }];
 }
 - (IBAction)add_med_action:(id)sender {
     NewMedFormViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"NewMedFormViewController"];
     [self.navigationController pushViewController:view animated:YES];
+}
+
+#pragma tableView
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.table_data.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    DrugCell *cell = [tableView dequeueReusableCellWithIdentifier:@"drug_cell" forIndexPath:indexPath];
+    NSDictionary *cell_data = [self.table_data objectAtIndex: indexPath.row];
+    
+    cell.drug_name.text = [NSString stringWithFormat:@"%@", cell_data[@"drug_name"]];
+    cell.dosage.text = [NSString stringWithFormat:@"%@", cell_data[@"dosage"]];
+    cell.date.text = [NSString stringWithFormat:@"%@", cell_data[@"date"]];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 }
 @end
