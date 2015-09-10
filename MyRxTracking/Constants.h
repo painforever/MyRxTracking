@@ -11,4 +11,8 @@
 @interface Constants : NSObject
 extern NSString *SERVER_URL;
 extern NSUserDefaults *userDefaults;
+
+extern int const THEME_COLOR_RED;
+extern int const THEME_COLOR_GREEN;
+extern int const THEME_COLOR_BLUE;
 @end

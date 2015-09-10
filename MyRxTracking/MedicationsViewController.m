@@ -49,8 +49,13 @@
     NSDictionary *cell_data = [self.table_data objectAtIndex: indexPath.row];
     
     cell.drug_name.text = [NSString stringWithFormat:@"%@", cell_data[@"drug_name"]];
-    cell.dosage.text = [NSString stringWithFormat:@"%@", cell_data[@"dosage"]];
-    cell.date.text = [NSString stringWithFormat:@"%@", cell_data[@"date"]];
+    cell.dosage.text = [NSString stringWithFormat:@"dosage: %@", cell_data[@"dosage"]];
+    cell.date.text = [NSString stringWithFormat:@"prescribed date: %@", cell_data[@"date"]];
+    
+    cell.drug_image.layer.borderWidth = 3.0f;
+    cell.drug_image.layer.borderColor = [UIColor colorWithRed:THEME_COLOR_RED green:THEME_COLOR_GREEN blue:THEME_COLOR_BLUE alpha:1].CGColor;
+    cell.drug_image.layer.cornerRadius = 20.0f;
+    cell.drug_image.clipsToBounds = YES;
     return cell;
 }
 

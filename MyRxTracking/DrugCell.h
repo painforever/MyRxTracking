@@ -12,5 +12,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *drug_name;
 @property (strong, nonatomic) IBOutlet UILabel *dosage;
 @property (strong, nonatomic) IBOutlet UILabel *date;
+@property (strong, nonatomic) IBOutlet UIImageView *drug_image;
+@property (strong, nonatomic) IBOutlet UIButton *take_button;
 
 @end

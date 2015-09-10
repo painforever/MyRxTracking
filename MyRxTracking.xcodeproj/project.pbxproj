@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		CF2DE64C1B95F91F00FA93AC /* UIViewController+SharedUIMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2DE64B1B95F91F00FA93AC /* UIViewController+SharedUIMethods.m */; };
+		CF5329FA1BA1C66E00627BC3 /* RxHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5329F91BA1C66E00627BC3 /* RxHistoryTableViewController.m */; };
+		CF5329FC1BA1CE3500627BC3 /* default-drug-image.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5329FB1BA1CE3500627BC3 /* default-drug-image.png */; };
+		CF5329FF1BA1D9CF00627BC3 /* RxHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5329FE1BA1D9CF00627BC3 /* RxHistoryCell.m */; };
+		CF532A021BA20FB100627BC3 /* RxDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF532A011BA20FB100627BC3 /* RxDetailsViewController.m */; };
+		CF532A051BA2274800627BC3 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF532A041BA2274800627BC3 /* SettingsViewController.m */; };
 		CF57575A1BA0BFF600869C44 /* DrugCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5757591BA0BFF600869C44 /* DrugCell.m */; };
 		CF57575D1BA0C09200869C44 /* Drug.m in Sources */ = {isa = PBXBuildFile; fileRef = CF57575C1BA0C09200869C44 /* Drug.m */; };
 		CF7210681B8F51AE0042CB54 /* NewDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7210671B8F51AE0042CB54 /* NewDoctorViewController.m */; };
@@ -66,6 +71,15 @@
 		7C3D9EBA66B598BA69FD3323 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CF2DE64A1B95F91F00FA93AC /* UIViewController+SharedUIMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+SharedUIMethods.h"; path = "Categories/UIViewController+SharedUIMethods.h"; sourceTree = "<group>"; };
 		CF2DE64B1B95F91F00FA93AC /* UIViewController+SharedUIMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+SharedUIMethods.m"; path = "Categories/UIViewController+SharedUIMethods.m"; sourceTree = "<group>"; };
+		CF5329F81BA1C66E00627BC3 /* RxHistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxHistoryTableViewController.h; sourceTree = "<group>"; };
+		CF5329F91BA1C66E00627BC3 /* RxHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxHistoryTableViewController.m; sourceTree = "<group>"; };
+		CF5329FB1BA1CE3500627BC3 /* default-drug-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "default-drug-image.png"; path = "Images/default-drug-image.png"; sourceTree = SOURCE_ROOT; };
+		CF5329FD1BA1D9CF00627BC3 /* RxHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxHistoryCell.h; sourceTree = "<group>"; };
+		CF5329FE1BA1D9CF00627BC3 /* RxHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxHistoryCell.m; sourceTree = "<group>"; };
+		CF532A001BA20FB100627BC3 /* RxDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxDetailsViewController.h; sourceTree = "<group>"; };
+		CF532A011BA20FB100627BC3 /* RxDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxDetailsViewController.m; sourceTree = "<group>"; };
+		CF532A031BA2274800627BC3 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		CF532A041BA2274800627BC3 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		CF5757581BA0BFF600869C44 /* DrugCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugCell.h; sourceTree = "<group>"; };
 		CF5757591BA0BFF600869C44 /* DrugCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugCell.m; sourceTree = "<group>"; };
 		CF57575B1BA0C09200869C44 /* Drug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drug.h; sourceTree = "<group>"; };
@@ -184,6 +198,15 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		CF5329F71BA1C5E000627BC3 /* RxHistory */ = {
+			isa = PBXGroup;
+			children = (
+				CF532A001BA20FB100627BC3 /* RxDetailsViewController.h */,
+				CF532A011BA20FB100627BC3 /* RxDetailsViewController.m */,
+			);
+			name = RxHistory;
+			sourceTree = "<group>";
+		};
 		CF7210651B8F518D0042CB54 /* MyDoctors */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,9 +298,6 @@
 				CFC259531B94D97F00328D8B /* Cells */,
 				CF72106A1B8F59BD0042CB54 /* Utils */,
 				CF7210691B8F59B90042CB54 /* Models */,
-				CF7210651B8F518D0042CB54 /* MyDoctors */,
-				CF8397B81B8E51790014EF19 /* Medications */,
-				CF8397B41B8E50BD0014EF19 /* SelfAlerts */,
 				CFA165881B8BBCA200507D11 /* Images */,
 				CFA1657D1B8BB32C00507D11 /* AfterLogin */,
 				CFA1657C1B8BB32500507D11 /* BeforeLogin */,
@@ -339,6 +359,10 @@
 		CFA1657D1B8BB32C00507D11 /* AfterLogin */ = {
 			isa = PBXGroup;
 			children = (
+				CF5329F71BA1C5E000627BC3 /* RxHistory */,
+				CF8397B41B8E50BD0014EF19 /* SelfAlerts */,
+				CF8397B81B8E51790014EF19 /* Medications */,
+				CF7210651B8F518D0042CB54 /* MyDoctors */,
 				CFA165811B8BB49900507D11 /* SideMenuBar */,
 			);
 			name = AfterLogin;
@@ -347,6 +371,8 @@
 		CFA165811B8BB49900507D11 /* SideMenuBar */ = {
 			isa = PBXGroup;
 			children = (
+				CF5329F81BA1C66E00627BC3 /* RxHistoryTableViewController.h */,
+				CF5329F91BA1C66E00627BC3 /* RxHistoryTableViewController.m */,
 				CFA165821B8BB59500507D11 /* SideBarMenuController.h */,
 				CFA165831B8BB59500507D11 /* SideBarMenuController.m */,
 				CFA165851B8BB75D00507D11 /* ProfileViewController.h */,
@@ -357,6 +383,8 @@
 				CF8397A11B8E48440014EF19 /* MedicationsViewController.m */,
 				CF8397A31B8E49690014EF19 /* MyDoctorsViewController.h */,
 				CF8397A41B8E49690014EF19 /* MyDoctorsViewController.m */,
+				CF532A031BA2274800627BC3 /* SettingsViewController.h */,
+				CF532A041BA2274800627BC3 /* SettingsViewController.m */,
 			);
 			name = SideMenuBar;
 			sourceTree = "<group>";
@@ -364,6 +392,7 @@
 		CFA165881B8BBCA200507D11 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CF5329FB1BA1CE3500627BC3 /* default-drug-image.png */,
 				CF8397A61B8E4C1C0014EF19 /* alerts.png */,
 				CF8397A71B8E4C1C0014EF19 /* doctors.jpeg */,
 				CF8397A81B8E4C1C0014EF19 /* logout.png */,
@@ -387,6 +416,8 @@
 				CFBB27D71B9799ED0034545C /* DoctorCell.m */,
 				CF5757581BA0BFF600869C44 /* DrugCell.h */,
 				CF5757591BA0BFF600869C44 /* DrugCell.m */,
+				CF5329FD1BA1D9CF00627BC3 /* RxHistoryCell.h */,
+				CF5329FE1BA1D9CF00627BC3 /* RxHistoryCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -482,6 +513,7 @@
 				CF7210751B8F5C3F0042CB54 /* Podfile in Resources */,
 				CF8397B21B8E4C1C0014EF19 /* rx.png in Resources */,
 				CF8397AF1B8E4C1C0014EF19 /* logout.png in Resources */,
+				CF5329FC1BA1CE3500627BC3 /* default-drug-image.png in Resources */,
 				CF8397AE1B8E4C1C0014EF19 /* doctors.jpeg in Resources */,
 				CF8397B01B8E4C1C0014EF19 /* medications.jpg in Resources */,
 				CFA165601B8BB16100507D11 /* Images.xcassets in Resources */,
@@ -538,6 +570,7 @@
 				CF72107C1B8F5C4A0042CB54 /* Get.m in Sources */,
 				CF72106D1B8F59F10042CB54 /* User.m in Sources */,
 				CFA165581B8BB16100507D11 /* AppDelegate.m in Sources */,
+				CF532A051BA2274800627BC3 /* SettingsViewController.m in Sources */,
 				CF8397B71B8E50D40014EF19 /* AlertFormViewController.m in Sources */,
 				CF72107D1B8F5C4A0042CB54 /* JSONHandler.m in Sources */,
 				CFA165551B8BB16100507D11 /* main.m in Sources */,
@@ -549,11 +582,14 @@
 				CF7210681B8F51AE0042CB54 /* NewDoctorViewController.m in Sources */,
 				CFC259561B94D9A600328D8B /* DoctorSearchCell.m in Sources */,
 				CFA165841B8BB59500507D11 /* SideBarMenuController.m in Sources */,
+				CF5329FA1BA1C66E00627BC3 /* RxHistoryTableViewController.m in Sources */,
 				CFC259591B94E2BE00328D8B /* AFNetwork.m in Sources */,
 				CFA165871B8BB75D00507D11 /* ProfileViewController.m in Sources */,
+				CF532A021BA20FB100627BC3 /* RxDetailsViewController.m in Sources */,
 				CFBB27D21B973E110034545C /* PatientProviderAssignment.m in Sources */,
 				CF8397BB1B8E51870014EF19 /* NewMedFormViewController.m in Sources */,
 				CF8397A51B8E49690014EF19 /* MyDoctorsViewController.m in Sources */,
+				CF5329FF1BA1D9CF00627BC3 /* RxHistoryCell.m in Sources */,
 				CF72107E1B8F5C4A0042CB54 /* Post.m in Sources */,
 				CF8397A21B8E48440014EF19 /* MedicationsViewController.m in Sources */,
 				CFBB27D51B9746650034545C /* AlertCell.m in Sources */,
