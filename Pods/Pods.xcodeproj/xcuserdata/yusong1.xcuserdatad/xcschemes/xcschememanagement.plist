@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBMenuController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>01554A19938E390B1CDA1B6D3DFBDF37</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>395372BB09FB899D3CA63071652125FF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3E789F62A9C12946D22570AF8A134A10</key>
+		<key>47A3D5937C77329210289E4972BBFCF7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5253F1C5749A176A95782FF4428DDA41</key>
+		<key>4DDE2B174262D4D1612AF4ADF538714A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AF45AD1DE4017A19B36FFD7187D099E3</key>
+		<key>7EBFFB6EEE30FCDD30AF62B4AE88BE08</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E87D6D0826FF67C959856A3F46BA97EC</key>
+		<key>E7914A8B83B3132CF023D5940298A157</key>
 		<dict>
 			<key>primary</key>
 			<true/>

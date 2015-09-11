@@ -10,4 +10,14 @@
 #import "SWRevealViewController.h"
 @interface SettingsViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+
+@property (strong, nonatomic) IBOutlet UITextField *email;
+@property (strong, nonatomic) IBOutlet UITextField *cellphone;
+@property (strong, nonatomic) IBOutlet UITextField *old_password;
+@property (strong, nonatomic) IBOutlet UITextField *password;
+@property (strong, nonatomic) IBOutlet UITextField *password_confirm;
+@property (strong, nonatomic) IBOutlet UIButton *update_btn;
+
+- (IBAction)update_action:(id)sender;
+
 @end

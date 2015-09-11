@@ -21,18 +21,21 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - CWPopup (1.2.6)
+  - IQKeyboardManager (3.3.1)
   - MBMenuController (2.0.3)
   - Underscore.m (0.2.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - CWPopup (~> 1.2.4)
+  - IQKeyboardManager
   - MBMenuController (~> 2.0.3)
   - Underscore.m
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   CWPopup: 3f8b0704a9914813d90372d66525d31f24b27d49
+  IQKeyboardManager: 860a5b9df32cc1435a3e967a08ed87de3e59c12e
   MBMenuController: 3bc06d28f505b5f472b22b424feda663b9e6647d
   Underscore.m: b86ca364d60509a39eb9c7886443c063b793aaba
 

@@ -7,7 +7,8 @@
 //
 
 #import "SettingsViewController.h"
-
+#import "UIViewController+SharedUIMethods.h"
+#import "Manifest.h"
 @interface SettingsViewController ()
 
 @end
@@ -16,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"My Profile";
+    self.title = @"Settings";
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
@@ -41,4 +42,27 @@
 }
 */
 
+- (IBAction)update_action:(id)sender {
+    BOOL valid = [self validateInputs];
+    if (!valid)
+        return;
+    [[AFNetwork getAFManager] PATCH: [[SERVER_URL stringByAppendingString:@"profiles/"] stringByAppendingString: [[userDefaults valueForKey:@"user_id"] stringValue]] parameters:@{@"user": @{@"email_address": self.email.text, @"cell_phone_number": self.cellphone.text, @"old_password": self.old_password.text, @"password": self.password.text}} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"result: %@", [responseObject description]);
+        [self showAlert:@"Update success" withMessage:@"Update success!"];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (operation.response.statusCode == 401) {
+            [self showAlert:@"The previous password is not correct." withMessage:@"Original password is not correct, please input valid password and then you can set a new password."];
+        }
+    }];
+}
+
+-(BOOL)validateInputs{
+    NSArray *inputs = @[self.email, self.cellphone, self.old_password, self.password, self.password_confirm];
+    BOOL valid = [self globallyValidateUserInputs: inputs];
+    if (![self.password.text isEqualToString: self.password_confirm.text]) {
+        [self showAlert:@"Password confirm not match" withMessage:@"Your password does not match the confirm."];
+        return false;
+    }
+    return valid;
+}
 @end
