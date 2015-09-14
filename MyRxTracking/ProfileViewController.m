@@ -49,6 +49,7 @@
     self.zipcode.text = [NSString stringWithFormat:@"zipcode: %@", contact_info[@"zipcode"]];
     self.phone.text = [NSString stringWithFormat:@"phone: %@", contact_info[@"cell_phone_number"]];
     self.email.text = [NSString stringWithFormat:@"email: %@", contact_info[@"email_address"]];
+    self.address.text = [NSString stringWithFormat:@"address: %@", contact_info[@"home_address1"]];
     if ([contact_info[@"avatar"] isEqual: [NSNull null]]) {
         if ([[contact_info[@"gender"] uppercaseString] isEqualToString:@"F"])
             self.avatar.image = [UIImage imageNamed: @"female_default_avatar.png"];
@@ -73,6 +74,11 @@
 }
 - (IBAction)edit_profile_action:(id)sender {
     self.edit_profile_view = [self.storyboard instantiateViewControllerWithIdentifier:@"EditProfileViewController"];
+    //assign the info to edit view controller
+    
+    NSArray *full_name = [self.full_name.text componentsSeparatedByString:@" "];
+    
+    self.edit_profile_view.user_info = @{@"first_name": full_name[0], @"last_name": full_name[1], @"country": self.country.text, @"county": self.county.text, @"cell_phone": self.phone.text, @"address": self.address.text, @"state": self.state.text, @"city": self.city.text, @"zipcode": self.zipcode.text, @"email": self.email.text};
     [self.navigationController pushViewController:self.edit_profile_view animated:YES];
 }
 @end

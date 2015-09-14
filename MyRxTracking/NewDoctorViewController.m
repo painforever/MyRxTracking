@@ -65,7 +65,6 @@
     if ([segue.identifier isEqualToString:@"doctor_details_segue"]) {
         DoctorDetailsViewController *view = (DoctorDetailsViewController *)segue.destinationViewController;
         view.selected_doctor = [self.table_data objectAtIndex:[self.tableView indexPathForSelectedRow].row];
-        NSLog(@"rriiririr: %@", [view.selected_doctor description]);
     }
 }
 @end

@@ -56,9 +56,16 @@
     cell.drug_image.layer.borderColor = [UIColor colorWithRed:THEME_COLOR_RED green:THEME_COLOR_GREEN blue:THEME_COLOR_BLUE alpha:1].CGColor;
     cell.drug_image.layer.cornerRadius = 20.0f;
     cell.drug_image.clipsToBounds = YES;
+    [cell.take_button addTarget:self
+                         action:@selector(take_it:)
+       forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+}
+
+-(IBAction)take_it:(id)sender{
+    NSLog(@"asasas");
 }
 @end
