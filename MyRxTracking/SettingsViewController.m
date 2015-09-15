@@ -18,6 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Settings";
+    //scrollView
+    self.scrollView.delegate = self;
+    self.scrollView.scrollEnabled = YES;
+    self.scrollView.contentSize = CGSizeMake(375, self.view.frame.size.height+200);
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {

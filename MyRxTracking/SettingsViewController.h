@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *password;
 @property (strong, nonatomic) IBOutlet UITextField *password_confirm;
 @property (strong, nonatomic) IBOutlet UIButton *update_btn;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 
 - (IBAction)update_action:(id)sender;
 
