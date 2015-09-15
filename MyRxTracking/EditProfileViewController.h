@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "UIViewController+SharedUIMethods.h"
+#import "UIViewController+CameraMethods.h"
 #import "Manifest.h"
 
-@interface EditProfileViewController : UIViewController
+@interface EditProfileViewController : UIViewController <UITextFieldDelegate, UIPickerViewDataSource,UIPickerViewDelegate, UIImagePickerControllerDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *avatar;
 @property (strong, nonatomic) IBOutlet UITextField *first_name;
 @property (strong, nonatomic) IBOutlet UITextField *last_name;
@@ -26,6 +27,8 @@
 @property (strong, nonatomic) IBOutlet UIView *avatar_view;
 @property (strong, nonatomic) IBOutlet UIView *address_view;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) UIImage *selected_image;
+@property (strong, nonatomic) UIImagePickerController *photo_gallery_picker;
 
 
 

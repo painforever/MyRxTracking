@@ -18,7 +18,12 @@
     [super viewDidLoad];
     [self setUpStyle];
     self.userInputs = @[self.first_name, self.last_name];
+    self.photo_gallery_picker = [[UIImagePickerController alloc] init];
+    self.photo_gallery_picker.delegate = self;
+    self.photo_gallery_picker.allowsEditing = YES;
+    self.photo_gallery_picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
+    self.avatar.image = [UIImage imageWithData:[NSData dataWithContentsOfURL: [NSURL URLWithString: self.user_info[@"avatar_url"]]]];
     self.first_name.text = self.user_info[@"first_name"];
     self.last_name.text = self.user_info[@"last_name"];
     self.country.text = [self stripColon:self.user_info[@"country"]];
@@ -48,7 +53,9 @@
 }
 
 - (IBAction)change_avatar_action:(id)sender {
-    
+    if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]){
+        [self presentViewController:self.photo_gallery_picker animated:YES completion:NULL];
+    }
 }
 
 -(BOOL)validUserInput{
@@ -75,5 +82,24 @@
 
 -(NSString *)stripColon: (NSString *)input{
     return [self trim: [input componentsSeparatedByString:@":"][1]];
+}
+
+#pragma Camera
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    NSURL *url = [NSURL URLWithString: AVATAR_URL];
+    // And dismiss the image picker.
+    [self dismissViewControllerAnimated:TRUE completion:nil];
+    NSString *filename = [NSString stringWithFormat:@"%@.jpg", [JSONHandler md5:[JSONHandler microtime]]];
+    self.selected_image = chosenImage;
+    //display image on GUI
+    self.avatar.image = chosenImage;
+    [self uploadAvatar:self.selected_image withFileName: filename withID: [userDefaults valueForKey:@"user_id"] withFileParamKeyName:@"avatar" withUploadingURL: AVATAR_URL];
+//    self.avatar.image = [NSString stringWithFormat:@"%@/%@/%@/%@", BASE_URL, @"uploads/user/avatar", [userDefaults valueForKey:@"user_id"], filename];
+    NSLog(@"take photo finished!");
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 @end

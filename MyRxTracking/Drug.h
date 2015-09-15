@@ -14,5 +14,5 @@
 @property (strong, nonatomic) NSString *dosage;
 @property (strong, nonatomic) NSMutableArray *side_effects;
 
-+(NSString *)searchDrug: (NSString *)drug_name;
++(NSMutableDictionary *)searchDrug: (NSString *)drug_name;
 @end

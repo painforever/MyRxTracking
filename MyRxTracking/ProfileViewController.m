@@ -41,6 +41,9 @@
 
 -(void)loadContactInfo: (NSMutableDictionary *)all_info{
     contact_info = all_info[@"contact_info"];
+    self.avatar_url = [NSString stringWithFormat:@"%@%@", BASE_URL, contact_info[@"avatar"][@"url"]];
+    self.avatar.image = [UIImage imageWithData:[NSData dataWithContentsOfURL: [NSURL URLWithString: self.avatar_url]]];
+    
     self.full_name.text = [NSString stringWithFormat:@"%@ %@", contact_info[@"fname"], contact_info[@"lname"]];
     self.city.text = [NSString stringWithFormat:@"city: %@", contact_info[@"city"]];
     self.state.text = [NSString stringWithFormat:@"state: %@", contact_info[@"state"]];
@@ -78,7 +81,7 @@
     
     NSArray *full_name = [self.full_name.text componentsSeparatedByString:@" "];
     
-    self.edit_profile_view.user_info = @{@"first_name": full_name[0], @"last_name": full_name[1], @"country": self.country.text, @"county": self.county.text, @"cell_phone": self.phone.text, @"address": self.address.text, @"state": self.state.text, @"city": self.city.text, @"zipcode": self.zipcode.text, @"email": self.email.text};
+    self.edit_profile_view.user_info = @{@"first_name": full_name[0], @"last_name": full_name[1], @"country": self.country.text, @"county": self.county.text, @"cell_phone": self.phone.text, @"address": self.address.text, @"state": self.state.text, @"city": self.city.text, @"zipcode": self.zipcode.text, @"email": self.email.text, @"avatar_url": self.avatar_url};
     [self.navigationController pushViewController:self.edit_profile_view animated:YES];
 }
 @end

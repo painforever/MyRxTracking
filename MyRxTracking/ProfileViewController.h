@@ -41,6 +41,7 @@
 //data
 @property (strong, nonatomic) NSMutableDictionary *contact_info;
 @property (strong, nonatomic) NSMutableDictionary *insurance_info;
+@property (strong, nonatomic) NSString *avatar_url;
 
 
 @end

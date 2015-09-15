@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CommonCrypto/CommonDigest.h>
 
 @interface JSONHandler : NSObject
 +(NSString*)DataToString:(NSData*)data;
@@ -17,5 +18,8 @@
 +(NSMutableArray *)handleNilForArray: (NSData *)data;
 +(NSMutableDictionary *)handleNilForHashs: (NSData *)data;
 +(BOOL)isNnumber:(NSString *)input;
+
++(NSString *)microtime;
++(NSString *)md5: (NSString *)input;
 @end
 

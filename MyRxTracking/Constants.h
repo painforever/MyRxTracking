@@ -10,7 +10,11 @@
 
 @interface Constants : NSObject
 extern NSString *SERVER_URL;
+extern NSString *BASE_URL;
 extern NSUserDefaults *userDefaults;
+
+extern NSString * AVATAR_URL;
+extern NSString * DRUG_PHOTO_URL;
 
 extern int const THEME_COLOR_RED;
 extern int const THEME_COLOR_GREEN;
