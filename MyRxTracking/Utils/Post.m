@@ -9,9 +9,12 @@
 
 #import "Post.h"
 
+
 @implementation Post
 +(NSString*)postRequest:(NSString *)url withParams:(NSString *)params{
-    
+    if (!is_online) {
+        return [[NSString alloc] initWithData:[NSData data] encoding:NSUTF8StringEncoding];
+    }
     NSData *data=[params dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     NSString *postLength = [NSString stringWithFormat:@"%d", [data length]];
     

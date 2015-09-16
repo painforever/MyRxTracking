@@ -8,8 +8,12 @@
 
 #import "Get.h"
 
+
 @implementation Get
 +(NSString*)getRequest:(NSString *)url withParams:(NSString *)params{
+    if (!is_online) {
+        return [[NSString alloc] initWithData:[NSData data] encoding:NSUTF8StringEncoding];
+    }
     NSMutableURLRequest *request=[[NSMutableURLRequest alloc] init];
     url=[url stringByAppendingString: params];
     [request setHTTPMethod:@"GET"];

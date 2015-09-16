@@ -56,9 +56,17 @@
     cell.drug_image.layer.borderColor = [UIColor colorWithRed:THEME_COLOR_RED green:THEME_COLOR_GREEN blue:THEME_COLOR_BLUE alpha:1].CGColor;
     cell.drug_image.layer.cornerRadius = 20.0f;
     cell.drug_image.clipsToBounds = YES;
-    [cell.take_button addTarget:self
-                         action:@selector(take_it:)
-       forControlEvents:UIControlEventTouchUpInside];
+    
+    cell.take_button.tag = cell_data[@"rx_item_id"];
+    if ([cell_data[@"type"] isEqualToString:@"added"]) {
+        [cell.take_button setEnabled: NO];
+        [cell.take_button setHidden:YES];
+    }
+    else{
+        [cell.take_button addTarget:self
+                             action:@selector(take_it:)
+                   forControlEvents:UIControlEventTouchUpInside];
+    }
     return cell;
 }
 
@@ -66,6 +74,12 @@
 }
 
 -(IBAction)take_it:(id)sender{
-    NSLog(@"asasas");
+    UIButton *clicked = (UIButton *)sender;
+    NSString *rx_item_id = [NSString stringWithFormat:@"%@", clicked.tag];
+    NSMutableDictionary *take_dic = [User takeDrug: rx_item_id];
+    [self showAlert:@"Success" withMessage: take_dic[@"msg"]];
+    if ([take_dic[@"finished"] isEqualToString:@"yes"]) {
+        [[clicked superview] setUserInteractionEnabled: NO];
+    }
 }
 @end

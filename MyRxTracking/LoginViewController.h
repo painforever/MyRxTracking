@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "SideBarMenuController.h"
 #import "Manifest.h"
+#import "File.h"
+#import "SignUpViewController.h"
+#import "UIViewController+CWPopup.h"
 
 @interface LoginViewController : UIViewController<UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *email;

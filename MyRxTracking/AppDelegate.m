@@ -17,6 +17,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    if ([File fileExistsByName: REMEMBERED_USER_DATA]) {
+        NSString *contents = [File readFileByName: REMEMBERED_USER_DATA];
+        NSLog(@"content: %@", contents);
+        NSArray *content_arr = [contents componentsSeparatedByString:@","];
+        userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setValue: content_arr[0] forKey:@"user_id"];
+        [userDefaults setValue: content_arr[1] forKey:@"patient_id"];
+        [userDefaults synchronize];
+
+        SideBarMenuController *view = [self.window.rootViewController.storyboard   instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
+        self.window.rootViewController = view;
+    }
     return YES;
 }
 

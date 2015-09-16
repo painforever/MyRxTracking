@@ -36,4 +36,16 @@
     }
     else return [[UITableViewCell alloc] init];
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //logout
+    if (indexPath.row == 7) {
+        userDefaults = nil;
+        [File deleteFileByName: REMEMBERED_EMAIL_FILENAME];
+        [File deleteFileByName:REMEMBERED_PASS_FILENAME];
+        [File deleteFileByName:REMEMBERED_USER_DATA];
+        LoginViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        [self presentViewController:view animated:YES completion:nil];
+    }
+}
 @end

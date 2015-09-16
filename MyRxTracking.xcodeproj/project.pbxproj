@@ -50,6 +50,8 @@
 		CFA165841B8BB59500507D11 /* SideBarMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA165831B8BB59500507D11 /* SideBarMenuController.m */; };
 		CFA165871B8BB75D00507D11 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA165861B8BB75D00507D11 /* ProfileViewController.m */; };
 		CFA1658A1B8BBCAF00507D11 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA165891B8BBCAF00507D11 /* menu.png */; };
+		CFA9A0EB1BA9C751008D2F28 /* File.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA9A0EA1BA9C751008D2F28 /* File.m */; };
+		CFA9A0EE1BA9F322008D2F28 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA9A0ED1BA9F322008D2F28 /* SignUpViewController.m */; };
 		CFBB27CF1B972CC50034545C /* Reminder.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBB27CE1B972CC50034545C /* Reminder.m */; };
 		CFBB27D21B973E110034545C /* PatientProviderAssignment.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBB27D11B973E110034545C /* PatientProviderAssignment.m */; };
 		CFBB27D51B9746650034545C /* AlertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBB27D41B9746650034545C /* AlertCell.m */; };
@@ -102,7 +104,7 @@
 		CF72106F1B8F5A5C0042CB54 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		CF7210711B8F5B570042CB54 /* Manifest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Manifest.h; sourceTree = "<group>"; };
 		CF7210721B8F5B570042CB54 /* Manifest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Manifest.m; sourceTree = "<group>"; };
-		CF7210741B8F5C3F0042CB54 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		CF7210741B8F5C3F0042CB54 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CF7210761B8F5C4A0042CB54 /* Get.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Get.h; path = Utils/Get.h; sourceTree = "<group>"; };
 		CF7210771B8F5C4A0042CB54 /* Get.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Get.m; path = Utils/Get.m; sourceTree = "<group>"; };
 		CF7210781B8F5C4A0042CB54 /* JSONHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONHandler.h; path = Utils/JSONHandler.h; sourceTree = "<group>"; };
@@ -146,6 +148,10 @@
 		CFA165851B8BB75D00507D11 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		CFA165861B8BB75D00507D11 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		CFA165891B8BBCAF00507D11 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = Images/menu.png; sourceTree = SOURCE_ROOT; };
+		CFA9A0E91BA9C751008D2F28 /* File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = File.h; sourceTree = "<group>"; };
+		CFA9A0EA1BA9C751008D2F28 /* File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = File.m; sourceTree = "<group>"; };
+		CFA9A0EC1BA9F322008D2F28 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		CFA9A0ED1BA9F322008D2F28 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		CFBB27CD1B972CC50034545C /* Reminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reminder.h; sourceTree = "<group>"; };
 		CFBB27CE1B972CC50034545C /* Reminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reminder.m; sourceTree = "<group>"; };
 		CFBB27D01B973E110034545C /* PatientProviderAssignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientProviderAssignment.h; sourceTree = "<group>"; };
@@ -269,6 +275,8 @@
 				CF72106F1B8F5A5C0042CB54 /* Constants.m */,
 				CF7210711B8F5B570042CB54 /* Manifest.h */,
 				CF7210721B8F5B570042CB54 /* Manifest.m */,
+				CFA9A0E91BA9C751008D2F28 /* File.h */,
+				CFA9A0EA1BA9C751008D2F28 /* File.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -371,6 +379,8 @@
 		CFA1657C1B8BB32500507D11 /* BeforeLogin */ = {
 			isa = PBXGroup;
 			children = (
+				CFA9A0EC1BA9F322008D2F28 /* SignUpViewController.h */,
+				CFA9A0ED1BA9F322008D2F28 /* SignUpViewController.m */,
 				CFA1657E1B8BB34700507D11 /* LoginViewController.h */,
 				CFA1657F1B8BB34700507D11 /* LoginViewController.m */,
 			);
@@ -599,6 +609,7 @@
 				CFA165581B8BB16100507D11 /* AppDelegate.m in Sources */,
 				CF532A051BA2274800627BC3 /* SettingsViewController.m in Sources */,
 				CF6607831BA8602D0008D9D5 /* UIViewController+CameraMethods.m in Sources */,
+				CFA9A0EB1BA9C751008D2F28 /* File.m in Sources */,
 				CF8397B71B8E50D40014EF19 /* AlertFormViewController.m in Sources */,
 				CF72107D1B8F5C4A0042CB54 /* JSONHandler.m in Sources */,
 				CFA165551B8BB16100507D11 /* main.m in Sources */,
@@ -619,6 +630,7 @@
 				CF8397A51B8E49690014EF19 /* MyDoctorsViewController.m in Sources */,
 				CF5329FF1BA1D9CF00627BC3 /* RxHistoryCell.m in Sources */,
 				CF4B80C41BA35AD6004C250E /* EditProfileViewController.m in Sources */,
+				CFA9A0EE1BA9F322008D2F28 /* SignUpViewController.m in Sources */,
 				CF72107E1B8F5C4A0042CB54 /* Post.m in Sources */,
 				CF8397A21B8E48440014EF19 /* MedicationsViewController.m in Sources */,
 				CFBB27D51B9746650034545C /* AlertCell.m in Sources */,

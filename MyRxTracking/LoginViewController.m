@@ -32,15 +32,20 @@
         [userDefaults setValue: user_dic[@"patient_id"] forKey:@"patient_id"];
         [userDefaults synchronize];
         
+        if (self.remember_me.on) [self storeAccount];
+        
         SideBarMenuController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
         [self presentViewController:view animated:YES completion:nil];
+        
     } failure:^(AFHTTPRequestOperation * operation, NSError *error) {
         [self showAlert:@"Authentication failed" withMessage:@"Email or password is wrong!"];
     }];
 }
 
 - (IBAction)signup_action:(id)sender {
-    
+    SignUpViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"SignUpViewController"];
+    view.view.frame = CGRectMake(0, 0, self.view.frame.size.width-50, self.view.frame.size.height-150);
+    [self presentPopupViewController:view animated:YES completion:nil];
 }
 
 -(BOOL)validUserInput{
@@ -55,8 +60,17 @@
     [textField resignFirstResponder];
 }
 
--(void)textFieldShouldReturn:(UITextField *)textField
-{
+-(void)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
+}
+
+#pragma methods for remembering password
+
+//this method must be called after userDefault data synced
+-(void)storeAccount{
+    [File createFileByName: REMEMBERED_EMAIL_FILENAME];[File writeToFileByName: REMEMBERED_EMAIL_FILENAME withContent: self.email.text];
+    [File createFileByName: REMEMBERED_PASS_FILENAME];[File writeToFileByName: REMEMBERED_PASS_FILENAME withContent: self.password.text];
+    NSArray *user_data_arr = @[[userDefaults valueForKey:@"user_id"], [userDefaults valueForKey:@"patient_id"]];
+    [File createFileByName: REMEMBERED_USER_DATA];[File writeToFileByName: REMEMBERED_USER_DATA withContent: [user_data_arr componentsJoinedByString:@","]];
 }
 @end

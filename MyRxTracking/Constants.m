@@ -26,4 +26,10 @@ NSString *AVATAR_URL=@"http://10.0.80.66:3000/my_rx_tracking/profiles/upload_ava
 int const THEME_COLOR_RED = 39;
 int const THEME_COLOR_GREEN = 82;
 int const THEME_COLOR_BLUE = 214;
+
+NSString *REMEMBERED_EMAIL_FILENAME = @"email.txt";;
+NSString *REMEMBERED_PASS_FILENAME = @"pass.txt";
+NSString *REMEMBERED_USER_DATA = @"user_data.txt";
+
+BOOL is_online = YES;
 @end

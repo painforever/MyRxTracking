@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "File.h"
+#import "Constants.h"
+#import "SideBarMenuController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

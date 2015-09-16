@@ -13,4 +13,11 @@
 
 -(User*)login: (NSString *)email withPassword:(NSString *)password;
 +(NSMutableArray *)searchUsers:(NSString *)searchText;
++(NSMutableDictionary *)takeDrug: (NSString *)rx_item_id;
+
++(NSString *)LogOut:(NSString*)user_id;
+
++(NSString*)signUp:(NSString *)email withPassword:(NSString *)password withFirstName:(NSString*)first_name withLastName:(NSString *)last_name;
+
++(NSString *)checkEmailRepeat: (NSString *)email;
 @end
