@@ -16,6 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [InternetConnection checkInternetConnection];
     // Override point for customization after application launch.
     if ([File fileExistsByName: REMEMBERED_USER_DATA]) {
         NSString *contents = [File readFileByName: REMEMBERED_USER_DATA];

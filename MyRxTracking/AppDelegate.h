@@ -10,6 +10,7 @@
 #import "File.h"
 #import "Constants.h"
 #import "SideBarMenuController.h"
+#import "InternetConnection.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
