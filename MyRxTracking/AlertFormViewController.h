@@ -13,6 +13,10 @@
 @property (strong, nonatomic) IBOutlet UITextField *reminder_name;
 @property (strong, nonatomic) IBOutlet UITextField *medication_name;
 @property (strong, nonatomic) IBOutlet UITextField *time;
+@property (weak, nonatomic) IBOutlet UITextField *repeat_times;
+
+
+
 - (IBAction)add_action:(id)sender;
 
 @end

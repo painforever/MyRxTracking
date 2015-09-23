@@ -11,6 +11,7 @@
 #import "Constants.h"
 #import "SideBarMenuController.h"
 #import "InternetConnection.h"
+#import "UIViewController+SharedUIMethods.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

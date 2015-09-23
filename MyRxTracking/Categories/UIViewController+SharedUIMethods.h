@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AFNetwork.h"
+#import "Constants.h"
 
 @interface UIViewController (SharedUIMethods)
 
@@ -21,4 +22,16 @@
 -(void)clearAllTextFields: (NSArray *)text_fields;
 
 -(BOOL)globallyValidateUserInputs:(NSArray *)inputs;
+
+//get the all formated date by appending only time, the format is yyyy-MM-dd HH:mm:ss
+-(NSDate *)getEntireFormattedDateByAppendingTime: (NSString *)time;
+
+//gloabally schedule 1 reminder
+-(void)scheduleReminder: (NSString *)msg withAlertSound: (NSString *)soundName withTime: (NSString *)time;
+
+//globally schedule multiple reminders
+-(void)scheduleReminders: (NSString *)days withTimes: (NSArray *)times_arr withDrugName: (NSString *)drug_name;
+
+//schedule all the Rx related reminders once the user is login.
+-(void)scheduleRxReminders: (NSString *)patient_id;
 @end

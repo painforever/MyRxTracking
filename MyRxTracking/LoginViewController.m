@@ -32,7 +32,10 @@
         [userDefaults setValue: user_dic[@"patient_id"] forKey:@"patient_id"];
         [userDefaults synchronize];
         
+        //remember account
         if (self.remember_me.on) [self storeAccount];
+        //schedule reminders
+        [self scheduleRxReminders: [userDefaults valueForKey:@"patient_id"]];
         
         SideBarMenuController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
         [self presentViewController:view animated:YES completion:nil];
