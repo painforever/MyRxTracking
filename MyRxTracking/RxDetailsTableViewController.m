@@ -15,7 +15,16 @@
 @implementation RxDetailsTableViewController
 -(void)viewDidLoad{
     self.drug_name = self.data[@"drug_name"];
-    self.rows = @{@"Medication Info": @[@"photo", @"drug_name", @"rx_id", @"dosage"], @"Other Info": @[@"days_of_treatment", @"times_per_day", @"notes"]};
+    if ([self.data[@"drug_photo"] isEqual: [NSNull null]])
+        self.drug_photo = @"no image";
+    else self.drug_photo = self.data[@"drug_photo"][@"url"];
+    self.rx_id = self.data[@"rx_id"];
+    self.dosage = self.data[@"dosage"];
+    self.days_of_treatment = self.data[@"days_of_treatment"];
+    self.times_per_day = self.data[@"times_per_day"];
+    self.notes = self.data[@"notes"];
+    
+    self.rows = @{@"Medication Info": @[self.drug_photo, self.drug_name, self.rx_id, self.dosage], @"Other Info": @[self.days_of_treatment, self.times_per_day, self.notes]};
     self.sections = @[@"Medication Info", @"Other Info"];
 }
 
@@ -45,14 +54,24 @@
     NSString *sectionTitle = [self.sections objectAtIndex:indexPath.section];
     NSArray *row = [self.rows objectForKey:sectionTitle];
     NSString *info = [row objectAtIndex:indexPath.row];
-    cell.textLabel.text = info;
-    cell.textLabel.textAlignment = UITextAlignmentCenter;
+    
     if ([sectionTitle isEqualToString:@"Medication Info"] && indexPath.row == 0) {
-        NSLog(@"chu xian!!!! %@", info);
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(5,5,200,200)];
-        imageView.image = [UIImage imageNamed:@"male_default_avatar.png"];
+        NSLog(@"chu xian!!!! %@", info);
+        if ([info isEqualToString:@"no image"]) {
+            imageView.image = [UIImage imageNamed:@"default-drug-image.png"];
+        }
+        else{
+//            NSString *drug_photo = [NSString stringWithFormat:@"%@%@", BASE_URL, self.drug_photo];
+//            imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: drug_photo]]];
+        }
+        
         imageView.center = CGPointMake(cell.contentView.bounds.size.width/2,cell.contentView.bounds.size.height/2);
         [cell addSubview: imageView];
+    }
+    else{
+        cell.textLabel.text = info;
+        cell.textLabel.textAlignment = UITextAlignmentCenter;
     }
     
     return cell;

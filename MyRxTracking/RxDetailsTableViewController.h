@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AFNetwork.h"
+#import "Manifest.h"
 
 @interface RxDetailsTableViewController : UITableViewController
 //@property (strong, nonatomic) NSString *rx_item_id;
