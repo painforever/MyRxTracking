@@ -14,14 +14,15 @@
 
 @implementation RxDetailsTableViewController
 -(void)viewDidLoad{
-    self.drug_name = self.data[@"drug_name"];
-    if ([self.data[@"drug_photo"] isEqual: [NSNull null]])
+    self.drug_name = [NSString stringWithFormat:@"Name: %@", self.data[@"drug_name"]];
+    NSLog(@"drug photo: %@", self.data[@"drug_photo"]);
+    if ([self.data[@"drug_photo"][@"drug_photo"][@"url"] isEqual: [NSNull null]])
         self.drug_photo = @"no image";
-    else self.drug_photo = self.data[@"drug_photo"][@"url"];
-    self.rx_id = self.data[@"rx_id"];
-    self.dosage = self.data[@"dosage"];
-    self.days_of_treatment = self.data[@"days_of_treatment"];
-    self.times_per_day = self.data[@"times_per_day"];
+    else self.drug_photo = self.data[@"drug_photo"][@"drug_photo"][@"url"];
+    self.rx_id = [NSString stringWithFormat:@"Prescription ID: %@", self.data[@"rx_id"]];
+    self.dosage = [NSString stringWithFormat:@"Dosage: %@", self.data[@"dosage"]];
+    self.days_of_treatment = [NSString stringWithFormat:@"Days of treatment: %@", self.data[@"days_of_treatment"]];
+    self.times_per_day = [NSString stringWithFormat:@"Times per day: %@", self.data[@"times_per_day"]];
     self.notes = self.data[@"notes"];
     
     self.rows = @{@"Medication Info": @[self.drug_photo, self.drug_name, self.rx_id, self.dosage], @"Other Info": @[self.days_of_treatment, self.times_per_day, self.notes]};
@@ -54,25 +55,32 @@
     NSString *sectionTitle = [self.sections objectAtIndex:indexPath.section];
     NSArray *row = [self.rows objectForKey:sectionTitle];
     NSString *info = [row objectAtIndex:indexPath.row];
-    
+    NSLog(@"info: %@", info);
+    NSLog(@"index: %d", indexPath.row);
     if ([sectionTitle isEqualToString:@"Medication Info"] && indexPath.row == 0) {
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(5,5,200,200)];
-        NSLog(@"chu xian!!!! %@", info);
-        if ([info isEqualToString:@"no image"]) {
+        if ([info isEqualToString:@"no image"])
             imageView.image = [UIImage imageNamed:@"default-drug-image.png"];
-        }
         else{
-//            NSString *drug_photo = [NSString stringWithFormat:@"%@%@", BASE_URL, self.drug_photo];
-//            imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: drug_photo]]];
+            NSString *drug_photo = [NSString stringWithFormat:@"%@%@", BASE_URL, self.drug_photo];
+            imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: drug_photo]]];
         }
         
         imageView.center = CGPointMake(cell.contentView.bounds.size.width/2,cell.contentView.bounds.size.height/2);
         [cell addSubview: imageView];
     }
+    else if([sectionTitle isEqualToString:@"Other Info"] && indexPath.row == 2){
+        UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(5, 5, 200, 200)];
+        textView.userInteractionEnabled = NO;
+        textView.textColor = [UIColor grayColor];
+        textView.text = info;
+        [cell addSubview: textView];
+    }
     else{
-        cell.textLabel.text = info;
+        cell.textLabel.text = [NSString stringWithFormat:@"%@", info];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
     }
+    
     
     return cell;
 }
