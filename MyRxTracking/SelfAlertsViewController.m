@@ -21,7 +21,7 @@
     //load data
     [[AFNetwork getAFManager] GET:[SERVER_URL stringByAppendingString:@"reminders"] parameters:@{@"user_id": [userDefaults stringForKey:@"user_id"]} success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSMutableArray *alerts = (NSMutableArray *)responseObject;
-        NSLog(@"dadasdadsfds: %@", [alerts description]);
+        //NSLog(@"dadasdadsfds: %@", [alerts description]);
         self.table_data = alerts;
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation * operation, NSError *error) {

@@ -14,7 +14,6 @@
 		CF5329FA1BA1C66E00627BC3 /* RxHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5329F91BA1C66E00627BC3 /* RxHistoryTableViewController.m */; };
 		CF5329FC1BA1CE3500627BC3 /* default-drug-image.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5329FB1BA1CE3500627BC3 /* default-drug-image.png */; };
 		CF5329FF1BA1D9CF00627BC3 /* RxHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5329FE1BA1D9CF00627BC3 /* RxHistoryCell.m */; };
-		CF532A021BA20FB100627BC3 /* RxDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF532A011BA20FB100627BC3 /* RxDetailsViewController.m */; };
 		CF532A051BA2274800627BC3 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF532A041BA2274800627BC3 /* SettingsViewController.m */; };
 		CF57575A1BA0BFF600869C44 /* DrugCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5757591BA0BFF600869C44 /* DrugCell.m */; };
 		CF57575D1BA0C09200869C44 /* Drug.m in Sources */ = {isa = PBXBuildFile; fileRef = CF57575C1BA0C09200869C44 /* Drug.m */; };
@@ -61,6 +60,7 @@
 		CFC259561B94D9A600328D8B /* DoctorSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC259551B94D9A600328D8B /* DoctorSearchCell.m */; };
 		CFC259591B94E2BE00328D8B /* AFNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC259581B94E2BE00328D8B /* AFNetwork.m */; };
 		CFC2595C1B94E6F700328D8B /* DoctorDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC2595B1B94E6F700328D8B /* DoctorDetailsViewController.m */; };
+		CFC8FFD81BB44F4700EBAD59 /* RxDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8FFD71BB44F4700EBAD59 /* RxDetailsTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F220824BA3D047BEBFBB2A4D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6928CCCCCB01ACA7FD60C5F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -88,8 +88,6 @@
 		CF5329FB1BA1CE3500627BC3 /* default-drug-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "default-drug-image.png"; path = "Images/default-drug-image.png"; sourceTree = SOURCE_ROOT; };
 		CF5329FD1BA1D9CF00627BC3 /* RxHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxHistoryCell.h; sourceTree = "<group>"; };
 		CF5329FE1BA1D9CF00627BC3 /* RxHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxHistoryCell.m; sourceTree = "<group>"; };
-		CF532A001BA20FB100627BC3 /* RxDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxDetailsViewController.h; sourceTree = "<group>"; };
-		CF532A011BA20FB100627BC3 /* RxDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxDetailsViewController.m; sourceTree = "<group>"; };
 		CF532A031BA2274800627BC3 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		CF532A041BA2274800627BC3 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		CF5757581BA0BFF600869C44 /* DrugCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugCell.h; sourceTree = "<group>"; };
@@ -172,6 +170,8 @@
 		CFC259581B94E2BE00328D8B /* AFNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetwork.m; sourceTree = "<group>"; };
 		CFC2595A1B94E6F700328D8B /* DoctorDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorDetailsViewController.h; sourceTree = "<group>"; };
 		CFC2595B1B94E6F700328D8B /* DoctorDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorDetailsViewController.m; sourceTree = "<group>"; };
+		CFC8FFD61BB44F4700EBAD59 /* RxDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxDetailsTableViewController.h; sourceTree = "<group>"; };
+		CFC8FFD71BB44F4700EBAD59 /* RxDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxDetailsTableViewController.m; sourceTree = "<group>"; };
 		D6928CCCCCB01ACA7FD60C5F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -234,8 +234,8 @@
 		CF5329F71BA1C5E000627BC3 /* RxHistory */ = {
 			isa = PBXGroup;
 			children = (
-				CF532A001BA20FB100627BC3 /* RxDetailsViewController.h */,
-				CF532A011BA20FB100627BC3 /* RxDetailsViewController.m */,
+				CFC8FFD61BB44F4700EBAD59 /* RxDetailsTableViewController.h */,
+				CFC8FFD71BB44F4700EBAD59 /* RxDetailsTableViewController.m */,
 			);
 			name = RxHistory;
 			sourceTree = "<group>";
@@ -614,6 +614,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFC8FFD81BB44F4700EBAD59 /* RxDetailsTableViewController.m in Sources */,
 				CF72107C1B8F5C4A0042CB54 /* Get.m in Sources */,
 				CF72106D1B8F59F10042CB54 /* User.m in Sources */,
 				CFA165581B8BB16100507D11 /* AppDelegate.m in Sources */,
@@ -635,7 +636,6 @@
 				CF5329FA1BA1C66E00627BC3 /* RxHistoryTableViewController.m in Sources */,
 				CFC259591B94E2BE00328D8B /* AFNetwork.m in Sources */,
 				CFA165871B8BB75D00507D11 /* ProfileViewController.m in Sources */,
-				CF532A021BA20FB100627BC3 /* RxDetailsViewController.m in Sources */,
 				CFA9A0F71BAA0996008D2F28 /* InternetConnection.m in Sources */,
 				CFBB27D21B973E110034545C /* PatientProviderAssignment.m in Sources */,
 				CF8397BB1B8E51870014EF19 /* NewMedFormViewController.m in Sources */,

@@ -8,13 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "SWRevealViewController.h"
-#import "RxDetailsViewController.h"
+#import "RxDetailsTableViewController.h"
 #import "Manifest.h"
 
 @interface RxHistoryTableViewController : UITableViewController
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 @property (strong, nonatomic) NSMutableArray *table_data;
-@property (strong, nonatomic) NSMutableDictionary *rx_row;
-@property (strong, nonatomic) RxDetailsViewController *rxDetailsView;
+@property (strong, nonatomic) RxDetailsTableViewController *rxDetailsView;
 @end

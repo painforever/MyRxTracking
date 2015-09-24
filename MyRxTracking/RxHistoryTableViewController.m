@@ -14,8 +14,6 @@
 @end
 
 @implementation RxHistoryTableViewController
-@synthesize table_data;
-@synthesize rx_row;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,9 +32,9 @@
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
     [[AFNetwork getAFManager] GET:[SERVER_URL stringByAppendingString:@"rxs"] parameters:@{@"patient_id": [userDefaults valueForKey:@"patient_id"]} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        table_data = (NSMutableArray *)responseObject;
+        self.table_data = (NSMutableArray *)responseObject;
         [self.tableView reloadData];
-        NSLog(@"res; %@", [table_data description]);
+        NSLog(@"rx history: %@", [self.table_data class]);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"failed");
     }];
@@ -61,11 +59,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     RxHistoryCell *cell = [tableView dequeueReusableCellWithIdentifier:@"rx_cell" forIndexPath:indexPath];
-    rx_row = table_data[indexPath.row];
+    NSDictionary *rx_row = [self.table_data objectAtIndex: indexPath.row];
     cell.drug_name.text = rx_row[@"drug_name"];
+    cell.notes.text = @"no notes for this medication.";
     if (![rx_row[@"notes"] isEqual: [NSNull null]])
       cell.notes.text = rx_row[@"notes"];
-    else cell.notes.text = @"no notes for this medication.";
     cell.rx_id.text = [NSString stringWithFormat:@"Rx id: %@", [rx_row[@"rx_id"] stringValue]];
     cell.is_finished.text = [NSString stringWithFormat:@"Finished? : %@", rx_row[@"is_finished"]];
     
@@ -76,7 +74,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    self.rxDetailsView = [self.storyboard instantiateViewControllerWithIdentifier:@"RxDetailsViewController"];
+    NSDictionary *selected_drug = [self.table_data objectAtIndex: indexPath.row];
+    self.rxDetailsView = [self.storyboard instantiateViewControllerWithIdentifier:@"RxDetailsTableViewController"];
+    self.rxDetailsView.data = selected_drug;
     [self.navigationController pushViewController:self.rxDetailsView animated:YES];
 }
 
