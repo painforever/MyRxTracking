@@ -36,6 +36,7 @@
                      }
                  }
      ];
+    [self canAdd];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,6 +51,19 @@
         [self.add_btn setEnabled:NO];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"failed");
+    }];
+}
+
+-(void)canAdd{
+    [[AFNetwork getAFManager] GET:[SERVER_URL stringByAppendingString:@"patient_provider_assignments/can_add"] parameters:@{@"patient_id": [userDefaults valueForKey:@"patient_id"], @"provider_npi": self.selected_doctor[@"NPI"]} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSArray *res_arr = (NSArray *)responseObject[@"result"];
+        if ([res_arr count] > 0){
+            self.add_btn.enabled = NO;
+            self.add_btn.backgroundColor = [UIColor grayColor];
+            [self.add_btn setTitle:@"Already added" forState:UIControlStateNormal];
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
     }];
 }
 @end

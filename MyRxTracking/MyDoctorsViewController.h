@@ -10,6 +10,7 @@
 #import "SWRevealViewController.h"
 #import "NewDoctorViewController.h"
 #import "DoctorCell.h"
+#import "DoctorDetailsViewController.h"
 
 @interface MyDoctorsViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;

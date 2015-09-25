@@ -45,9 +45,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AlertCell *cell = [tableView dequeueReusableCellWithIdentifier:@"alert_cell" forIndexPath:indexPath];
     NSDictionary *cell_data = [self.table_data objectAtIndex: indexPath.row];
-    cell.reminder_name.text = cell_data[@"reminder_name"];
-    cell.drug_name.text = cell_data[@"drug_name"];
-    cell.time.text = cell_data[@"reminder_time"];
+    cell.reminder_name.text = [NSString stringWithFormat:@"Title: %@", cell_data[@"reminder_name"]];
+    cell.drug_name.text = [NSString stringWithFormat:@"TODO: %@", cell_data[@"drug_name"]];
+    cell.time.text = [NSString stringWithFormat:@"Time: %@", cell_data[@"reminder_time"]];
     return cell;
 }
 
@@ -55,6 +55,6 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 80;
+    return 120;
 }
 @end

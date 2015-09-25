@@ -12,6 +12,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.time.numberOfLines = 4;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

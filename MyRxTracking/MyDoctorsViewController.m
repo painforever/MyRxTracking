@@ -47,15 +47,19 @@
     NSDictionary *cell_data = [self.table_data objectAtIndex: indexPath.row];
     
     cell.name.text = [NSString stringWithFormat:@"%@ %@", cell_data[@"prvd_First_Name"] ,cell_data[@"prvd_Last_Name_Legal_Name"]];
-    cell.phone.text = [NSString stringWithFormat:@"%@", cell_data[@"prvd_Business_Practice_loc_addr_Telephone_Number"]];
-    cell.address.text = [NSString stringWithFormat:@"%@", cell_data[@"prvd_First_Line_Business_Practice_loc_addr"]];
+    cell.phone.text = [NSString stringWithFormat:@"Phone: %@", cell_data[@"prvd_Business_Practice_loc_addr_Telephone_Number"]];
+    cell.address.text = [NSString stringWithFormat:@"Address %@", cell_data[@"prvd_First_Line_Business_Practice_loc_addr"]];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    DoctorDetailsViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorDetailsViewController"];
+    NSMutableDictionary *selected_data = [self.table_data objectAtIndex: indexPath.row];
+    view.selected_doctor = selected_data;
+    [self.navigationController pushViewController:view animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 80;
+    return 120;
 }
 @end
