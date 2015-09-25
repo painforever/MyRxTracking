@@ -25,6 +25,7 @@
     }
     [[AFNetwork getAFManager] GET:[SERVER_URL stringByAppendingString:@"medications"] parameters:@{@"patient_id": [userDefaults valueForKey:@"patient_id"]} success:^(AFHTTPRequestOperation *operation, id responseObject) {
         self.table_data = (NSMutableArray *)responseObject;
+        NSLog(@"data: %@", [responseObject description]);
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *responseObject) {
         NSLog(@"failed");
@@ -66,6 +67,9 @@
         [cell.take_button addTarget:self
                              action:@selector(take_it:)
                    forControlEvents:UIControlEventTouchUpInside];
+    }
+    if (![cell_data[@"remote_drug_photo_url"] isEqual: [NSNull null]]) {
+        cell.drug_image.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: cell_data[@"remote_drug_photo_url"]]]];
     }
     return cell;
 }

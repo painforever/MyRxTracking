@@ -15,11 +15,13 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.title = @"New Medication";
+    self.drug_image_file_name = @"";
     self.cameraView = [[UIImagePickerController alloc] init];
     self.cameraView.delegate = self;
     self.cameraView.allowsEditing = YES;
     self.cameraView.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     self.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: @"http://bipolarhappens.com/bhblog/wp-content/uploads/med-question6.gif"]]];
+    self.medication_name.delegate = self;
 }
 - (IBAction)take_photo_action:(id)sender {
     if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]){
@@ -51,13 +53,43 @@
     [[AFNetwork getAFManager] POST:[SERVER_URL stringByAppendingString:@"medications"] parameters:@{@"prm": @{@"patient_id": [userDefaults valueForKey:@"patient_id"], @"drug_id": self.selected_drug_id , @"dosage": self.dosage.text, @"prescribed_date": [NSDate date]}} success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *res_dic = (NSDictionary *)responseObject;
         NSLog(@"dasasfdsds %@", [res_dic description]);
-        [self uploadAvatar:self.imageView.image withFileName:self.drug_image_file_name withID:res_dic[@"id"] withFileParamKeyName:@"drug_photo" withUploadingURL: DRUG_PHOTO_URL];
+        //see if it's remote url or local file name, if it's local file then do the upload
+        NSRange http = [self.drug_image_file_name rangeOfString:@"http://"];
+        NSRange https = [self.drug_image_file_name rangeOfString:@"https://"];
+        if ([self.drug_image_file_name isEqualToString:@"drug not found"]) {
+            [self showAlert:@"Drug added" withMessage:@"Drug added!"];
+            return;
+        }
+        else if (http.location == NSNotFound && https.location == NSNotFound) {
+            [self uploadAvatar:self.imageView.image withFileName:self.drug_image_file_name withID:res_dic[@"id"] withFileParamKeyName:@"drug_photo" withUploadingURL: DRUG_PHOTO_URL];
+        }
+        else{
+            [[AFNetwork getAFManager] POST:[SERVER_URL stringByAppendingString:@"medications/update_drug_remote_url"] parameters: @{@"id": res_dic[@"id"], @"drug_photo": self.drug_image_file_name} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {}];
+        }
         [self showAlert:@"Drug added" withMessage:@"Drug added!"];
     } failure:^(AFHTTPRequestOperation *operation, NSError *responseObject) {
         NSLog(@"failed");
     }];
 }
 
+#pragma UITetxfield stuffs
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    if (textField == self.medication_name) {
+        NSLog(@"zheng yi zhong");
+        //search for drugs from GoodRx and get the drug image after user onblur the textField
+        [[AFNetwork getAFManager] GET:[SERVER_URL stringByAppendingString:@"medications/async_search_drug"] parameters:@{@"drug": self.medication_name.text} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            NSDictionary *image_dic = (NSDictionary *)responseObject;
+            self.drug_image_file_name = image_dic[@"result"];
+            NSLog(@"remote: %@", self.drug_image_file_name);
+            self.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: self.drug_image_file_name]]];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"failed %@", [operation responseString]);
+            self.imageView.image = [UIImage imageNamed:@"default-drug-image.png"];
+            self.drug_image_file_name = [operation responseString];
+        }];
+    }
+}
 #pragma Camera
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];

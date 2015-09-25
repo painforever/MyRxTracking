@@ -10,7 +10,7 @@
 #import "UIViewController+SharedUIMethods.h"
 #import "UIViewController+CameraMethods.h"
 
-@interface NewMedFormViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate, UIImagePickerControllerDelegate>
+@interface NewMedFormViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *medication_name;
 @property (strong, nonatomic) IBOutlet UITextField *dosage;
 @property (strong, nonatomic) IBOutlet UIButton *take_photo_btn;
