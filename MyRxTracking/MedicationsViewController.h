@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SWRevealViewController.h"
 #import "NewMedFormViewController.h"
+#import "AdverseEventFormViewController.h"
 
 @interface MedicationsViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;

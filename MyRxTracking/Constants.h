@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <SocketRocket/SRWebSocket.h>
 
 @interface Constants : NSObject
 extern NSString *SERVER_URL;
@@ -19,6 +20,10 @@ extern NSString * DRUG_PHOTO_URL;
 extern int const THEME_COLOR_RED;
 extern int const THEME_COLOR_GREEN;
 extern int const THEME_COLOR_BLUE;
+
+//websocket
+extern NSString *WEBSOCKET_URL;
+extern SRWebSocket *websocket;
 
 extern NSString *REMEMBERED_EMAIL_FILENAME;
 extern NSString *REMEMBERED_PASS_FILENAME;

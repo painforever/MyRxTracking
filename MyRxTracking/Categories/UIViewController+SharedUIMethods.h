@@ -10,7 +10,7 @@
 #import "AFNetwork.h"
 #import "Constants.h"
 
-@interface UIViewController (SharedUIMethods)
+@interface UIViewController (SharedUIMethods) <SRWebSocketDelegate>
 
 -(void)showAlert: (NSString *)title withMessage: (NSString *)msg;
 
@@ -36,4 +36,6 @@
 -(void)scheduleRxReminders: (NSString *)patient_id;
 
 -(UIView *)setLeftViewForTextfields:(NSString *)imageName withContainerScale:(int)containerScale withImageIconScale:(int)imageScale withUITextField:(UITextField *)textfield;
+
+-(void)getSelf;
 @end

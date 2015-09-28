@@ -111,4 +111,36 @@
     textfield.leftViewMode = UITextFieldViewModeAlways;
     return container;
 }
+
+#pragma mark - SRWebSocket delegate
+
+- (void)connectWebSocket {
+    NSString *urlString=[NSString stringWithFormat: [WEBSOCKET_URL stringByAppendingString:@"?user_id=%@"],[userDefaults valueForKey:@"user_id"]];
+    websocket = [[SRWebSocket alloc] initWithURL:[NSURL URLWithString:urlString]];
+    websocket.delegate=self;
+    [websocket open];
+}
+
+- (void)webSocketDidOpen:(SRWebSocket *)newWebSocket {
+}
+
+- (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error {
+    // [self connectWebSocket];
+}
+
+- (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean {
+    // [self connectWebSocket];
+}
+
+- (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message {
+    NSData *data=[message dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    UIAlertView *messageAlert = [[UIAlertView alloc]
+                                 initWithTitle:@"New message" message: [dic objectForKey:@"msg"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [messageAlert show];
+}
+
+-(void)getSelf{
+    NSLog(@"self: %@", [[self class] description]);
+}
 @end

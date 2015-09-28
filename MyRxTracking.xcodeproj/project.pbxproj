@@ -63,6 +63,7 @@
 		CFC8FFD81BB44F4700EBAD59 /* RxDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8FFD71BB44F4700EBAD59 /* RxDetailsTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		CFD657D41BB981150085160C /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD657D21BB981150085160C /* account.png */; settings = {ASSET_TAGS = (); }; };
 		CFD657D51BB981150085160C /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD657D31BB981150085160C /* envelope.png */; settings = {ASSET_TAGS = (); }; };
+		CFD657D81BB9CDAD0085160C /* AdverseEventFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD657D71BB9CDAD0085160C /* AdverseEventFormViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F220824BA3D047BEBFBB2A4D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6928CCCCCB01ACA7FD60C5F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -176,6 +177,8 @@
 		CFC8FFD71BB44F4700EBAD59 /* RxDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxDetailsTableViewController.m; sourceTree = "<group>"; };
 		CFD657D21BB981150085160C /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = account.png; path = Images/account.png; sourceTree = SOURCE_ROOT; };
 		CFD657D31BB981150085160C /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = envelope.png; path = Images/envelope.png; sourceTree = SOURCE_ROOT; };
+		CFD657D61BB9CDAD0085160C /* AdverseEventFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdverseEventFormViewController.h; sourceTree = "<group>"; };
+		CFD657D71BB9CDAD0085160C /* AdverseEventFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdverseEventFormViewController.m; sourceTree = "<group>"; };
 		D6928CCCCCB01ACA7FD60C5F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -309,6 +312,8 @@
 			children = (
 				CF8397B91B8E51870014EF19 /* NewMedFormViewController.h */,
 				CF8397BA1B8E51870014EF19 /* NewMedFormViewController.m */,
+				CFD657D61BB9CDAD0085160C /* AdverseEventFormViewController.h */,
+				CFD657D71BB9CDAD0085160C /* AdverseEventFormViewController.m */,
 			);
 			name = Medications;
 			sourceTree = "<group>";
@@ -654,6 +659,7 @@
 				CF72107E1B8F5C4A0042CB54 /* Post.m in Sources */,
 				CF8397A21B8E48440014EF19 /* MedicationsViewController.m in Sources */,
 				CFBB27D51B9746650034545C /* AlertCell.m in Sources */,
+				CFD657D81BB9CDAD0085160C /* AdverseEventFormViewController.m in Sources */,
 				CF57575A1BA0BFF600869C44 /* DrugCell.m in Sources */,
 				CF83979F1B8E48060014EF19 /* SelfAlertsViewController.m in Sources */,
 				CFA165801B8BB34700507D11 /* LoginViewController.m in Sources */,

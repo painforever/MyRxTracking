@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SocketRocket.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Underscore.m.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0AA7FDC4016D03EE80E02DB7D5DBE5BB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C7DB5B539742E19C939F9AC46B23698</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>395372BB09FB899D3CA63071652125FF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4DDE2B174262D4D1612AF4ADF538714A</key>
+		<key>94F265BB8E3482E8E540CBC5986C482A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>87E7E8047BDA2B84F5A804D05459FA13</key>
+		<key>94F7F189F3302603E3064AD0A6552133</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A6F3CEEB46C8A413C2A4299683D3B52E</key>
+		<key>9D669292DBADDB5FBA0C6CD66A1FEA40</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DF7F6545ED95072614A8FF3F98D2279E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F8AFCAABBF2C5D8D2203206C28162A9A</key>
+		<key>F20DE0E6575B31203C0B020B0C0FC62C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

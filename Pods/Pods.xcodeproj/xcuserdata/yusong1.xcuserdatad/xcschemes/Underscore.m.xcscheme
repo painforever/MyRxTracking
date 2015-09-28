@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "68B7978D2541624AD5EC3DC4"
+               BlueprintIdentifier = "73DCAF9404DC2EA9FA4A5EC1"
                BuildableName = "libUnderscore.m.a"
                BlueprintName = "Underscore.m"
                ReferencedContainer = "container:Pods.xcodeproj">

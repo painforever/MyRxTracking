@@ -25,7 +25,6 @@
     }
     [[AFNetwork getAFManager] GET:[SERVER_URL stringByAppendingString:@"medications"] parameters:@{@"patient_id": [userDefaults valueForKey:@"patient_id"]} success:^(AFHTTPRequestOperation *operation, id responseObject) {
         self.table_data = (NSMutableArray *)responseObject;
-        NSLog(@"data: %@", [responseObject description]);
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *responseObject) {
         NSLog(@"failed");
@@ -75,6 +74,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSDictionary *selected_data = [self.table_data objectAtIndex: indexPath.row];
+    AdverseEventFormViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"AdverseEventFormViewController"];
+    view.drug = selected_data;
+    [self.navigationController pushViewController:view animated:YES];
 }
 
 -(IBAction)take_it:(id)sender{
