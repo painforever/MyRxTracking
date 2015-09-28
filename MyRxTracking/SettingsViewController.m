@@ -23,11 +23,11 @@
     self.scrollView.scrollEnabled = YES;
     self.scrollView.contentSize = CGSizeMake(400, self.view.frame.size.height+200);
     
-    self.email.leftView = [self setLeftViewForTextfields:@"envelope.png" withContainerScale:45 withImageIconScale:24 withUITextField:self.email];
-    self.old_password.leftView = [self setLeftViewForTextfields:@"settings.png" withContainerScale:45 withImageIconScale:24 withUITextField:self.old_password];
-    self.password.leftView = [self setLeftViewForTextfields:@"settings.png" withContainerScale:45 withImageIconScale:24 withUITextField:self.password];
-    self.password_confirm.leftView = [self setLeftViewForTextfields:@"settings.png" withContainerScale:45 withImageIconScale:24 withUITextField:self.password_confirm];
-    self.cellphone.leftView = [self setLeftViewForTextfields:@"account.png" withContainerScale:45 withImageIconScale:24 withUITextField:self.cellphone];
+    self.email.leftView = [self setLeftViewForTextfields:@"envelope.png" withContainerScale:50 withImageIconScale:24 withUITextField:self.email];
+    self.old_password.leftView = [self setLeftViewForTextfields:@"settings.png" withContainerScale:50 withImageIconScale:24 withUITextField:self.old_password];
+    self.password.leftView = [self setLeftViewForTextfields:@"settings.png" withContainerScale:50 withImageIconScale:24 withUITextField:self.password];
+    self.password_confirm.leftView = [self setLeftViewForTextfields:@"settings.png" withContainerScale:50 withImageIconScale:24 withUITextField:self.password_confirm];
+    self.cellphone.leftView = [self setLeftViewForTextfields:@"account.png" withContainerScale:50 withImageIconScale:24 withUITextField:self.cellphone];
     
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
