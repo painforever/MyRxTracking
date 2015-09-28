@@ -16,6 +16,17 @@
     [super viewDidLoad];
     [self styleLoginControls];
     // Do any additional setup after loading the view, typically from a nib.
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissPopup)];
+    tapRecognizer.numberOfTapsRequired = 2;
+    tapRecognizer.delegate = self;
+    self.useBlurForPopup = YES;
+    [self.view addGestureRecognizer:tapRecognizer];
+}
+
+- (void)dismissPopup {
+    if (self.popupViewController != nil) {
+        [self dismissPopupViewControllerAnimated:YES completion:^{}];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
