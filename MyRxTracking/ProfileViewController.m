@@ -57,6 +57,7 @@
     self.zipcode.text = [NSString stringWithFormat:@"zipcode: %@", contact_info[@"zipcode"]];
     self.phone.text = [NSString stringWithFormat:@"phone: %@", contact_info[@"cell_phone_number"]];
     self.email.text = [NSString stringWithFormat:@"email: %@", contact_info[@"email_address"]];
+    self.email.numberOfLines = 2;
     self.address.text = [NSString stringWithFormat:@"address: %@", contact_info[@"home_address1"]];
     if ([contact_info[@"avatar"] isEqual: [NSNull null]]) {
         if ([[contact_info[@"gender"] uppercaseString] isEqualToString:@"F"])
@@ -78,7 +79,7 @@
     //scrollView
     self.scrollView.delegate = self;
     self.scrollView.scrollEnabled = YES;
-    self.scrollView.contentSize = CGSizeMake(375, 800);
+    self.scrollView.contentSize = CGSizeMake(400, 800);
 }
 - (IBAction)edit_profile_action:(id)sender {
     self.edit_profile_view = [self.storyboard instantiateViewControllerWithIdentifier:@"EditProfileViewController"];

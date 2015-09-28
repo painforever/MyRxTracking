@@ -14,6 +14,7 @@
 @implementation LoginViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self styleLoginControls];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -75,5 +76,25 @@
     [File createFileByName: REMEMBERED_PASS_FILENAME];[File writeToFileByName: REMEMBERED_PASS_FILENAME withContent: self.password.text];
     NSArray *user_data_arr = @[[userDefaults valueForKey:@"user_id"], [userDefaults valueForKey:@"patient_id"]];
     [File createFileByName: REMEMBERED_USER_DATA];[File writeToFileByName: REMEMBERED_USER_DATA withContent: [user_data_arr componentsJoinedByString:@","]];
+}
+
+#pragma styles for controls
+-(void)styleLoginControls{
+    UIImageView* usernameIconImage = [[UIImageView alloc] initWithFrame:CGRectMake(9, 9, 24, 24)];
+    usernameIconImage.image = [UIImage imageNamed:@"envelope.png"];
+    UIView* usernameIconContainer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    usernameIconContainer.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
+    [usernameIconContainer addSubview:usernameIconImage];
+    
+    UIImageView *passwordIconImage = [[UIImageView alloc] initWithFrame:CGRectMake(9, 9, 24, 24)];
+    passwordIconImage.image = [UIImage imageNamed:@"account.png"];
+    UIView *passwordIconContainer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    passwordIconContainer.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
+    [passwordIconContainer addSubview: passwordIconImage];
+    
+    self.email.leftViewMode = UITextFieldViewModeAlways;
+    self.email.leftView = usernameIconContainer;
+    self.password.leftViewMode = UITextFieldViewModeAlways;
+    self.password.leftView = passwordIconContainer;
 }
 @end

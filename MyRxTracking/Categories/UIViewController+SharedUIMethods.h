@@ -34,4 +34,6 @@
 
 //schedule all the Rx related reminders once the user is login.
 -(void)scheduleRxReminders: (NSString *)patient_id;
+
+-(UIView *)setLeftViewForTextfields:(NSString *)imageName withContainerScale:(int)containerScale withImageIconScale:(int)imageScale withUITextField:(UITextField *)textfield;
 @end

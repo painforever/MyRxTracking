@@ -61,6 +61,8 @@
 		CFC259591B94E2BE00328D8B /* AFNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC259581B94E2BE00328D8B /* AFNetwork.m */; };
 		CFC2595C1B94E6F700328D8B /* DoctorDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC2595B1B94E6F700328D8B /* DoctorDetailsViewController.m */; };
 		CFC8FFD81BB44F4700EBAD59 /* RxDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8FFD71BB44F4700EBAD59 /* RxDetailsTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		CFD657D41BB981150085160C /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD657D21BB981150085160C /* account.png */; settings = {ASSET_TAGS = (); }; };
+		CFD657D51BB981150085160C /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD657D31BB981150085160C /* envelope.png */; settings = {ASSET_TAGS = (); }; };
 		F220824BA3D047BEBFBB2A4D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6928CCCCCB01ACA7FD60C5F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -172,6 +174,8 @@
 		CFC2595B1B94E6F700328D8B /* DoctorDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorDetailsViewController.m; sourceTree = "<group>"; };
 		CFC8FFD61BB44F4700EBAD59 /* RxDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxDetailsTableViewController.h; sourceTree = "<group>"; };
 		CFC8FFD71BB44F4700EBAD59 /* RxDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxDetailsTableViewController.m; sourceTree = "<group>"; };
+		CFD657D21BB981150085160C /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = account.png; path = Images/account.png; sourceTree = SOURCE_ROOT; };
+		CFD657D31BB981150085160C /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = envelope.png; path = Images/envelope.png; sourceTree = SOURCE_ROOT; };
 		D6928CCCCCB01ACA7FD60C5F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -434,6 +438,8 @@
 		CFA165881B8BBCA200507D11 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CFD657D21BB981150085160C /* account.png */,
+				CFD657D31BB981150085160C /* envelope.png */,
 				CF4B80BD1BA32AC1004C250E /* female_default_avatar.png */,
 				CF4B80BE1BA32AC1004C250E /* male_default_avatar.png */,
 				CF5329FB1BA1CE3500627BC3 /* default-drug-image.png */,
@@ -550,6 +556,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF8397AD1B8E4C1C0014EF19 /* alerts.png in Resources */,
+				CFD657D51BB981150085160C /* envelope.png in Resources */,
 				CFA1658A1B8BBCAF00507D11 /* menu.png in Resources */,
 				CF4B80BF1BA32AC1004C250E /* female_default_avatar.png in Resources */,
 				CFA1655E1B8BB16100507D11 /* Main.storyboard in Resources */,
@@ -560,6 +567,7 @@
 				CF7210751B8F5C3F0042CB54 /* Podfile in Resources */,
 				CF8397B21B8E4C1C0014EF19 /* rx.png in Resources */,
 				CF8397AF1B8E4C1C0014EF19 /* logout.png in Resources */,
+				CFD657D41BB981150085160C /* account.png in Resources */,
 				CF5329FC1BA1CE3500627BC3 /* default-drug-image.png in Resources */,
 				CF8397AE1B8E4C1C0014EF19 /* doctors.jpeg in Resources */,
 				CF8397B01B8E4C1C0014EF19 /* medications.jpg in Resources */,

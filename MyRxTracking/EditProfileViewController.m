@@ -77,7 +77,7 @@
     //scrollView
     self.scrollView.delegate = self;
     self.scrollView.scrollEnabled = YES;
-    self.scrollView.contentSize = CGSizeMake(375, 900);
+    self.scrollView.contentSize = CGSizeMake(400, 900);
 }
 
 -(NSString *)stripColon: (NSString *)input{
