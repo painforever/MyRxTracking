@@ -72,8 +72,8 @@
 }
 
 -(void)setUpStyle{
-    self.avatar.layer.borderWidth = 3.0f;
-    self.avatar.layer.cornerRadius = 10.0f;
+    self.avatar.layer.borderWidth = 1.0f;
+    self.avatar.layer.cornerRadius = self.avatar.layer.frame.size.height/2;
     self.avatar.clipsToBounds = YES;
     
     //scrollView

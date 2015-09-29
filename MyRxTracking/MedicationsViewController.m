@@ -16,6 +16,9 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.title = @"My Medications";
+    UIImageView *wall = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"drug_list_photo.jpg"]];
+    [wall setFrame:self.tableView.frame];
+    self.tableView.backgroundView = wall;
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
@@ -56,6 +59,7 @@
     cell.drug_image.layer.borderColor = [UIColor colorWithRed:THEME_COLOR_RED green:THEME_COLOR_GREEN blue:THEME_COLOR_BLUE alpha:1].CGColor;
     cell.drug_image.layer.cornerRadius = 20.0f;
     cell.drug_image.clipsToBounds = YES;
+    cell.backgroundColor = [UIColor clearColor];
     
     cell.take_button.tag = cell_data[@"rx_item_id"];
     if ([cell_data[@"type"] isEqualToString:@"added"]) {

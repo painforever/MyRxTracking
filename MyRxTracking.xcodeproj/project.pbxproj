@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		CF2DE64C1B95F91F00FA93AC /* UIViewController+SharedUIMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2DE64B1B95F91F00FA93AC /* UIViewController+SharedUIMethods.m */; };
+		CF36E1561BBB2724000FB0EF /* login_title.png in Resources */ = {isa = PBXBuildFile; fileRef = CF36E1551BBB2724000FB0EF /* login_title.png */; settings = {ASSET_TAGS = (); }; };
+		CF36E1581BBB2DD6000FB0EF /* drug_list_photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF36E1571BBB2DD6000FB0EF /* drug_list_photo.jpg */; settings = {ASSET_TAGS = (); }; };
+		CF36E15A1BBB33D2000FB0EF /* profile_wall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF36E1591BBB33D2000FB0EF /* profile_wall.jpg */; settings = {ASSET_TAGS = (); }; };
+		CF36E15C1BBB36B3000FB0EF /* name_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF36E15B1BBB36B3000FB0EF /* name_background.jpg */; settings = {ASSET_TAGS = (); }; };
 		CF4B80BF1BA32AC1004C250E /* female_default_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4B80BD1BA32AC1004C250E /* female_default_avatar.png */; };
 		CF4B80C01BA32AC1004C250E /* male_default_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4B80BE1BA32AC1004C250E /* male_default_avatar.png */; };
 		CF4B80C41BA35AD6004C250E /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4B80C31BA35AD6004C250E /* EditProfileViewController.m */; };
@@ -83,6 +87,10 @@
 		7C3D9EBA66B598BA69FD3323 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CF2DE64A1B95F91F00FA93AC /* UIViewController+SharedUIMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+SharedUIMethods.h"; path = "Categories/UIViewController+SharedUIMethods.h"; sourceTree = "<group>"; };
 		CF2DE64B1B95F91F00FA93AC /* UIViewController+SharedUIMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+SharedUIMethods.m"; path = "Categories/UIViewController+SharedUIMethods.m"; sourceTree = "<group>"; };
+		CF36E1551BBB2724000FB0EF /* login_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = login_title.png; path = Images/login_title.png; sourceTree = SOURCE_ROOT; };
+		CF36E1571BBB2DD6000FB0EF /* drug_list_photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = drug_list_photo.jpg; path = Images/drug_list_photo.jpg; sourceTree = SOURCE_ROOT; };
+		CF36E1591BBB33D2000FB0EF /* profile_wall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = profile_wall.jpg; path = Images/profile_wall.jpg; sourceTree = SOURCE_ROOT; };
+		CF36E15B1BBB36B3000FB0EF /* name_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = name_background.jpg; path = Images/name_background.jpg; sourceTree = SOURCE_ROOT; };
 		CF4B80BD1BA32AC1004C250E /* female_default_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = female_default_avatar.png; path = Images/female_default_avatar.png; sourceTree = SOURCE_ROOT; };
 		CF4B80BE1BA32AC1004C250E /* male_default_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = male_default_avatar.png; path = Images/male_default_avatar.png; sourceTree = SOURCE_ROOT; };
 		CF4B80C21BA35AD6004C250E /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
@@ -445,6 +453,10 @@
 		CFA165881B8BBCA200507D11 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CF36E15B1BBB36B3000FB0EF /* name_background.jpg */,
+				CF36E1591BBB33D2000FB0EF /* profile_wall.jpg */,
+				CF36E1571BBB2DD6000FB0EF /* drug_list_photo.jpg */,
+				CF36E1551BBB2724000FB0EF /* login_title.png */,
 				CFD657DB1BB9E5F00085160C /* login.jpg */,
 				CFD657D21BB981150085160C /* account.png */,
 				CFD657D31BB981150085160C /* envelope.png */,
@@ -566,6 +578,7 @@
 				CF8397AD1B8E4C1C0014EF19 /* alerts.png in Resources */,
 				CFD657D51BB981150085160C /* envelope.png in Resources */,
 				CFA1658A1B8BBCAF00507D11 /* menu.png in Resources */,
+				CF36E1561BBB2724000FB0EF /* login_title.png in Resources */,
 				CF4B80BF1BA32AC1004C250E /* female_default_avatar.png in Resources */,
 				CFA1655E1B8BB16100507D11 /* Main.storyboard in Resources */,
 				CF8397B31B8E4C1C0014EF19 /* settings.png in Resources */,
@@ -574,10 +587,13 @@
 				CF4B80C01BA32AC1004C250E /* male_default_avatar.png in Resources */,
 				CF7210751B8F5C3F0042CB54 /* Podfile in Resources */,
 				CF8397B21B8E4C1C0014EF19 /* rx.png in Resources */,
+				CF36E15A1BBB33D2000FB0EF /* profile_wall.jpg in Resources */,
 				CF8397AF1B8E4C1C0014EF19 /* logout.png in Resources */,
+				CF36E15C1BBB36B3000FB0EF /* name_background.jpg in Resources */,
 				CFD657D41BB981150085160C /* account.png in Resources */,
 				CFD657DC1BB9E5F00085160C /* login.jpg in Resources */,
 				CF5329FC1BA1CE3500627BC3 /* default-drug-image.png in Resources */,
+				CF36E1581BBB2DD6000FB0EF /* drug_list_photo.jpg in Resources */,
 				CF8397AE1B8E4C1C0014EF19 /* doctors.jpeg in Resources */,
 				CF8397B01B8E4C1C0014EF19 /* medications.jpg in Resources */,
 				CFA165601B8BB16100507D11 /* Images.xcassets in Resources */,

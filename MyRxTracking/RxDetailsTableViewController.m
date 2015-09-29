@@ -73,15 +73,13 @@
         UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(5, 5, 200, 200)];
         textView.userInteractionEnabled = NO;
         textView.textColor = [UIColor grayColor];
-        textView.text = info;
+        textView.text = [NSString stringWithFormat:@"%@", info];
         [cell addSubview: textView];
     }
     else{
         cell.textLabel.text = [NSString stringWithFormat:@"%@", info];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
     }
-    
-    
     return cell;
 }
 

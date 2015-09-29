@@ -66,7 +66,7 @@
       cell.notes.text = rx_row[@"notes"];
     cell.rx_id.text = [NSString stringWithFormat:@"Rx id: %@", [rx_row[@"rx_id"] stringValue]];
     cell.is_finished.text = [NSString stringWithFormat:@"Finished? : %@", rx_row[@"is_finished"]];
-    
+    cell.notes.userInteractionEnabled = NO;
     if ([rx_row[@"is_finished"] isEqualToString:@"no"])
         cell.is_finished.textColor = [UIColor redColor];
     else cell.is_finished.textColor = [UIColor blueColor];

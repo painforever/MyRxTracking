@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5EB11A05F0B797A6C9CE4680DA7044F47D0348FD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "5EB11A05F0B797A6C9CE4680DA7044F47D0348FD" : 0,
+    "7622C2EF35C2CF08365F5179DE90D72B32110804" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F0EA3497-589B-43D8-850C-6790F7E33D0D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "5EB11A05F0B797A6C9CE4680DA7044F47D0348FD" : "MyRxTracking",
+    "7622C2EF35C2CF08365F5179DE90D72B32110804" : "RATracking\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MyRxTracking",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MyRxTracking.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/painforever\/MyRxTracking.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5EB11A05F0B797A6C9CE4680DA7044F47D0348FD"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/painforever\/RATracking.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7622C2EF35C2CF08365F5179DE90D72B32110804"
+    }
+  ]
+}
