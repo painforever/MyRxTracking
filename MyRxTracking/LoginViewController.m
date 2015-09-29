@@ -107,5 +107,7 @@
     self.email.leftView = usernameIconContainer;
     self.password.leftViewMode = UITextFieldViewModeAlways;
     self.password.leftView = passwordIconContainer;
+    
+    self.remember_me.onTintColor = [UIColor colorWithRed:39.0/255.0 green:182.0/255.0 blue:214.0/255.0 alpha:1.0];
 }
 @end

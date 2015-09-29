@@ -50,15 +50,15 @@
     self.avatar.image = [UIImage imageWithData:[NSData dataWithContentsOfURL: [NSURL URLWithString: self.avatar_url]]];
     
     self.full_name.text = [NSString stringWithFormat:@"%@ %@", contact_info[@"fname"], contact_info[@"lname"]];
-    self.city.text = [NSString stringWithFormat:@"city: %@", contact_info[@"city"]];
-    self.state.text = [NSString stringWithFormat:@"state: %@", contact_info[@"state"]];
-    self.country.text = [NSString stringWithFormat:@"country: %@", contact_info[@"country"]];
-    self.county.text = [NSString stringWithFormat:@"county: %@", contact_info[@"county"]];
-    self.zipcode.text = [NSString stringWithFormat:@"zipcode: %@", contact_info[@"zipcode"]];
-    self.phone.text = [NSString stringWithFormat:@"phone: %@", contact_info[@"cell_phone_number"]];
-    self.email.text = [NSString stringWithFormat:@"email: %@", contact_info[@"email_address"]];
+    self.city.text = [NSString stringWithFormat:@"City: %@", contact_info[@"city"]];
+    self.state.text = [NSString stringWithFormat:@"State: %@", contact_info[@"state"]];
+    self.country.text = [NSString stringWithFormat:@"Country: %@", contact_info[@"country"]];
+    self.county.text = [NSString stringWithFormat:@"County: %@", contact_info[@"county"]];
+    self.zipcode.text = [NSString stringWithFormat:@"Zipcode: %@", contact_info[@"zipcode"]];
+    self.phone.text = [NSString stringWithFormat:@"Phone: %@", contact_info[@"cell_phone_number"]];
+    self.email.text = [NSString stringWithFormat:@"Email: %@", contact_info[@"email_address"]];
     self.email.numberOfLines = 2;
-    self.address.text = [NSString stringWithFormat:@"address: %@", contact_info[@"home_address1"]];
+    self.address.text = [NSString stringWithFormat:@"Address: %@", contact_info[@"home_address1"]];
     if ([contact_info[@"avatar"] isEqual: [NSNull null]]) {
         if ([[contact_info[@"gender"] uppercaseString] isEqualToString:@"F"])
             self.avatar.image = [UIImage imageNamed: @"female_default_avatar.png"];
