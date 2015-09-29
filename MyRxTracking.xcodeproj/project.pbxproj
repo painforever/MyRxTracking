@@ -64,6 +64,7 @@
 		CFD657D41BB981150085160C /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD657D21BB981150085160C /* account.png */; settings = {ASSET_TAGS = (); }; };
 		CFD657D51BB981150085160C /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD657D31BB981150085160C /* envelope.png */; settings = {ASSET_TAGS = (); }; };
 		CFD657D81BB9CDAD0085160C /* AdverseEventFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD657D71BB9CDAD0085160C /* AdverseEventFormViewController.m */; settings = {ASSET_TAGS = (); }; };
+		CFD657DC1BB9E5F00085160C /* login.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFD657DB1BB9E5F00085160C /* login.jpg */; settings = {ASSET_TAGS = (); }; };
 		F220824BA3D047BEBFBB2A4D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6928CCCCCB01ACA7FD60C5F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -179,6 +180,7 @@
 		CFD657D31BB981150085160C /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = envelope.png; path = Images/envelope.png; sourceTree = SOURCE_ROOT; };
 		CFD657D61BB9CDAD0085160C /* AdverseEventFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdverseEventFormViewController.h; sourceTree = "<group>"; };
 		CFD657D71BB9CDAD0085160C /* AdverseEventFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdverseEventFormViewController.m; sourceTree = "<group>"; };
+		CFD657DB1BB9E5F00085160C /* login.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = login.jpg; path = ../../../login.jpg; sourceTree = "<group>"; };
 		D6928CCCCCB01ACA7FD60C5F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -443,6 +445,7 @@
 		CFA165881B8BBCA200507D11 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CFD657DB1BB9E5F00085160C /* login.jpg */,
 				CFD657D21BB981150085160C /* account.png */,
 				CFD657D31BB981150085160C /* envelope.png */,
 				CF4B80BD1BA32AC1004C250E /* female_default_avatar.png */,
@@ -573,6 +576,7 @@
 				CF8397B21B8E4C1C0014EF19 /* rx.png in Resources */,
 				CF8397AF1B8E4C1C0014EF19 /* logout.png in Resources */,
 				CFD657D41BB981150085160C /* account.png in Resources */,
+				CFD657DC1BB9E5F00085160C /* login.jpg in Resources */,
 				CF5329FC1BA1CE3500627BC3 /* default-drug-image.png in Resources */,
 				CF8397AE1B8E4C1C0014EF19 /* doctors.jpeg in Resources */,
 				CF8397B01B8E4C1C0014EF19 /* medications.jpg in Resources */,
