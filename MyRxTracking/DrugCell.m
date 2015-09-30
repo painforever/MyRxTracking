@@ -20,4 +20,30 @@
     // Configure the view for the selected state
 }
 
+-(void)prepareForReuse{
+    [super prepareForReuse];
+    [self clearAllComponents];
+}
+
+-(void)didMoveToWindow{
+    
+}
+
+-(void)clearAllComponents{
+    Underscore.arrayEach(@[self.dosage, self.drug_image, self.drug_name, self.date, self.take_button, self.type], ^(id ele){
+        if ([ele isKindOfClass: [UILabel class]]) {
+            UILabel *label = (UILabel *)ele;
+            label.text = nil;
+        }
+        else if ([ele isKindOfClass: [UIImageView class]]){
+            UIImageView *imageView = (UIImageView *)ele;
+            imageView.image = [UIImage imageNamed:@"default-drug-image.png"];
+        }
+        else{
+            //button and NSString
+            ele = nil;
+        }
+    });
+}
+
 @end

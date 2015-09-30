@@ -37,5 +37,8 @@
 
 -(UIView *)setLeftViewForTextfields:(NSString *)imageName withContainerScale:(int)containerScale withImageIconScale:(int)imageScale withUITextField:(UITextField *)textfield;
 
+//display and style only for the drug image
+-(void)displayAndStyleDrugImage: (id)imageUrl withImageView: (UIImageView *)imageView withImageKeyName: (NSString *)key;
+
 -(void)getSelf;
 @end

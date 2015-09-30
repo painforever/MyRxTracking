@@ -19,6 +19,7 @@
     UIUserNotificationSettings* notificationSettings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil];
     [[UIApplication sharedApplication] registerUserNotificationSettings:notificationSettings];
     
+    
     [InternetConnection checkInternetConnection];
     // Override point for customization after application launch.
     if ([File fileExistsByName: REMEMBERED_USER_DATA]) {
@@ -56,6 +57,16 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"wocao!!!!"
+                                                        message:@"li ke!"
+                                                       delegate:self cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+    
+    
+    [alertView show];
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Manifest.h"
 
 @interface DrugCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *drug_name;
@@ -14,5 +15,5 @@
 @property (strong, nonatomic) IBOutlet UILabel *date;
 @property (strong, nonatomic) IBOutlet UIImageView *drug_image;
 @property (strong, nonatomic) IBOutlet UIButton *take_button;
-
+@property (strong, nonatomic) NSString *type;
 @end

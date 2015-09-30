@@ -58,8 +58,12 @@
 -(void)scheduleReminder:(NSString *)msg withAlertSound:(NSString *)soundName withTime:(NSString *)time{
     NSDate *date = [self getEntireFormattedDateByAppendingTime: time];
     UILocalNotification *notification = [[UILocalNotification alloc] init];
+    notification.repeatInterval = NSDayCalendarUnit;
     [notification setAlertBody: msg];
     [notification setFireDate: date];
+    //[notification setFireDate:[NSDate dateWithTimeIntervalSinceNow:10]];
+    [notification setTimeZone:[NSTimeZone  defaultTimeZone]];
+    NSLog(@"remidenr: %@", date);
     notification.soundName = soundName;
     [[UIApplication sharedApplication] scheduleLocalNotification: notification];
 }
@@ -138,6 +142,27 @@
     UIAlertView *messageAlert = [[UIAlertView alloc]
                                  initWithTitle:@"New message" message: [dic objectForKey:@"msg"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [messageAlert show];
+}
+
+-(void)displayAndStyleDrugImage:(id)imageUrl withImageView:(UIImageView *)imageView withImageKeyName:(NSString *)key{
+    //display it
+    NSString *drug_image_url = @"";
+    if ([imageUrl isKindOfClass: [NSDictionary class]] || [imageUrl isKindOfClass: [NSMutableDictionary class]]){
+        drug_image_url = imageUrl[key];
+    }
+    else{
+        drug_image_url = imageUrl;
+    }
+    
+    if (![drug_image_url isEqual: [NSNull null]]) {
+        imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: drug_image_url]]];
+    }
+    
+    //style it
+    imageView.layer.borderWidth = 3.0f;
+    imageView.layer.borderColor = [UIColor colorWithRed:THEME_COLOR_RED green:THEME_COLOR_GREEN blue:THEME_COLOR_BLUE alpha:1].CGColor;
+    imageView.layer.cornerRadius = 20.0f;
+    imageView.clipsToBounds = YES;
 }
 
 -(void)getSelf{

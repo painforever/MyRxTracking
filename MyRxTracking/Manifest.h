@@ -17,6 +17,10 @@
 #import "Reminder.h"
 #import "PatientProviderAssignment.h"
 #import "Drug.h"
+
+#import "Underscore.h"
+#define _ Underscore
+
 @interface Manifest : NSObject
 
 @end

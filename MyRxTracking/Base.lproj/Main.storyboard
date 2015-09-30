@@ -1606,7 +1606,7 @@
                                     <constraint firstAttribute="height" constant="40" id="1p8-Hk-XNE"/>
                                     <constraint firstAttribute="width" constant="189" id="bYl-I0-Frv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <color key="textColor" red="0.36308663730000001" green="0.26804017530000002" blue="0.86188052400000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1619,9 +1619,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpA-oI-dga">
-                                <rect key="frame" x="65" y="416" width="245" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgf-5P-XES">
+                                <rect key="frame" x="65" y="368" width="245" height="46"/>
                                 <color key="backgroundColor" red="0.1529411765" green="0.71372549019999998" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="lzj-sH-SSX"/>
+                                    <constraint firstAttribute="height" constant="46" id="uwp-jr-gKd"/>
+                                </constraints>
+                                <state key="normal" title="Select Adverse Event">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="select_action:" destination="uwv-lf-Ldj" eventType="touchUpInside" id="fwW-Bb-ZNE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpA-oI-dga">
+                                <rect key="frame" x="65" y="422" width="245" height="46"/>
+                                <color key="backgroundColor" red="0.1529411765" green="0.71372549019999998" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="aoz-dX-Doh"/>
+                                    <constraint firstAttribute="width" constant="245" id="wtV-4B-gWb"/>
+                                </constraints>
                                 <state key="normal" title="Report">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -1632,12 +1650,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.75948326529999999" green="1" blue="0.73417204150000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Rgf-5P-XES" firstAttribute="top" secondItem="AmQ-cM-Seu" secondAttribute="bottom" constant="135" id="3Zl-zP-tbZ"/>
                             <constraint firstItem="AmQ-cM-Seu" firstAttribute="leading" secondItem="D3O-Cy-Gyh" secondAttribute="leading" id="BeL-fz-EG4"/>
                             <constraint firstItem="AmQ-cM-Seu" firstAttribute="centerX" secondItem="5Pr-yT-yyO" secondAttribute="centerX" id="Eec-Jn-bUd"/>
                             <constraint firstItem="AmQ-cM-Seu" firstAttribute="top" secondItem="1F1-VM-Q7e" secondAttribute="bottom" constant="8" id="JbG-p8-OFh"/>
                             <constraint firstItem="D3O-Cy-Gyh" firstAttribute="top" secondItem="AmQ-cM-Seu" secondAttribute="bottom" constant="29" id="KET-iY-zcZ"/>
                             <constraint firstItem="jqp-8P-0dQ" firstAttribute="top" secondItem="AmQ-cM-Seu" secondAttribute="bottom" constant="97" id="LDD-4z-jlh"/>
+                            <constraint firstItem="AmQ-cM-Seu" firstAttribute="leading" secondItem="Rgf-5P-XES" secondAttribute="leading" id="TWo-xQ-NTq"/>
                             <constraint firstItem="AmQ-cM-Seu" firstAttribute="leading" secondItem="jqp-8P-0dQ" secondAttribute="leading" id="fhh-eb-1yy"/>
+                            <constraint firstItem="FpA-oI-dga" firstAttribute="top" secondItem="AmQ-cM-Seu" secondAttribute="bottom" constant="189" id="mE7-O6-Rtu"/>
+                            <constraint firstItem="AmQ-cM-Seu" firstAttribute="leading" secondItem="FpA-oI-dga" secondAttribute="leading" id="yQO-ip-xlK"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -1646,6 +1668,7 @@
                         <outlet property="drug_image" destination="AmQ-cM-Seu" id="Hs6-z0-Poh"/>
                         <outlet property="drug_name" destination="D3O-Cy-Gyh" id="ANq-ID-Iyw"/>
                         <outlet property="report_btn" destination="FpA-oI-dga" id="hd0-qS-OUu"/>
+                        <outlet property="select_event_btn" destination="Rgf-5P-XES" id="87O-kM-xw5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xi3-ee-1S9" userLabel="First Responder" sceneMemberID="firstResponder"/>

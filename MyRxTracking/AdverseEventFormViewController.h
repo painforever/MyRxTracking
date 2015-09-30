@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Manifest.h"
 
-@interface AdverseEventFormViewController : UIViewController <UIActionSheetDelegate>
+@interface AdverseEventFormViewController : UIViewController <UIActionSheetDelegate, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *drug_image;
 
@@ -22,6 +23,18 @@
 
 @property (strong, nonatomic) NSDictionary *drug;
 
+@property (strong, nonatomic) UIActionSheet *actionSheet;
+
+@property (weak, nonatomic) IBOutlet UIButton *select_event_btn;
+
+@property (strong, nonatomic) NSMutableArray *adverse_events_arr;
+
+@property (strong, nonatomic) NSMutableArray *adverse_events_arr_for_submit;
+
+
 - (IBAction)report_action:(id)sender;
+- (IBAction)select_action:(id)sender;
+
+- (void)showNormalActionSheet:(id)sender;
 
 @end

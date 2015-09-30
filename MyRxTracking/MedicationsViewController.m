@@ -49,6 +49,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     DrugCell *cell = [tableView dequeueReusableCellWithIdentifier:@"drug_cell" forIndexPath:indexPath];
+    if (cell == nil) {
+        cell = [[DrugCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"drug_cell"];
+    }
     NSDictionary *cell_data = [self.table_data objectAtIndex: indexPath.row];
     
     cell.drug_name.text = [NSString stringWithFormat:@"%@", cell_data[@"drug_name"]];
@@ -62,7 +65,8 @@
     cell.backgroundColor = [UIColor clearColor];
     
     cell.take_button.tag = cell_data[@"rx_item_id"];
-    if ([cell_data[@"type"] isEqualToString:@"added"]) {
+    cell.type = cell_data[@"type"];
+    if ([cell.type isEqualToString:@"added"]) {
         [cell.take_button setEnabled: NO];
         [cell.take_button setHidden:YES];
     }
@@ -71,6 +75,8 @@
                              action:@selector(take_it:)
                    forControlEvents:UIControlEventTouchUpInside];
     }
+    
+    NSLog(@"remote: %@", [cell_data description]);
     if (![cell_data[@"remote_drug_photo_url"] isEqual: [NSNull null]]) {
         cell.drug_image.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: cell_data[@"remote_drug_photo_url"]]]];
     }
