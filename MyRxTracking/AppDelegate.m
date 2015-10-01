@@ -19,7 +19,6 @@
     UIUserNotificationSettings* notificationSettings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil];
     [[UIApplication sharedApplication] registerUserNotificationSettings:notificationSettings];
     
-    
     [InternetConnection checkInternetConnection];
     // Override point for customization after application launch.
     if ([File fileExistsByName: REMEMBERED_USER_DATA]) {
@@ -60,8 +59,8 @@
 }
 
 -(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"wocao!!!!"
-                                                        message:@"li ke!"
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Time to take drug."
+                                                        message:notification.alertBody
                                                        delegate:self cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
     

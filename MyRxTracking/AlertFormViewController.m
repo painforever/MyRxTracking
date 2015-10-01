@@ -15,6 +15,23 @@
     self.title = @"New Alert";
     [self loadMyDrugs];
     [self initPicker];
+    
+//    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+//    NSDate *date = [NSDate date];
+//    // Set the fire date/time
+//    [localNotification setFireDate:[date dateByAddingTimeInterval:5]];
+//    [localNotification setTimeZone:[NSTimeZone defaultTimeZone]];
+//    
+//    localNotification.applicationIconBadgeNumber=0;
+//    
+//    // Setup alert notification
+//    [localNotification setAlertAction:@"Open App"];
+//    [localNotification setAlertBody:@"songyu"];
+//    [localNotification setAlertBody:@"You had set a Local Notification on this time"];
+//    localNotification.soundName=UILocalNotificationDefaultSoundName;
+//    [localNotification setHasAction:YES];
+//    UIApplication *app=[UIApplication sharedApplication];
+//    [app scheduleLocalNotification:localNotification];
 }
 - (IBAction)add_action:(id)sender {
     if (![self validateInput])
@@ -26,7 +43,15 @@
         
         //start to schedule a single reminder
         NSString *alert_msg = [NSString stringWithFormat:@"%@ - %@", self.reminder_name.text, self.medication_name.text];
+        
         [self scheduleReminder: alert_msg  withAlertSound:@"Alarm_1.mp3" withTime: self.time.text];
+        
+//        [self scheduleReminder: alert_msg  withAlertSound:@"Alarm_1.mp3" withTime: @"11:54:00"];
+//        [self scheduleReminder: alert_msg  withAlertSound:@"Alarm_1.mp3" withTime: @"11:55:00"];
+//        [self scheduleReminder: alert_msg  withAlertSound:@"Alarm_1.mp3" withTime: @"11:56:00"];
+//        [self scheduleReminder: alert_msg  withAlertSound:@"Alarm_1.mp3" withTime: @"11:57:00"];
+//        [self scheduleReminder: alert_msg  withAlertSound:@"Alarm_1.mp3" withTime: @"11:58:00"];
+        
         self.medication_name.text = @"";self.time.text = @"";self.reminder_name.text = @"";self.repeat_times.text = @"";
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"failed");

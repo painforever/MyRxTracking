@@ -62,8 +62,7 @@
     [notification setAlertBody: msg];
     [notification setFireDate: date];
     //[notification setFireDate:[NSDate dateWithTimeIntervalSinceNow:10]];
-    [notification setTimeZone:[NSTimeZone  defaultTimeZone]];
-    NSLog(@"remidenr: %@", date);
+    [notification setTimeZone:[NSTimeZone defaultTimeZone]];
     notification.soundName = soundName;
     [[UIApplication sharedApplication] scheduleLocalNotification: notification];
 }

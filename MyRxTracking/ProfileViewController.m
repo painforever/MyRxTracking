@@ -25,7 +25,7 @@
     [self setUpStyle];
     //schedule the reminders
     if ([File fileExistsByName: REMEMBERED_USER_DATA]) {
-        [self scheduleRxReminders: [userDefaults valueForKey:@"patient_id"]];
+        //[self scheduleRxReminders: [userDefaults valueForKey:@"patient_id"]];
     }
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
