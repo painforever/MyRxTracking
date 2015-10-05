@@ -502,7 +502,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aS-it-46x">
-                                                <rect key="frame" x="190" y="117" width="126" height="40"/>
+                                                <rect key="frame" x="190" y="110" width="126" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -513,8 +513,8 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6Z-so-gWi">
-                                                <rect key="frame" x="-40" y="150" width="170" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6Z-so-gWi">
+                                                <rect key="frame" x="22" y="150" width="145" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -525,38 +525,26 @@
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rMA-BQ-Ydp">
                                         <rect key="frame" x="0.0" y="510" width="375" height="157"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PCN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfq-0C-jkx">
-                                                <rect key="frame" x="13" y="29" width="123" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Group number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaJ-OP-mAC">
-                                                <rect key="frame" x="13" y="58" width="134" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="insurance plan name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqF-bD-CmD">
-                                                <rect key="frame" x="13" y="87" width="134" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="insurance company name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVl-db-u25">
-                                                <rect key="frame" x="168" y="29" width="144" height="21"/>
+                                                <rect key="frame" x="168" y="17" width="185" height="45"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BC/BS plan" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJc-N7-cfF">
-                                                <rect key="frame" x="13" y="116" width="134" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Group number" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaJ-OP-mAC">
+                                                <rect key="frame" x="13" y="76" width="134" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="id number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVI-g7-9ZS">
-                                                <rect key="frame" x="168" y="58" width="134" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SSN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8b-FL-cO0">
+                                                <rect key="frame" x="13" y="24" width="107" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="insurance plan name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqF-bD-CmD">
+                                                <rect key="frame" x="168" y="43" width="185" height="88"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -616,7 +604,6 @@
                         <outlet property="address" destination="FCQ-X7-1EI" id="10c-bQ-Grr"/>
                         <outlet property="avatar" destination="zgf-Cy-hFh" id="2eU-y3-4Yn"/>
                         <outlet property="avatar_view" destination="0aA-eF-mQK" id="Ood-HL-RHB"/>
-                        <outlet property="bc_bs_plan" destination="FJc-N7-cfF" id="KWd-xY-BLa"/>
                         <outlet property="city" destination="4Ut-sP-BAK" id="XPE-PI-LCb"/>
                         <outlet property="contact_view" destination="yRh-XT-KTe" id="hIE-Dg-OCB"/>
                         <outlet property="country" destination="LtX-DE-m6u" id="Zs3-HI-ADn"/>
@@ -624,14 +611,13 @@
                         <outlet property="email" destination="4aS-it-46x" id="gan-w9-gI9"/>
                         <outlet property="full_name" destination="UND-4V-u9D" id="Wfp-IJ-s4O"/>
                         <outlet property="group_number" destination="eaJ-OP-mAC" id="sKK-vD-eGm"/>
-                        <outlet property="id_number" destination="rVI-g7-9ZS" id="dgb-Ch-T3j"/>
                         <outlet property="insurance_company_name" destination="eVl-db-u25" id="4S1-dh-dgx"/>
                         <outlet property="insurance_plan_name" destination="pqF-bD-CmD" id="Y7e-UH-qJn"/>
                         <outlet property="insurance_view" destination="rMA-BQ-Ydp" id="51P-a6-hRE"/>
-                        <outlet property="pcn" destination="kfq-0C-jkx" id="2nD-6H-FEW"/>
                         <outlet property="phone" destination="g6Z-so-gWi" id="icN-Oi-ciA"/>
                         <outlet property="scrollView" destination="7bD-sB-mAi" id="eLC-Re-hln"/>
                         <outlet property="sidebarButton" destination="NTc-ps-t6n" id="7db-cn-zzO"/>
+                        <outlet property="ssn" destination="i8b-FL-cO0" id="u2g-pl-xM4"/>
                         <outlet property="state" destination="sNl-Hk-HJR" id="mpd-qq-C6B"/>
                         <outlet property="zipcode" destination="YZO-qI-886" id="s34-Ku-2Wn"/>
                     </connections>

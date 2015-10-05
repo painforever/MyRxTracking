@@ -19,6 +19,7 @@
     UIImageView *wall = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"drug_list_photo.jpg"]];
     [wall setFrame:self.tableView.frame];
     self.tableView.backgroundView = wall;
+    self.tableView.allowsMultipleSelectionDuringEditing = NO;
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
@@ -27,7 +28,7 @@
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
     [[AFNetwork getAFManager] GET:[SERVER_URL stringByAppendingString:@"medications"] parameters:@{@"patient_id": [userDefaults valueForKey:@"patient_id"]} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        self.table_data = (NSMutableArray *)responseObject;
+        self.table_data = [(NSArray *)responseObject mutableCopy];
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *responseObject) {
         NSLog(@"failed");
@@ -97,6 +98,22 @@
     [self showAlert:@"Success" withMessage: take_dic[@"msg"]];
     if ([take_dic[@"finished"] isEqualToString:@"yes"]) {
         [[clicked superview] setUserInteractionEnabled: NO];
+    }
+}
+
+// Override to support conditional editing of the table view.
+// This only needs to be implemented if you are going to be returning NO
+// for some items. By default, all items are editable.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return YES if you want the specified item to be editable.
+    return YES;
+}
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.table_data removeObjectAtIndex:indexPath.row];
+        [self.tableView reloadData];
     }
 }
 @end

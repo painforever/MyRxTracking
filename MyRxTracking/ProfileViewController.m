@@ -18,6 +18,7 @@
 @implementation ProfileViewController
 @synthesize contact_info;
 @synthesize insurance_info;
+@synthesize plan_info;
 
 -(void)viewDidLoad{
     [super viewDidLoad];
@@ -68,7 +69,14 @@
 }
 
 -(void)loadInsuranceInfo: (NSMutableDictionary *)all_info{
+    self.insurance_company_name.numberOfLines = 10;
+    self.insurance_plan_name.numberOfLines = 10;
     insurance_info = all_info[@"insurance_info"];
+    plan_info = all_info[@"plan"];
+    self.insurance_company_name.text = [NSString stringWithFormat:@"Company Name: %@", plan_info[@"org_name"]];
+    self.group_number.text = [NSString stringWithFormat:@"Group ID: %@", insurance_info[@"group_id"]];
+    self.insurance_plan_name.text = [NSString stringWithFormat:@"Plan Name: %@", plan_info[@"plan_name"]];
+    self.ssn.text = [NSString stringWithFormat:@"SSN: %@", all_info[@"patient"][@"ssn"]];
 }
 
 -(void)setUpStyle{

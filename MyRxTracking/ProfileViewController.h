@@ -36,11 +36,13 @@
 @property (strong, nonatomic) IBOutlet UILabel *insurance_company_name;
 @property (strong, nonatomic) IBOutlet UILabel *id_number;
 @property (strong, nonatomic) EditProfileViewController *edit_profile_view;
+@property (weak, nonatomic) IBOutlet UILabel *ssn;
 - (IBAction)edit_profile_action:(id)sender;
 
 //data
 @property (strong, nonatomic) NSMutableDictionary *contact_info;
 @property (strong, nonatomic) NSMutableDictionary *insurance_info;
+@property (strong, nonatomic) NSDictionary *plan_info;
 @property (strong, nonatomic) NSString *avatar_url;
 
 
