@@ -40,5 +40,12 @@
 //display and style only for the drug image
 -(void)displayAndStyleDrugImage: (id)imageUrl withImageView: (UIImageView *)imageView withImageKeyName: (NSString *)key;
 
+//set scroll view for all kinds of devices
+-(void)setScrollViewSiseForAllKindsOfDevices: (UIScrollView *)scrollView withView: (UIView *)view;
+
+-(void)setOneViewCenterAlign: (UIView *)view withParentView: (UIView *)parentView;
+
+-(void)setAllViewCenterAlign: (NSArray *)views withParentView: (UIView *)parentView;
+
 -(void)getSelf;
 @end

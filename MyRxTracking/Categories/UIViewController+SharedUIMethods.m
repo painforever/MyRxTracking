@@ -156,12 +156,37 @@
     if (![drug_image_url isEqual: [NSNull null]]) {
         imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: drug_image_url]]];
     }
+    else
+        imageView.image = [UIImage imageNamed:@"default-drug-image.png"];
     
     //style it
     imageView.layer.borderWidth = 3.0f;
     imageView.layer.borderColor = [UIColor colorWithRed:THEME_COLOR_RED green:THEME_COLOR_GREEN blue:THEME_COLOR_BLUE alpha:1].CGColor;
     imageView.layer.cornerRadius = 20.0f;
     imageView.clipsToBounds = YES;
+}
+
+-(void)setScrollViewSiseForAllKindsOfDevices: (UIScrollView *)scrollView withView:(UIView *)view{
+    scrollView.userInteractionEnabled = YES;
+    CGFloat bottom_coor = view.frame.origin.y + 150;
+    if (IS_IPHONE4)
+        scrollView.contentSize = CGSizeMake(320, bottom_coor);
+    else if (IS_IPHONE5)
+        scrollView.contentSize = CGSizeMake(320, bottom_coor);
+    else if (IS_IPHONE6)
+        scrollView.contentSize = CGSizeMake(375, bottom_coor);
+    else if (IS_IPHONE6PLUS)
+        scrollView.contentSize = CGSizeMake(414, bottom_coor);
+}
+
+-(void)setOneViewCenterAlign:(UIView *)view withParentView:(UIView *)parentView{
+    view.center = CGPointMake(parentView.bounds.size.width/2, parentView.bounds.size.height/2);
+}
+
+-(void)setAllViewCenterAlign:(NSArray *)views withParentView:(UIView *)parentView{
+    for (UIView *view in views) {
+        [self setOneViewCenterAlign:view withParentView: parentView];
+    }
 }
 
 -(void)getSelf{

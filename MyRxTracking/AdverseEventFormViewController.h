@@ -10,8 +10,9 @@
 #import "Manifest.h"
 
 @interface AdverseEventFormViewController : UIViewController <UIActionSheetDelegate, UITextFieldDelegate>
-
 @property (weak, nonatomic) IBOutlet UIImageView *drug_image;
+
+@property (weak, nonatomic) IBOutlet UIImageView *adverse_event_part_image;
 
 @property (weak, nonatomic) IBOutlet UILabel *drug_name;
 
@@ -30,6 +31,8 @@
 @property (strong, nonatomic) NSMutableArray *adverse_events_arr;
 
 @property (strong, nonatomic) NSMutableArray *adverse_events_arr_for_submit;
+@property (weak, nonatomic) IBOutlet UIButton *take_picture_for_adverse_event_btn;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 
 - (IBAction)report_action:(id)sender;
@@ -37,4 +40,5 @@
 
 - (void)showNormalActionSheet:(id)sender;
 
+- (IBAction)take_picture_action:(id)sender;
 @end
