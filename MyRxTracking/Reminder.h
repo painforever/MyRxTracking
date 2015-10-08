@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface Reminder : NSObject
-+(NSDictionary *)constructParams: (NSString *)reminder_name withMedicationName: (NSString *)med_name withTime: (NSString *)time withRepeatTimes: (NSString *)repeat_times withUserID: (NSString *)passed_user_id;
++(NSDictionary *)constructParams: (NSString *)reminder_name withTime: (NSString *)time withRepeatTimes: (NSString *)repeat_times withUserID: (NSString *)passed_user_id;
 @end

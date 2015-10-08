@@ -35,7 +35,7 @@
     }];
 }
 - (IBAction)add_med_action:(id)sender {
-    NewMedFormViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"NewMedFormViewController"];
+    NewMedFormViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"NewMedTableForm"];
     [self.navigationController pushViewController:view animated:YES];
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF01D7E71BC6FCB70008F600 /* NewMedTableForm.m in Sources */ = {isa = PBXBuildFile; fileRef = CF01D7E61BC6FCB70008F600 /* NewMedTableForm.m */; settings = {ASSET_TAGS = (); }; };
 		CF2DE64C1B95F91F00FA93AC /* UIViewController+SharedUIMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2DE64B1B95F91F00FA93AC /* UIViewController+SharedUIMethods.m */; };
 		CF36E1561BBB2724000FB0EF /* login_title.png in Resources */ = {isa = PBXBuildFile; fileRef = CF36E1551BBB2724000FB0EF /* login_title.png */; settings = {ASSET_TAGS = (); }; };
 		CF36E1581BBB2DD6000FB0EF /* drug_list_photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF36E1571BBB2DD6000FB0EF /* drug_list_photo.jpg */; settings = {ASSET_TAGS = (); }; };
@@ -85,6 +86,8 @@
 /* Begin PBXFileReference section */
 		5BE6299D3F2509542918CEC6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7C3D9EBA66B598BA69FD3323 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CF01D7E51BC6FCB70008F600 /* NewMedTableForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewMedTableForm.h; sourceTree = "<group>"; };
+		CF01D7E61BC6FCB70008F600 /* NewMedTableForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewMedTableForm.m; sourceTree = "<group>"; };
 		CF2DE64A1B95F91F00FA93AC /* UIViewController+SharedUIMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+SharedUIMethods.h"; path = "Categories/UIViewController+SharedUIMethods.h"; sourceTree = "<group>"; };
 		CF2DE64B1B95F91F00FA93AC /* UIViewController+SharedUIMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+SharedUIMethods.m"; path = "Categories/UIViewController+SharedUIMethods.m"; sourceTree = "<group>"; };
 		CF36E1551BBB2724000FB0EF /* login_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = login_title.png; path = Images/login_title.png; sourceTree = SOURCE_ROOT; };
@@ -324,6 +327,8 @@
 				CF8397BA1B8E51870014EF19 /* NewMedFormViewController.m */,
 				CFD657D61BB9CDAD0085160C /* AdverseEventFormViewController.h */,
 				CFD657D71BB9CDAD0085160C /* AdverseEventFormViewController.m */,
+				CF01D7E51BC6FCB70008F600 /* NewMedTableForm.h */,
+				CF01D7E61BC6FCB70008F600 /* NewMedTableForm.m */,
 			);
 			name = Medications;
 			sourceTree = "<group>";
@@ -670,6 +675,7 @@
 				CFC259591B94E2BE00328D8B /* AFNetwork.m in Sources */,
 				CFA165871B8BB75D00507D11 /* ProfileViewController.m in Sources */,
 				CFA9A0F71BAA0996008D2F28 /* InternetConnection.m in Sources */,
+				CF01D7E71BC6FCB70008F600 /* NewMedTableForm.m in Sources */,
 				CFBB27D21B973E110034545C /* PatientProviderAssignment.m in Sources */,
 				CF8397BB1B8E51870014EF19 /* NewMedFormViewController.m in Sources */,
 				CF8397A51B8E49690014EF19 /* MyDoctorsViewController.m in Sources */,

@@ -9,8 +9,8 @@
 #import "Reminder.h"
 
 @implementation Reminder
-+(NSDictionary *)constructParams:(NSString *)reminder_name withMedicationName:(NSString *)med_name withTime:(NSString *)time withRepeatTimes: (NSString *)repeat_times withUserID:(NSString *)passed_user_id{
-    NSDictionary *params = @{@"reminder": @{@"reminder_name": reminder_name, @"drug_name": med_name, @"reminder_time": time, @"user_id": passed_user_id, @"repeat_times": repeat_times}};
++(NSDictionary *)constructParams:(NSString *)reminder_name withTime:(NSString *)time withRepeatTimes: (NSString *)repeat_times withUserID:(NSString *)passed_user_id{
+    NSDictionary *params = @{@"reminder": @{@"reminder_name": reminder_name, @"reminder_time": time, @"user_id": passed_user_id, @"repeat_times": repeat_times}};
     return params;
 }
 @end
