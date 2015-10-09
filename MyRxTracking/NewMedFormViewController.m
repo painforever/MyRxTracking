@@ -22,6 +22,8 @@
     self.cameraView.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     self.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: @"http://bipolarhappens.com/bhblog/wp-content/uploads/med-question6.gif"]]];
     self.medication_name.delegate = self;
+    //[self setScrollViewSiseForAllKindsOfDevices: self.scrollView withView: self.view3];
+    self.scrollView.contentSize = CGSizeMake(375, self.view3.frame.origin.y+50);
 }
 - (IBAction)take_photo_action:(id)sender {
     if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]){
@@ -71,6 +73,12 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *responseObject) {
         NSLog(@"failed");
     }];
+}
+
+- (IBAction)setup_times_action:(id)sender {
+}
+
+- (IBAction)switcher_value_changed:(id)sender {
 }
 
 #pragma UITetxfield stuffs

@@ -1045,7 +1045,7 @@
         <!--New Med Form View Controller-->
         <scene sceneID="dZX-wW-Kje">
             <objects>
-                <viewController storyboardIdentifier="NewMedFormViewController" id="XMr-z5-JFA" customClass="NewMedFormViewController" sceneMemberID="viewController">
+                <viewController id="XMr-z5-JFA" customClass="NewMedFormViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="P6M-v3-1bV"/>
                         <viewControllerLayoutGuide type="bottom" id="cr0-up-hlT"/>
@@ -1074,9 +1074,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="take_photo_action:" destination="XMr-z5-JFA" eventType="touchUpInside" id="7gL-iI-naU"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default-drug-image.png" translatesAutoresizingMaskIntoConstraints="NO" id="vhO-Kj-8x1">
                                 <rect key="frame" x="80" y="207" width="215" height="159"/>
@@ -1088,54 +1085,164 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="add_action:" destination="XMr-z5-JFA" eventType="touchUpInside" id="zwZ-y0-7rD"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.75948326529999999" green="1" blue="0.73417204150000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="dosage" destination="FVV-1E-dl7" id="a3P-hb-C7d"/>
-                        <outlet property="imageView" destination="vhO-Kj-8x1" id="hPC-Aw-L8W"/>
-                        <outlet property="medication_name" destination="Ajn-aK-woH" id="lKU-O9-HRO"/>
-                        <outlet property="take_photo_btn" destination="fpa-6x-Fj3" id="ecV-NX-NAK"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0WY-mA-jGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2751.5" y="-138.5"/>
         </scene>
-        <!--New Med Table Form-->
-        <scene sceneID="9wf-Ki-ezm">
+        <!--New Med Form View Controller-->
+        <scene sceneID="VJn-Jv-0Ni">
             <objects>
-                <tableViewController storyboardIdentifier="NewMedTableForm" id="8wY-k9-Yfl" customClass="NewMedTableForm" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="2v7-pr-wc1">
+                <viewController storyboardIdentifier="NewMedFormViewController" id="cBc-tx-dD4" customClass="NewMedFormViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Xo-RO-1XR"/>
+                        <viewControllerLayoutGuide type="bottom" id="2pE-CV-Dmf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MBF-By-IzA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rl2-a7-6Ch">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="767"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y0I-mb-jG3">
+                                        <rect key="frame" x="17" y="27" width="340" height="127"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Medication Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qVP-Jc-rF5">
+                                                <rect key="frame" x="43" y="27" width="255" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dosage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1SW-KS-Nan">
+                                                <rect key="frame" x="43" y="77" width="255" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wfw-KH-KjH">
+                                        <rect key="frame" x="17" y="204" width="340" height="179"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default-drug-image.png" translatesAutoresizingMaskIntoConstraints="NO" id="6OY-86-bvg">
+                                                <rect key="frame" x="97" y="8" width="147" height="123"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1KK-Fy-kFn">
+                                                <rect key="frame" x="114" y="139" width="113" height="31"/>
+                                                <color key="backgroundColor" red="0.1529411765" green="0.71372549019999998" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <state key="normal" title="Take Photo">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="take_photo_action:" destination="cBc-tx-dD4" eventType="touchUpInside" id="J6I-rL-Vda"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jmz-TW-sAG">
+                                        <rect key="frame" x="17" y="408" width="340" height="168"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Take as needed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Gb-Rw-Hat">
+                                                <rect key="frame" x="74" y="44" width="127" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAB-GH-IgM">
+                                                <rect key="frame" x="74" y="109" width="189" height="38"/>
+                                                <color key="backgroundColor" red="0.1529411765" green="0.71372549019999998" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Set up times">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="setup_times_action:" destination="cBc-tx-dD4" eventType="touchUpInside" id="V58-Th-7cm"/>
+                                                </connections>
+                                            </button>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x7Y-Oa-FIg">
+                                                <rect key="frame" x="214" y="44" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="switcher_value_changed:" destination="cBc-tx-dD4" eventType="valueChanged" id="cM3-7Q-1i7"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rl2-a7-6Ch" firstAttribute="centerX" secondItem="MBF-By-IzA" secondAttribute="centerX" id="NAJ-6s-oco"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="G6Q-cH-8CR">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="t6a-5L-UiT">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qUI-Wa-uJH">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1529411765" green="0.71372549019999998" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="add_action:" destination="cBc-tx-dD4" eventType="touchUpInside" id="Bwy-8f-siz"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="dosage" destination="1SW-KS-Nan" id="xqb-iI-Uk6"/>
+                        <outlet property="imageView" destination="6OY-86-bvg" id="5cg-1B-31k"/>
+                        <outlet property="medication_name" destination="qVP-Jc-rF5" id="8nh-rn-R0Z"/>
+                        <outlet property="scrollView" destination="rl2-a7-6Ch" id="3cM-OJ-XtL"/>
+                        <outlet property="setup_time_btn" destination="LAB-GH-IgM" id="dca-E9-kZO"/>
+                        <outlet property="switcher" destination="x7Y-Oa-FIg" id="rSm-cQ-EL0"/>
+                        <outlet property="take_photo_btn" destination="1KK-Fy-kFn" id="9Ge-NA-yen"/>
+                        <outlet property="view1" destination="y0I-mb-jG3" id="3tY-GS-zl3"/>
+                        <outlet property="view2" destination="Wfw-KH-KjH" id="EVR-Uc-Nl6"/>
+                        <outlet property="view3" destination="jmz-TW-sAG" id="1nb-FZ-ntn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xwZ-7Y-a7B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3654.5" y="-138.5"/>
+        </scene>
+        <!--Pick Times Table-->
+        <scene sceneID="yf6-dK-Haf">
+            <objects>
+                <tableViewController storyboardIdentifier="PickTimesTable" id="HMb-xy-dNK" customClass="PickTimesTable" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Pc-JW-hMs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="90" id="nBe-Dr-BZ9">
-                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="70" id="dsX-Wu-sXP">
+                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nBe-Dr-BZ9" id="Y8G-xh-Ghv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dsX-Wu-sXP" id="BzT-PH-kiR">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="8wY-k9-Yfl" id="nwo-Og-sPj"/>
-                            <outlet property="delegate" destination="8wY-k9-Yfl" id="w8T-eO-VR9"/>
+                            <outlet property="dataSource" destination="HMb-xy-dNK" id="tfW-Th-fTZ"/>
+                            <outlet property="delegate" destination="HMb-xy-dNK" id="dQV-Bx-2uI"/>
                         </connections>
                     </tableView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lT5-ZE-F0D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PZ9-9W-1mc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3222.5" y="-138.5"/>
+            <point key="canvasLocation" x="4078.5" y="-138.5"/>
         </scene>
         <!--Self Alerts View Controller-->
         <scene sceneID="Vpt-W5-uhq">
@@ -1791,6 +1898,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SzX-dE-cQS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="182.5" y="-526.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QYR-3y-EkL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ysv-7Y-2JI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7ge-oG-gX6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cBc-tx-dD4" kind="relationship" relationship="rootViewController" id="Aad-Q0-wxU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oRd-RH-hMe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3181.5" y="-143.5"/>
         </scene>
     </scenes>
     <resources>

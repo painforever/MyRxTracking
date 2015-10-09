@@ -19,7 +19,22 @@
 
 @property (strong, nonatomic) NSString *selected_drug_id;
 @property (strong, nonatomic) NSString *drug_image_file_name;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
+
+
+@property (weak, nonatomic) IBOutlet UIView *view1;
+@property (weak, nonatomic) IBOutlet UIView *view2;
+@property (weak, nonatomic) IBOutlet UIView *view3;
+
+
+@property (weak, nonatomic) IBOutlet UISwitch *switcher;
+@property (weak, nonatomic) IBOutlet UIButton *setup_time_btn;
+
+
 
 - (IBAction)take_photo_action:(id)sender;
 - (IBAction)add_action:(id)sender;
+- (IBAction)setup_times_action:(id)sender;
+- (IBAction)switcher_value_changed:(id)sender;
 @end

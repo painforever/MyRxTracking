@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.menuItems = @[@"1", @"2", @"3", @"4", @"5", @"6", @"7"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,35 +31,55 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"cell1";
+    NSString *CellIdentifier = self.menuItems[indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    if (indexPath.row == 0){
-        [self addTextFieldToCell:@"Medication Name" withCGRect:CGRectMake((cell.frame.size.width-250)/2, (cell.frame.size.height-40)/2, 250, 40) withTag:indexPath.row withUITextfield: self.medication_name withCell:cell];
-    }
     
-    if (indexPath.row == 1){
-        [self addTextFieldToCell:@"Dosage" withCGRect:CGRectMake((cell.frame.size.width-250)/2, (cell.frame.size.height-40)/2, 250, 40) withTag:indexPath.row withUITextfield: self.dosage withCell:cell];
-    }
-    
-    if (indexPath.row == 2){
-        
-    }
-    
-    if (indexPath.row == 3){
-        [self addButtonToCell:@"Take Photo" withCGRect:CGRectMake((cell.frame.size.width-250)/2, (cell.frame.size.height-40)/2, 250, 40) withTag:indexPath.row withButton:self.take_photo_btn withCell:cell];
-    }
-    self.medication_name.delegate = self;
-    self.dosage.delegate = self;
-    self.frequency.delegate = self;
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//    
+//    if (indexPath.row == 0){
+//        [self addTextFieldToCell:@"Medication Name" withCGRect:CGRectMake((cell.frame.size.width-250)/2, (cell.frame.size.height-40)/2, 250, 40) withTag:indexPath.row withUITextfield: self.medication_name withCell:cell];
+//    }
+//    
+//    if (indexPath.row == 1){
+//        [self addTextFieldToCell:@"Dosage" withCGRect:CGRectMake((cell.frame.size.width-250)/2, (cell.frame.size.height-40)/2, 250, 40) withTag:indexPath.row withUITextfield: self.dosage withCell:cell];
+//    }
+//    
+//    if (indexPath.row == 2){
+//        //drug photo....
+//        self.drug_photo = [[UIImageView alloc] initWithFrame:CGRectMake((cell.frame.size.width-250)/2, (cell.frame.size.height-40)/2, 250, 250)];
+//        self.drug_photo.image = [UIImage imageNamed:@"default-drug-image.png"];
+//        [cell addSubview: self.drug_photo];
+//    }
+//    
+//    if (indexPath.row == 3){
+//        [self addButtonToCell:@"Take Photo" withCGRect:CGRectMake((cell.frame.size.width-250)/2, (cell.frame.size.height-40)/2, 250, 40) withTag:indexPath.row withButton:self.take_photo_btn withCell:cell];
+//    }
+//    if (indexPath.row == 4) {
+//        self.switcher = [[UISwitch alloc] initWithFrame:CGRectMake(cell.frame.size.width-100, (cell.frame.size.height-30)/2, 100, 30)];
+//        [self.switcher addTarget:self action:@selector(flip:) forControlEvents:UIControlEventValueChanged];
+//        [cell addSubview: self.switcher];
+//        cell.textLabel.text = @"Take as needed";
+//    }
+//    if (indexPath.row == 5) {
+//        [self addTextFieldToCell:@"Frequency" withCGRect:CGRectMake((cell.frame.size.width-250)/2, (cell.frame.size.height-40)/2, 250, 40) withTag:indexPath.row withUITextfield:self.frequency withCell:cell];
+//        self.frequencyCell = cell;
+//    }
+//    if (indexPath.row == 6) {
+//        cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+//        self.setupTimeCell = cell;
+//        [self toggleSetupTimes];
+//    }
+//    self.medication_name.delegate = self;
+//    self.dosage.delegate = self;
+//    self.frequency.delegate = self;
     return cell;
 }
 
@@ -76,6 +97,8 @@
     field.autocorrectionType = UITextAutocorrectionTypeNo;
     [field setClearButtonMode:UITextFieldViewModeWhileEditing];
     field.tag = tag;
+    field.text = @"";
+    field.delegate = self;
     [cell addSubview: field];
 }
 
@@ -90,52 +113,52 @@
     [cell addSubview: btn];
 }
 
+-(void)toggleSetupTimes{
+    NSArray *controls = @[self.setupTimeCell, self.frequencyCell];
+    if (self.switcher.on){
+        self.setupTimeCell.textLabel.text = @"Not available";
+        for (UITableViewCell *cell in controls) {
+            cell.userInteractionEnabled = NO;
+            cell.textLabel.enabled = NO;
+            cell.accessoryType = UITableViewCellSelectionStyleNone;
+        }
+    }
+    else {
+        self.setupTimeCell.textLabel.text = @"Go and set up times ->";
+        self.setupTimeCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        for (UITableViewCell *cell in controls) {
+            cell.textLabel.enabled = YES;
+            cell.userInteractionEnabled = YES;
+        }
+    }
+}
+
 -(IBAction)buttonClicked:(id)sender{
     NSLog(@"sdsdsdsdsdsds");
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+-(IBAction)flip:(id)sender{
+    UISwitch *switcher = (UISwitch *)sender;
+    [self toggleSetupTimes];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 6) {
+        NSLog(@"sasasaasasa %@", self.frequency.text);
+        PickTimesTable *view = [self.storyboard instantiateViewControllerWithIdentifier:@"PickTimesTable"];
+        view.data = [[NSMutableDictionary alloc] init];
+        view.data = @{@"fre": self.frequency.text};
+        [self.navigationController pushViewController:view animated:YES];
+    }
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    NSLog(@"hjdgsdsh %@", self.frequency.text);
+    if ([textField isEqual: self.frequency]) {
+        NSLog(@"hjdgsdsh %@", self.frequency.text);
+    }
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+- (IBAction)save_action:(id)sender {
 }
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
