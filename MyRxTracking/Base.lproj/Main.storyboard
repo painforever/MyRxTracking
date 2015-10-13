@@ -262,7 +262,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCf-EP-tBe">
                                             <rect key="frame" x="8" y="54" width="125" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7pM-OL-uwm">
@@ -275,7 +275,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSR-YY-kSh">
                                             <rect key="frame" x="8" y="95" width="125" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -333,7 +333,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drug Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVg-go-ABF">
                                             <rect key="frame" x="37" y="8" width="301" height="38.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -349,7 +349,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rx id" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skr-sQ-nzb">
                                             <rect key="frame" x="47" y="7" width="280" height="40.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -365,7 +365,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dosage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwh-bb-wKt">
                                             <rect key="frame" x="40" y="8" width="295" height="40.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -381,7 +381,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="days of treatment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hg-Cf-lHB">
                                             <rect key="frame" x="56" y="6" width="262" height="47"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -397,7 +397,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="times per day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3h-Qq-XAM">
                                             <rect key="frame" x="59" y="10" width="256" height="37.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -540,7 +540,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SSN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8b-FL-cO0">
                                                 <rect key="frame" x="13" y="24" width="107" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="insurance plan name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqF-bD-CmD">
@@ -1043,59 +1043,6 @@
             <point key="canvasLocation" x="2300.5" y="-143.5"/>
         </scene>
         <!--New Med Form View Controller-->
-        <scene sceneID="dZX-wW-Kje">
-            <objects>
-                <viewController id="XMr-z5-JFA" customClass="NewMedFormViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="P6M-v3-1bV"/>
-                        <viewControllerLayoutGuide type="bottom" id="cr0-up-hlT"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="pQO-vg-yxt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="drug_list_photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ESm-Yt-lwJ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Medication name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ajn-aK-woH">
-                                <rect key="frame" x="80" y="67" width="215" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dosage" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FVV-1E-dl7">
-                                <rect key="frame" x="80" y="113" width="215" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpa-6x-Fj3">
-                                <rect key="frame" x="80" y="162" width="215" height="30"/>
-                                <color key="backgroundColor" red="0.15169835400000001" green="0.71221715490000004" blue="0.83854166669999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Take photo">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default-drug-image.png" translatesAutoresizingMaskIntoConstraints="NO" id="vhO-Kj-8x1">
-                                <rect key="frame" x="80" y="207" width="215" height="159"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvK-mw-kfl">
-                                <rect key="frame" x="80" y="379" width="215" height="40"/>
-                                <color key="backgroundColor" red="0.15169835400000001" green="0.71221715490000004" blue="0.83854166669999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Add">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.75948326529999999" green="1" blue="0.73417204150000004" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0WY-mA-jGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2751.5" y="-138.5"/>
-        </scene>
-        <!--New Med Form View Controller-->
         <scene sceneID="VJn-Jv-0Ni">
             <objects>
                 <viewController storyboardIdentifier="NewMedFormViewController" id="cBc-tx-dD4" customClass="NewMedFormViewController" sceneMemberID="viewController">
@@ -1124,42 +1071,42 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.75948326529999999" green="1" blue="0.73417204150000004" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wfw-KH-KjH">
-                                        <rect key="frame" x="17" y="204" width="340" height="179"/>
+                                        <rect key="frame" x="17" y="162" width="340" height="179"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default-drug-image.png" translatesAutoresizingMaskIntoConstraints="NO" id="6OY-86-bvg">
                                                 <rect key="frame" x="97" y="8" width="147" height="123"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1KK-Fy-kFn">
                                                 <rect key="frame" x="114" y="139" width="113" height="31"/>
-                                                <color key="backgroundColor" red="0.1529411765" green="0.71372549019999998" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.15169835400000001" green="0.71221715490000004" blue="0.83854166669999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="Take Photo">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="take_photo_action:" destination="cBc-tx-dD4" eventType="touchUpInside" id="J6I-rL-Vda"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.75948326529999999" green="1" blue="0.73417204150000004" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jmz-TW-sAG">
-                                        <rect key="frame" x="17" y="408" width="340" height="168"/>
+                                        <rect key="frame" x="17" y="349" width="340" height="232"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Take as needed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Gb-Rw-Hat">
                                                 <rect key="frame" x="74" y="44" width="127" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAB-GH-IgM">
-                                                <rect key="frame" x="74" y="109" width="189" height="38"/>
-                                                <color key="backgroundColor" red="0.1529411765" green="0.71372549019999998" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="74" y="186" width="189" height="38"/>
+                                                <color key="backgroundColor" red="0.15169835400000001" green="0.71221715490000004" blue="0.83854166669999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Set up times">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="setup_times_action:" destination="cBc-tx-dD4" eventType="touchUpInside" id="V58-Th-7cm"/>
@@ -1171,13 +1118,23 @@
                                                     <action selector="switcher_value_changed:" destination="cBc-tx-dD4" eventType="valueChanged" id="cM3-7Q-1i7"/>
                                                 </connections>
                                             </switch>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="frequency" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jem-OK-Pi8">
+                                                <rect key="frame" x="74" y="91" width="189" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="repeat(days)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kIZ-2T-PR8">
+                                                <rect key="frame" x="74" y="136" width="189" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.75948326529999999" green="1" blue="0.73417204150000004" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.15169835400000001" green="0.71221715490000004" blue="0.83854166669999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="rl2-a7-6Ch" firstAttribute="centerX" secondItem="MBF-By-IzA" secondAttribute="centerX" id="NAJ-6s-oco"/>
                         </constraints>
@@ -1200,8 +1157,10 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="dosage" destination="1SW-KS-Nan" id="xqb-iI-Uk6"/>
+                        <outlet property="frequency" destination="Jem-OK-Pi8" id="0Rt-jP-tF0"/>
                         <outlet property="imageView" destination="6OY-86-bvg" id="5cg-1B-31k"/>
                         <outlet property="medication_name" destination="qVP-Jc-rF5" id="8nh-rn-R0Z"/>
+                        <outlet property="repeat" destination="kIZ-2T-PR8" id="5GV-9h-4fw"/>
                         <outlet property="scrollView" destination="rl2-a7-6Ch" id="3cM-OJ-XtL"/>
                         <outlet property="setup_time_btn" destination="LAB-GH-IgM" id="dca-E9-kZO"/>
                         <outlet property="switcher" destination="x7Y-Oa-FIg" id="rSm-cQ-EL0"/>
@@ -1213,36 +1172,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xwZ-7Y-a7B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3654.5" y="-138.5"/>
+            <point key="canvasLocation" x="3274.5" y="-138.5"/>
         </scene>
-        <!--Pick Times Table-->
-        <scene sceneID="yf6-dK-Haf">
+        <!--Picker Times View Controller-->
+        <scene sceneID="Cps-cQ-ErG">
             <objects>
-                <tableViewController storyboardIdentifier="PickTimesTable" id="HMb-xy-dNK" customClass="PickTimesTable" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Pc-JW-hMs">
+                <viewController storyboardIdentifier="PickerTimesViewController" id="qPe-nJ-mRj" customClass="PickerTimesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ojv-6x-KSU"/>
+                        <viewControllerLayoutGuide type="bottom" id="fGB-Ke-YpF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oWv-NY-unF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="70" id="dsX-Wu-sXP">
-                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dsX-Wu-sXP" id="BzT-PH-kiR">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="HMb-xy-dNK" id="tfW-Th-fTZ"/>
-                            <outlet property="delegate" destination="HMb-xy-dNK" id="dQV-Bx-2uI"/>
-                        </connections>
-                    </tableView>
+                        <color key="backgroundColor" red="0.15169835400000001" green="0.71221715490000004" blue="0.83854166669999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PZ9-9W-1mc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kwz-dL-ba5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4078.5" y="-138.5"/>
+            <point key="canvasLocation" x="3744.5" y="-143.5"/>
         </scene>
         <!--Self Alerts View Controller-->
         <scene sceneID="Vpt-W5-uhq">
@@ -1276,13 +1225,13 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="drug name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Stn-ND-cAy">
                                                     <rect key="frame" x="24" y="82" width="148" height="23.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                    <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="st5-MN-fbt">
                                                     <rect key="frame" x="213" y="67" width="154" height="26"/>
                                                     <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                    <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1409,7 +1358,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28R-Fe-aFQ">
                                                     <rect key="frame" x="42" y="52" width="144" height="25"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                    <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ono-Mf-AqI">
@@ -1916,7 +1865,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oRd-RH-hMe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3181.5" y="-143.5"/>
+            <point key="canvasLocation" x="2794.5" y="-143.5"/>
         </scene>
     </scenes>
     <resources>

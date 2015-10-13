@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UIViewController+SharedUIMethods.h"
+#import "PickerTimesViewController.h"
 #import "UIViewController+CameraMethods.h"
 
 @interface NewMedFormViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
@@ -30,6 +31,11 @@
 
 @property (weak, nonatomic) IBOutlet UISwitch *switcher;
 @property (weak, nonatomic) IBOutlet UIButton *setup_time_btn;
+@property (weak, nonatomic) IBOutlet UITextField *frequency;
+@property (weak, nonatomic) IBOutlet UITextField *repeat;
+@property (strong, nonatomic) NSArray *controls;
+@property (strong, nonatomic) NSMutableArray *scheduledNotificationTimes;
+@property (strong, nonatomic) PickerTimesViewController *pickerTimeView;
 
 
 

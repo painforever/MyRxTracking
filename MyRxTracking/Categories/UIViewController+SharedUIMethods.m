@@ -96,7 +96,7 @@
         for (NSDictionary *item in arr) {
             if (![item[@"time_of_day"] isEqual: [NSNull null]]) {
                 [self scheduleReminders: item[@"days_of_treatment"] withTimes: [item[@"time_of_day"] componentsSeparatedByString:@","] withDrugName: item[@"drug_name"]];
-                //NSLog(@"Yue Le");
+                NSLog(@"Yue Le");
             }
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *responseObject) {
@@ -187,6 +187,21 @@
     for (UIView *view in views) {
         [self setOneViewCenterAlign:view withParentView: parentView];
     }
+}
+
+-(NSArray *)getUITextfieldTextInArray:(NSMutableArray *)textFields{
+    return Underscore.array(textFields).map(^NSString *(UITextField *field){
+        return field.text;
+    }).unwrap;
+}
+
+-(UIView *)getUIViewByTagFromArray:(int)tag withArray:(NSMutableArray *)array{
+    for (UIView *obj in array) {
+        if (obj.tag == tag) {
+            return obj;
+        }
+    }
+    return nil;
 }
 
 -(void)getSelf{

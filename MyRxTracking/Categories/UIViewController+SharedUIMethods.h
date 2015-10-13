@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AFNetwork.h"
 #import "Constants.h"
+#import "Manifest.h"
 
 @interface UIViewController (SharedUIMethods) <SRWebSocketDelegate>
 
@@ -46,6 +47,10 @@
 -(void)setOneViewCenterAlign: (UIView *)view withParentView: (UIView *)parentView;
 
 -(void)setAllViewCenterAlign: (NSArray *)views withParentView: (UIView *)parentView;
+
+-(NSArray *)getUITextfieldTextInArray: (NSMutableArray *)textFields;
+
+-(UIView *)getUIViewByTagFromArray: (int)tag withArray: (NSMutableArray *)array;
 
 -(void)getSelf;
 @end

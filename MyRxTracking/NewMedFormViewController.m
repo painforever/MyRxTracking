@@ -14,6 +14,7 @@
 @implementation NewMedFormViewController
 -(void)viewDidLoad{
     [super viewDidLoad];
+    self.controls = @[self.frequency, self.repeat, self.setup_time_btn];
     self.title = @"New Medication";
     self.drug_image_file_name = @"";
     self.cameraView = [[UIImagePickerController alloc] init];
@@ -25,6 +26,15 @@
     //[self setScrollViewSiseForAllKindsOfDevices: self.scrollView withView: self.view3];
     self.scrollView.contentSize = CGSizeMake(375, self.view3.frame.origin.y+50);
 }
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    if ([self.pickerTimeView.timeControls count] > 0) {
+        self.scheduledNotificationTimes = [self getUITextfieldTextInArray:self.pickerTimeView.timeControls];
+        NSLog(@"the times are : %@", [self.scheduledNotificationTimes description]);
+    }
+}
+
 - (IBAction)take_photo_action:(id)sender {
     if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]){
         [self presentViewController:self.cameraView animated:YES completion:NULL];
@@ -32,6 +42,16 @@
 }
 
 - (IBAction)add_action:(id)sender {
+    if (!self.switcher.on) {
+        if (![self checkFrequencyAndRepeat])
+            return;
+    }
+    if (!self.switcher.on) {
+        if ([self findEmptyStringInArray:self.scheduledNotificationTimes]) {
+            [self showAlert:@"Schedule time includes empty time." withMessage:@"There are at least 1 time is empty, please click 'set up times' button and schedule reminder times."];
+        }
+        return;
+    }
     NSArray *inputs = @[self.medication_name, self.dosage];
     NSString *alert = [[NSString alloc] init];
     for (UITextField *input in inputs) {
@@ -70,15 +90,24 @@
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {}];
         }
         [self showAlert:@"Drug added" withMessage:@"Drug added!"];
+        
+        //schedule the notifications
+        [self scheduleReminders:self.repeat.text withTimes:self.scheduledNotificationTimes withDrugName:self.medication_name.text];
     } failure:^(AFHTTPRequestOperation *operation, NSError *responseObject) {
         NSLog(@"failed");
     }];
 }
 
 - (IBAction)setup_times_action:(id)sender {
+    if (![self checkFrequencyAndRepeat])
+        return;
+    self.pickerTimeView = [self.storyboard instantiateViewControllerWithIdentifier:@"PickerTimesViewController"];
+    self.pickerTimeView.frequency = [self.frequency.text integerValue];
+    [self.navigationController pushViewController:self.pickerTimeView animated:YES];
 }
 
 - (IBAction)switcher_value_changed:(id)sender {
+    [self disableControls];
 }
 
 #pragma UITetxfield stuffs
@@ -112,5 +141,38 @@
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [picker dismissViewControllerAnimated:YES completion:NULL];
+}
+
+-(void)disableControls{
+    if (self.switcher.on) {
+        for (UIView *control in self.controls) {
+            control.userInteractionEnabled = NO;
+            control.alpha = 0.4;
+        }
+    }
+    else{
+        for (UIView *control in self.controls) {
+            control.userInteractionEnabled = YES;
+            control.alpha = 1.0;
+        }
+    }
+}
+
+-(BOOL)checkFrequencyAndRepeat{
+    for (UITextField *obj in @[self.frequency, self.repeat]) {
+        if (![JSONHandler isNnumber: obj.text]) {
+            [self showAlert:@"Digit required." withMessage:[NSString stringWithFormat:@"%@ must be number!", obj.placeholder]];
+            return NO;
+        }
+    }
+    return YES;
+}
+
+-(BOOL)findEmptyStringInArray: (NSMutableArray *)array{
+    for (NSString *str in array) {
+        if ([str length] == 0 || str == nil)
+            return YES;
+    }
+    return NO;
 }
 @end
