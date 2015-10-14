@@ -55,7 +55,7 @@
 -(void)updateTextField: (id)sender{
     UIDatePicker *picker = (UIDatePicker *)sender;
     UITextField *field = [self getUIViewByTagFromArray:picker.tag withArray: self.timeControls];
-    NSLog(@"tag is %d", field.tag);
-    [field setText: [[NSString stringWithFormat:@"%@", picker.date] substringFromIndex:11]];
+    NSString *final_time = [[[NSString stringWithFormat:@"%@", picker.date] substringFromIndex:11] substringToIndex:8];
+    [field setText: final_time];
 }
 @end

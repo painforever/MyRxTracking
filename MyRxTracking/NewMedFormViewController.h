@@ -10,6 +10,8 @@
 #import "UIViewController+SharedUIMethods.h"
 #import "PickerTimesViewController.h"
 #import "UIViewController+CameraMethods.h"
+#import "UIViewController+CWPopup.h"
+#import "CouponViewController.h"
 
 @interface NewMedFormViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *medication_name;
@@ -36,6 +38,7 @@
 @property (strong, nonatomic) NSArray *controls;
 @property (strong, nonatomic) NSMutableArray *scheduledNotificationTimes;
 @property (strong, nonatomic) PickerTimesViewController *pickerTimeView;
+- (IBAction)coupon_action:(id)sender;
 
 
 

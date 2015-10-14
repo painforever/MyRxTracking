@@ -52,6 +52,7 @@
     stringFromDate=[[stringFromDate stringByAppendingString:@" "] stringByAppendingString: time];
     [formater setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     NSDate *date=[formater dateFromString:stringFromDate];
+    NSLog(@"date: %@", date);
     return date;
 }
 

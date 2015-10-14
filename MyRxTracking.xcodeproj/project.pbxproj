@@ -14,6 +14,8 @@
 		CF36E15A1BBB33D2000FB0EF /* profile_wall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF36E1591BBB33D2000FB0EF /* profile_wall.jpg */; settings = {ASSET_TAGS = (); }; };
 		CF36E15C1BBB36B3000FB0EF /* name_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF36E15B1BBB36B3000FB0EF /* name_background.jpg */; settings = {ASSET_TAGS = (); }; };
 		CF3A7CA91BCD61880009D7FA /* PickerTimesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3A7CA81BCD61880009D7FA /* PickerTimesViewController.m */; settings = {ASSET_TAGS = (); }; };
+		CF43C17D1BCED03800E5B479 /* CouponViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF43C17C1BCED03800E5B479 /* CouponViewController.m */; settings = {ASSET_TAGS = (); }; };
+		CF43C17F1BCED1EF00E5B479 /* eagleforce_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CF43C17E1BCED1EF00E5B479 /* eagleforce_logo.png */; settings = {ASSET_TAGS = (); }; };
 		CF4B80BF1BA32AC1004C250E /* female_default_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4B80BD1BA32AC1004C250E /* female_default_avatar.png */; };
 		CF4B80C01BA32AC1004C250E /* male_default_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4B80BE1BA32AC1004C250E /* male_default_avatar.png */; };
 		CF4B80C41BA35AD6004C250E /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4B80C31BA35AD6004C250E /* EditProfileViewController.m */; };
@@ -72,6 +74,10 @@
 		CFD657D51BB981150085160C /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD657D31BB981150085160C /* envelope.png */; settings = {ASSET_TAGS = (); }; };
 		CFD657D81BB9CDAD0085160C /* AdverseEventFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD657D71BB9CDAD0085160C /* AdverseEventFormViewController.m */; settings = {ASSET_TAGS = (); }; };
 		CFE598D71BBC1F4C00AE87C5 /* login.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFE598D61BBC1F4C00AE87C5 /* login.jpg */; settings = {ASSET_TAGS = (); }; };
+		CFEF60CF1BCEE0EE0071045E /* coupon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFEF60CE1BCEE0EE0071045E /* coupon.jpg */; settings = {ASSET_TAGS = (); }; };
+		CFEF60D21BCEE1D40071045E /* CouponsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEF60D11BCEE1D40071045E /* CouponsTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		CFEF60D51BCEE22D0071045E /* Coupon.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEF60D41BCEE22D0071045E /* Coupon.m */; settings = {ASSET_TAGS = (); }; };
+		CFEF60D81BCEE2730071045E /* CouponCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEF60D71BCEE2730071045E /* CouponCell.m */; settings = {ASSET_TAGS = (); }; };
 		F220824BA3D047BEBFBB2A4D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6928CCCCCB01ACA7FD60C5F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +104,9 @@
 		CF36E15B1BBB36B3000FB0EF /* name_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = name_background.jpg; path = Images/name_background.jpg; sourceTree = SOURCE_ROOT; };
 		CF3A7CA71BCD61880009D7FA /* PickerTimesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerTimesViewController.h; sourceTree = "<group>"; };
 		CF3A7CA81BCD61880009D7FA /* PickerTimesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerTimesViewController.m; sourceTree = "<group>"; };
+		CF43C17B1BCED03800E5B479 /* CouponViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouponViewController.h; sourceTree = "<group>"; };
+		CF43C17C1BCED03800E5B479 /* CouponViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CouponViewController.m; sourceTree = "<group>"; };
+		CF43C17E1BCED1EF00E5B479 /* eagleforce_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eagleforce_logo.png; path = Images/eagleforce_logo.png; sourceTree = SOURCE_ROOT; };
 		CF4B80BD1BA32AC1004C250E /* female_default_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = female_default_avatar.png; path = Images/female_default_avatar.png; sourceTree = SOURCE_ROOT; };
 		CF4B80BE1BA32AC1004C250E /* male_default_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = male_default_avatar.png; path = Images/male_default_avatar.png; sourceTree = SOURCE_ROOT; };
 		CF4B80C21BA35AD6004C250E /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
@@ -198,6 +207,13 @@
 		CFD657D61BB9CDAD0085160C /* AdverseEventFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdverseEventFormViewController.h; sourceTree = "<group>"; };
 		CFD657D71BB9CDAD0085160C /* AdverseEventFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdverseEventFormViewController.m; sourceTree = "<group>"; };
 		CFE598D61BBC1F4C00AE87C5 /* login.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = login.jpg; path = Images/login.jpg; sourceTree = SOURCE_ROOT; };
+		CFEF60CE1BCEE0EE0071045E /* coupon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = coupon.jpg; path = Images/coupon.jpg; sourceTree = SOURCE_ROOT; };
+		CFEF60D01BCEE1D40071045E /* CouponsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouponsTableViewController.h; sourceTree = "<group>"; };
+		CFEF60D11BCEE1D40071045E /* CouponsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CouponsTableViewController.m; sourceTree = "<group>"; };
+		CFEF60D31BCEE22D0071045E /* Coupon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coupon.h; sourceTree = "<group>"; };
+		CFEF60D41BCEE22D0071045E /* Coupon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coupon.m; sourceTree = "<group>"; };
+		CFEF60D61BCEE2730071045E /* CouponCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouponCell.h; sourceTree = "<group>"; };
+		CFEF60D71BCEE2730071045E /* CouponCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CouponCell.m; sourceTree = "<group>"; };
 		D6928CCCCCB01ACA7FD60C5F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -290,6 +306,8 @@
 				CFBB27D11B973E110034545C /* PatientProviderAssignment.m */,
 				CF57575B1BA0C09200869C44 /* Drug.h */,
 				CF57575C1BA0C09200869C44 /* Drug.m */,
+				CFEF60D31BCEE22D0071045E /* Coupon.h */,
+				CFEF60D41BCEE22D0071045E /* Coupon.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -339,6 +357,8 @@
 				CFB8005D1BC8415400593B4B /* PickTimesTable.m */,
 				CF3A7CA71BCD61880009D7FA /* PickerTimesViewController.h */,
 				CF3A7CA81BCD61880009D7FA /* PickerTimesViewController.m */,
+				CF43C17B1BCED03800E5B479 /* CouponViewController.h */,
+				CF43C17C1BCED03800E5B479 /* CouponViewController.m */,
 			);
 			name = Medications;
 			sourceTree = "<group>";
@@ -461,6 +481,8 @@
 				CF8397A41B8E49690014EF19 /* MyDoctorsViewController.m */,
 				CF532A031BA2274800627BC3 /* SettingsViewController.h */,
 				CF532A041BA2274800627BC3 /* SettingsViewController.m */,
+				CFEF60D01BCEE1D40071045E /* CouponsTableViewController.h */,
+				CFEF60D11BCEE1D40071045E /* CouponsTableViewController.m */,
 			);
 			name = SideMenuBar;
 			sourceTree = "<group>";
@@ -468,6 +490,8 @@
 		CFA165881B8BBCA200507D11 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CFEF60CE1BCEE0EE0071045E /* coupon.jpg */,
+				CF43C17E1BCED1EF00E5B479 /* eagleforce_logo.png */,
 				CFE598D61BBC1F4C00AE87C5 /* login.jpg */,
 				CF36E15B1BBB36B3000FB0EF /* name_background.jpg */,
 				CF36E1591BBB33D2000FB0EF /* profile_wall.jpg */,
@@ -503,6 +527,8 @@
 				CF5757591BA0BFF600869C44 /* DrugCell.m */,
 				CF5329FD1BA1D9CF00627BC3 /* RxHistoryCell.h */,
 				CF5329FE1BA1D9CF00627BC3 /* RxHistoryCell.m */,
+				CFEF60D61BCEE2730071045E /* CouponCell.h */,
+				CFEF60D71BCEE2730071045E /* CouponCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -605,11 +631,13 @@
 				CF36E15A1BBB33D2000FB0EF /* profile_wall.jpg in Resources */,
 				CF8397AF1B8E4C1C0014EF19 /* logout.png in Resources */,
 				CF36E15C1BBB36B3000FB0EF /* name_background.jpg in Resources */,
+				CF43C17F1BCED1EF00E5B479 /* eagleforce_logo.png in Resources */,
 				CFD657D41BB981150085160C /* account.png in Resources */,
 				CF5329FC1BA1CE3500627BC3 /* default-drug-image.png in Resources */,
 				CFE598D71BBC1F4C00AE87C5 /* login.jpg in Resources */,
 				CF36E1581BBB2DD6000FB0EF /* drug_list_photo.jpg in Resources */,
 				CF8397AE1B8E4C1C0014EF19 /* doctors.jpeg in Resources */,
+				CFEF60CF1BCEE0EE0071045E /* coupon.jpg in Resources */,
 				CF8397B01B8E4C1C0014EF19 /* medications.jpg in Resources */,
 				CFA165601B8BB16100507D11 /* Images.xcassets in Resources */,
 			);
@@ -663,9 +691,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFC8FFD81BB44F4700EBAD59 /* RxDetailsTableViewController.m in Sources */,
+				CFEF60D21BCEE1D40071045E /* CouponsTableViewController.m in Sources */,
 				CF72107C1B8F5C4A0042CB54 /* Get.m in Sources */,
 				CF72106D1B8F59F10042CB54 /* User.m in Sources */,
 				CFA165581B8BB16100507D11 /* AppDelegate.m in Sources */,
+				CFEF60D81BCEE2730071045E /* CouponCell.m in Sources */,
 				CF532A051BA2274800627BC3 /* SettingsViewController.m in Sources */,
 				CF6607831BA8602D0008D9D5 /* UIViewController+CameraMethods.m in Sources */,
 				CFA9A0EB1BA9C751008D2F28 /* File.m in Sources */,
@@ -685,6 +715,7 @@
 				CFC259591B94E2BE00328D8B /* AFNetwork.m in Sources */,
 				CFA165871B8BB75D00507D11 /* ProfileViewController.m in Sources */,
 				CFA9A0F71BAA0996008D2F28 /* InternetConnection.m in Sources */,
+				CF43C17D1BCED03800E5B479 /* CouponViewController.m in Sources */,
 				CF01D7E71BC6FCB70008F600 /* NewMedTableForm.m in Sources */,
 				CFBB27D21B973E110034545C /* PatientProviderAssignment.m in Sources */,
 				CF8397BB1B8E51870014EF19 /* NewMedFormViewController.m in Sources */,
@@ -702,6 +733,7 @@
 				CFA165801B8BB34700507D11 /* LoginViewController.m in Sources */,
 				CF7210731B8F5B570042CB54 /* Manifest.m in Sources */,
 				CF3A7CA91BCD61880009D7FA /* PickerTimesViewController.m in Sources */,
+				CFEF60D51BCEE22D0071045E /* Coupon.m in Sources */,
 				CFBB27CF1B972CC50034545C /* Reminder.m in Sources */,
 				CF57575D1BA0C09200869C44 /* Drug.m in Sources */,
 			);

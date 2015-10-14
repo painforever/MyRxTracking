@@ -11,7 +11,7 @@
 @implementation SideBarMenuController
 -(void)viewDidLoad{
     [super viewDidLoad];
-    self.menuItems = @[@"logo", @"profile", @"medications", @"alerts", @"my_doctors", @"rx_history", @"settings", @"logout"];
+    self.menuItems = @[@"logo", @"profile", @"medications", @"alerts", @"my_doctors", @"rx_history", @"coupons", @"settings", @"logout"];
 }
 #pragma mark - Table view data source
 
@@ -39,7 +39,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //logout
-    if (indexPath.row == 7) {
+    if (indexPath.row == 8) {
         userDefaults = nil;
         [File deleteFileByName: REMEMBERED_EMAIL_FILENAME];
         [File deleteFileByName:REMEMBERED_PASS_FILENAME];

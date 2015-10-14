@@ -35,6 +35,13 @@
     }
 }
 
+- (IBAction)coupon_action:(id)sender {
+    CouponViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"CouponViewController"];
+    view.view.frame = CGRectMake(0, 0, self.view.frame.size.width-50, self.view.frame.size.height-400);
+    
+    [self presentPopupViewController:view animated:YES completion:nil];
+}
+
 - (IBAction)take_photo_action:(id)sender {
     if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]){
         [self presentViewController:self.cameraView animated:YES completion:NULL];
@@ -42,16 +49,6 @@
 }
 
 - (IBAction)add_action:(id)sender {
-    if (!self.switcher.on) {
-        if (![self checkFrequencyAndRepeat])
-            return;
-    }
-    if (!self.switcher.on) {
-        if ([self findEmptyStringInArray:self.scheduledNotificationTimes]) {
-            [self showAlert:@"Schedule time includes empty time." withMessage:@"There are at least 1 time is empty, please click 'set up times' button and schedule reminder times."];
-        }
-        return;
-    }
     NSArray *inputs = @[self.medication_name, self.dosage];
     NSString *alert = [[NSString alloc] init];
     for (UITextField *input in inputs) {
@@ -71,6 +68,18 @@
         [self showAlert:@"Cannot find this drug" withMessage:@"We are sorry but we cannot find this drug."];
         return;
     }
+    
+    if (!self.switcher.on) {
+        if (![self checkFrequencyAndRepeat])
+            return;
+    }
+    if (!self.switcher.on) {
+        if ([self findEmptyStringInArray:self.scheduledNotificationTimes]) {
+            [self showAlert:@"Schedule time includes empty time." withMessage:@"There are at least 1 time is empty, please click 'set up times' button and schedule reminder times."];
+            return;
+        }
+    }
+    
     self.selected_drug_id = res_dic[@"result"][@"drug_id"];
     [[AFNetwork getAFManager] POST:[SERVER_URL stringByAppendingString:@"medications"] parameters:@{@"prm": @{@"patient_id": [userDefaults valueForKey:@"patient_id"], @"drug_id": self.selected_drug_id , @"dosage": self.dosage.text, @"prescribed_date": [NSDate date]}} success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *res_dic = (NSDictionary *)responseObject;
