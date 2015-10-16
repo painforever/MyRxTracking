@@ -24,7 +24,7 @@
     self.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: @"http://bipolarhappens.com/bhblog/wp-content/uploads/med-question6.gif"]]];
     self.medication_name.delegate = self;
     //[self setScrollViewSiseForAllKindsOfDevices: self.scrollView withView: self.view3];
-    self.scrollView.contentSize = CGSizeMake(375, self.view3.frame.origin.y+50);
+    self.scrollView.contentSize = CGSizeMake(375, self.view.frame.origin.y+50);
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -127,7 +127,7 @@
         [[AFNetwork getAFManager] GET:[SERVER_URL stringByAppendingString:@"medications/async_search_drug"] parameters:@{@"drug": self.medication_name.text} success:^(AFHTTPRequestOperation *operation, id responseObject) {
             NSDictionary *image_dic = (NSDictionary *)responseObject;
             self.drug_image_file_name = image_dic[@"result"];
-            NSLog(@"remote: %@", self.drug_image_file_name);
+            //NSLog(@"remote: %@", self.drug_image_file_name);
             self.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: self.drug_image_file_name]]];
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"failed %@", [operation responseString]);
@@ -173,6 +173,11 @@
             [self showAlert:@"Digit required." withMessage:[NSString stringWithFormat:@"%@ must be number!", obj.placeholder]];
             return NO;
         }
+    }
+    
+    if ([self.frequency.text integerValue] > 7) {
+        [self showAlert:@"Frequency cannot be too big" withMessage:@"Frequency cannot be bigger than 7."];
+        return NO;
     }
     return YES;
 }

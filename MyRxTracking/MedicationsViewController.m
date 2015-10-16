@@ -80,7 +80,7 @@
                    forControlEvents:UIControlEventTouchUpInside];
     }
     
-    NSLog(@"remote: %@", [cell_data description]);
+    //NSLog(@"remote: %@", [cell_data description]);
     if (![cell_data[@"remote_drug_photo_url"] isEqual: [NSNull null]]) {
         cell.drug_image.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: cell_data[@"remote_drug_photo_url"]]]];
     }
