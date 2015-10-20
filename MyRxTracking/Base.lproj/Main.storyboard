@@ -67,6 +67,7 @@
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="plg-Up-8K5">
                                 <rect key="frame" x="45" y="410" width="51" height="31"/>
+                                <color key="onTintColor" red="0.15169835400000001" green="0.71221715490000004" blue="0.83854166669999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="remember_me_value_changed:" destination="vXZ-lx-hvc" eventType="valueChanged" id="jYS-Ke-4DT"/>
                                 </connections>
@@ -98,6 +99,20 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_title.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zup-2P-0ac">
                                 <rect key="frame" x="20" y="85" width="335" height="120"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwj-Id-cYL">
+                                <rect key="frame" x="236" y="390" width="93" height="29.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="A3K-oC-uPL"/>
+                                    <constraint firstAttribute="height" constant="29.5" id="ztk-fK-ZbF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="forget password?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="forget_password_action:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="veh-34-F40"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.75948326529999999" green="1" blue="0.73417204150000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -107,6 +122,8 @@
                             <constraint firstItem="XoD-Ye-BZD" firstAttribute="leading" secondItem="9aa-dR-ehG" secondAttribute="leading" id="IKk-JZ-oA4"/>
                             <constraint firstItem="XoD-Ye-BZD" firstAttribute="leading" secondItem="Nt9-uK-ohd" secondAttribute="leading" id="L2j-Uu-mvm"/>
                             <constraint firstItem="plg-Up-8K5" firstAttribute="top" secondItem="XoD-Ye-BZD" secondAttribute="bottom" constant="98" id="RNR-ah-FyR"/>
+                            <constraint firstItem="Kwj-Id-cYL" firstAttribute="top" secondItem="XoD-Ye-BZD" secondAttribute="bottom" constant="78" id="Rfg-Xi-tbT"/>
+                            <constraint firstItem="XoD-Ye-BZD" firstAttribute="trailing" secondItem="Kwj-Id-cYL" secondAttribute="trailing" id="aZN-UG-1zq"/>
                             <constraint firstItem="XoD-Ye-BZD" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="242" id="bFR-oR-kKT"/>
                             <constraint firstItem="9aa-dR-ehG" firstAttribute="top" secondItem="XoD-Ye-BZD" secondAttribute="bottom" constant="26" id="bzC-WO-Tfg"/>
                             <constraint firstItem="XoD-Ye-BZD" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="oPh-tF-TsU"/>
@@ -118,6 +135,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="email" destination="XoD-Ye-BZD" id="axw-eR-uvF"/>
+                        <outlet property="forget_password_btn" destination="Kwj-Id-cYL" id="FDy-9o-SNO"/>
                         <outlet property="login_btn" destination="Nt9-uK-ohd" id="xyK-AB-va9"/>
                         <outlet property="password" destination="9aa-dR-ehG" id="CcN-Ic-oFC"/>
                         <outlet property="remember_me" destination="plg-Up-8K5" id="gcr-KW-thm"/>
@@ -807,7 +825,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7FD-02-Jxd">
                                             <rect key="frame" x="35" y="102" width="157" height="38"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>

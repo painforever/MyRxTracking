@@ -15,6 +15,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self styleLoginControls];
+    //[self setUpAlertViewController];
     // Do any additional setup after loading the view, typically from a nib.
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissPopup)];
     tapRecognizer.numberOfTapsRequired = 2;
@@ -69,6 +70,12 @@
 }
 
 - (IBAction)remember_me_value_changed:(id)sender {
+    
+}
+
+- (IBAction)forget_password_action:(id)sender {
+    //[self presentViewController:self.forget_passsword animated:YES completion:nil];
+    [self setUpAlertViewController];
 }
 
 -(void)textFieldDidEndEditing:(UITextField *)textField{
@@ -109,5 +116,33 @@
     self.password.leftView = passwordIconContainer;
     
     self.remember_me.onTintColor = [UIColor colorWithRed:39.0/255.0 green:182.0/255.0 blue:214.0/255.0 alpha:1.0];
+}
+
+#pragma set up the alert view controller
+-(void)setUpAlertViewController{
+    self.forget_passsword = [UIAlertController alertControllerWithTitle:@"Input Email" message:@"We will send you a temp password to use" preferredStyle:UIAlertControllerStyleAlert];
+    [self.forget_passsword addTextFieldWithConfigurationHandler:^(UITextField *textField){
+         textField.placeholder = NSLocalizedString(@"EmailPlaceholder", @"Email");
+        [textField addTarget:self
+                      action:@selector(emailTextFieldDidChange:)
+            forControlEvents:UIControlEventEditingChanged];
+     }];
+    
+    self.okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"OK action")
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction *action){
+                                   NSLog(@"email send to: %@", self.forgetpassword_email);
+                                   [[AFNetwork getAFManager] POST:[SERVER_URL stringByAppendingString:@"users/add_temp_password"] parameters:@{@"email": self.forgetpassword_email} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                       [self showAlert:@"Email sent." withMessage:@"A temp password is already sent ot your email, you can use either the temp one or the original one to login."];
+                                   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                       [self showAlert:@"Bad internet access." withMessage:@"The internet access is bad, please check the network visibility."];
+                                   }];
+                               }];
+    [self.forget_passsword addAction: self.okAction];
+    [self presentViewController:self.forget_passsword animated:YES completion:nil];
+}
+
+-(void)emailTextFieldDidChange:(UITextField *)sender{
+    self.forgetpassword_email = sender.text;
 }
 @end
