@@ -17,6 +17,7 @@
 #import "Reminder.h"
 #import "PatientProviderAssignment.h"
 #import "Drug.h"
+#import "File.h"
 
 #import "Underscore.h"
 #define _ Underscore

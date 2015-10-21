@@ -57,9 +57,15 @@
     BOOL valid = [self validateInputs];
     if (!valid)
         return;
-    [[AFNetwork getAFManager] PATCH: [[SERVER_URL stringByAppendingString:@"profiles/"] stringByAppendingString: [[userDefaults valueForKey:@"user_id"] stringValue]] parameters:@{@"user": @{@"email_address": self.email.text, @"cell_phone_number": self.cellphone.text, @"old_password": self.old_password.text, @"password": self.password.text}} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [[AFNetwork getAFManager] PATCH: [[SERVER_URL stringByAppendingString:@"profiles/"] stringByAppendingString: [[userDefaults valueForKey:@"user_id"] stringValue]] parameters:@{@"user": @{@"email_address": self.email.text, @"cell_phone_number": self.cellphone.text, @"old_password": self.old_password.text, @"password": self.password.text, @"temp_password": [NSNull null]}} success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"result: %@", [responseObject description]);
         [self showAlert:@"Update success" withMessage:@"Update success!"];
+        
+        //reset the stored password file on disk
+        [File deleteFileByName:REMEMBERED_PASS_FILENAME];
+        [File createFileByName:REMEMBERED_PASS_FILENAME];
+        [File writeToFileByName:REMEMBERED_PASS_FILENAME withContent:self.password.text];
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (operation.response.statusCode == 401) {
             [self showAlert:@"The previous password is not correct." withMessage:@"Original password is not correct, please input valid password and then you can set a new password."];
