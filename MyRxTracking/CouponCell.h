@@ -13,5 +13,9 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *name;
 @property (strong, nonatomic) IBOutlet UIImageView *company_logo;
+@property (strong, nonatomic) IBOutlet UILabel *vendor_name;
+@property (strong, nonatomic) IBOutlet UILabel *ndc;
+@property (strong, nonatomic) IBOutlet UILabel *expiration_date;
+@property (strong, nonatomic) IBOutlet UILabel *percent_discount;
 
 @end

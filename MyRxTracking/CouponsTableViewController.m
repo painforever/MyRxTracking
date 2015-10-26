@@ -23,20 +23,16 @@
         [self.sidebarButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.table_data = [[NSMutableArray alloc] init];
-    for (int i=0;i<10;i++) {
-//        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake((self.view.frame.size.width-200)/2, 10, 200, 100)];
-//        imgView.image = [UIImage imageNamed:@"eagleforce_logo.png"];
-        Coupon *cp = [Coupon initWithProperties:@"coupon" withImageView: nil];
-        [self.table_data addObject: @"Yu Song"];
-    }
-    [self.tableView reloadData];
+    [[AFNetwork getAFManager] GET:[SERVER_URL stringByAppendingString:@"coupons"] parameters:@{@"patient_id": [userDefaults valueForKey:@"patient_id"]} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        for (NSDictionary *coupon in (NSMutableArray *)responseObject) {
+            Coupon *cp = [Coupon initWithProperties:coupon[@"brand_name"] withVendorName:coupon[@"coupon_vendor"] withNDC:coupon[@"ndc"] withExpirationDate:coupon[@"expiration_date"] withPercentDiscount:coupon[@"percent_discount"] withBIN:coupon[@"bin"] withPCN:coupon[@"pcn"]];
+            [self.table_data addObject: cp];
+        }
+        [self.tableView reloadData];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"failed");
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,14 +47,18 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.table_data.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CouponCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    //Coupon *cp = [self.table_data objectAtIndex: indexPath.row];
-    cell.name.text = @"Yu Song";
+    Coupon *cp = [self.table_data objectAtIndex: indexPath.row];
+    cell.name.text = cp.brand_name;
+    cell.vendor_name.text = cp.vendor_name;
+    cell.expiration_date.text = cp.expiration_date;
+    cell.percent_discount.text = cp.percent_discount;
+    cell.ndc.text = cp.ndc;
     cell.company_logo.image = [UIImage imageNamed:@"eagleforce_logo.png"];
     return cell;
 }
