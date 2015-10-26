@@ -36,10 +36,12 @@
 }
 
 - (IBAction)coupon_action:(id)sender {
-    CouponViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"CouponViewController"];
-    view.view.frame = CGRectMake(0, 0, self.view.frame.size.width-50, self.view.frame.size.height-400);
-    
-    [self presentPopupViewController:view animated:YES completion:nil];
+//    CouponViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"CouponViewController"];
+//    view.view.frame = CGRectMake(0, 0, self.view.frame.size.width-50, self.view.frame.size.height-400);
+//    
+//    [self presentPopupViewController:view animated:YES completion:nil];
+    CouponsTableViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"CouponsTableViewController"];
+    [self.navigationController pushViewController:view animated:YES];
 }
 
 - (IBAction)take_photo_action:(id)sender {

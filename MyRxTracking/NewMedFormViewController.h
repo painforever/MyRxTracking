@@ -12,6 +12,7 @@
 #import "UIViewController+CameraMethods.h"
 #import "UIViewController+CWPopup.h"
 #import "CouponViewController.h"
+#import "CouponsTableViewController.h"
 
 @interface NewMedFormViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *medication_name;

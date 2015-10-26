@@ -17,17 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y, self.view.frame.size.width-50, self.view.frame.size.height-500)];
-    imageView.image = [UIImage imageNamed:@"eagleforce_logo.png"];
-    
-    UILabel *name = [[UILabel alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x+10, self.view.bounds.origin.y+self.view.frame.size.height-500+10, 100, 30)];
-    name.text = @"Yu Song";
-    
-    UILabel *pcn = [[UILabel alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x+10, self.view.bounds.origin.y+self.view.frame.size.height-500+50, 100, 30)];
-    pcn.text = @"G434890802";
-    [self.view addSubview:imageView];
-    [self.view addSubview:name];
-    [self.view addSubview:pcn];
+//    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y, self.view.frame.size.width-50, self.view.frame.size.height-500)];
+//    imageView.image = [UIImage imageNamed:@"eagleforce_logo.png"];
+//    
+//    UILabel *name = [[UILabel alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x+10, self.view.bounds.origin.y+self.view.frame.size.height-500+10, 100, 30)];
+//    name.text = @"Yu Song";
+//    
+//    UILabel *pcn = [[UILabel alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x+10, self.view.bounds.origin.y+self.view.frame.size.height-500+50, 100, 30)];
+//    pcn.text = @"G434890802";
+//    [self.view addSubview:imageView];
+//    [self.view addSubview:name];
+//    [self.view addSubview:pcn];
 }
 
 - (void)didReceiveMemoryWarning {

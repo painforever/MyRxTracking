@@ -10,6 +10,7 @@
 #import "CouponCell.h"
 #import "Coupon.h"
 #import "SWRevealViewController.h"
+#import "CouponViewController.h"
 
 @interface CouponsTableViewController : UITableViewController
 @property (strong, nonatomic) NSMutableArray *table_data;
