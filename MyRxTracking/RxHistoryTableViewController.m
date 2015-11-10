@@ -34,7 +34,6 @@
     [[AFNetwork getAFManager] GET:[SERVER_URL stringByAppendingString:@"rxs"] parameters:@{@"patient_id": [userDefaults valueForKey:@"patient_id"]} success:^(AFHTTPRequestOperation *operation, id responseObject) {
         self.table_data = (NSMutableArray *)responseObject;
         [self.tableView reloadData];
-        NSLog(@"rx history: %@", [self.table_data class]);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"failed");
     }];

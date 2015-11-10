@@ -58,7 +58,7 @@
     if (!valid)
         return;
     [[AFNetwork getAFManager] PATCH: [[SERVER_URL stringByAppendingString:@"profiles/"] stringByAppendingString: [[userDefaults valueForKey:@"user_id"] stringValue]] parameters:@{@"user": @{@"email_address": self.email.text, @"cell_phone_number": self.cellphone.text, @"old_password": self.old_password.text, @"password": self.password.text, @"temp_password": [NSNull null]}} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"result: %@", [responseObject description]);
+        //NSLog(@"result: %@", [responseObject description]);
         [self showAlert:@"Update success" withMessage:@"Update success!"];
         
         //reset the stored password file on disk

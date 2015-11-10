@@ -60,7 +60,8 @@
     self.email.text = [NSString stringWithFormat:@"Email: %@", contact_info[@"email_address"]];
     self.email.numberOfLines = 2;
     self.address.text = [NSString stringWithFormat:@"Address: %@", contact_info[@"home_address1"]];
-    if ([contact_info[@"avatar"] isEqual: [NSNull null]]) {
+    NSLog(@"contact: %@", [contact_info[@"avatar"]  description]);
+    if ([contact_info[@"avatar"][@"url"] isEqual: [NSNull null]]) {
         if ([[contact_info[@"gender"] uppercaseString] isEqualToString:@"F"])
             self.avatar.image = [UIImage imageNamed: @"female_default_avatar.png"];
         else self.avatar.image = [UIImage imageNamed:@"male_default_avatar.png"];

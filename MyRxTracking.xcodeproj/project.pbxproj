@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CF01D7E71BC6FCB70008F600 /* NewMedTableForm.m in Sources */ = {isa = PBXBuildFile; fileRef = CF01D7E61BC6FCB70008F600 /* NewMedTableForm.m */; settings = {ASSET_TAGS = (); }; };
+		CF01D7E71BC6FCB70008F600 /* NewMedTableForm.m in Sources */ = {isa = PBXBuildFile; fileRef = CF01D7E61BC6FCB70008F600 /* NewMedTableForm.m */; };
 		CF2DE64C1B95F91F00FA93AC /* UIViewController+SharedUIMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2DE64B1B95F91F00FA93AC /* UIViewController+SharedUIMethods.m */; };
-		CF36E1561BBB2724000FB0EF /* login_title.png in Resources */ = {isa = PBXBuildFile; fileRef = CF36E1551BBB2724000FB0EF /* login_title.png */; settings = {ASSET_TAGS = (); }; };
-		CF36E1581BBB2DD6000FB0EF /* drug_list_photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF36E1571BBB2DD6000FB0EF /* drug_list_photo.jpg */; settings = {ASSET_TAGS = (); }; };
-		CF36E15A1BBB33D2000FB0EF /* profile_wall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF36E1591BBB33D2000FB0EF /* profile_wall.jpg */; settings = {ASSET_TAGS = (); }; };
-		CF36E15C1BBB36B3000FB0EF /* name_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF36E15B1BBB36B3000FB0EF /* name_background.jpg */; settings = {ASSET_TAGS = (); }; };
-		CF3A7CA91BCD61880009D7FA /* PickerTimesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3A7CA81BCD61880009D7FA /* PickerTimesViewController.m */; settings = {ASSET_TAGS = (); }; };
-		CF43C17D1BCED03800E5B479 /* CouponViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF43C17C1BCED03800E5B479 /* CouponViewController.m */; settings = {ASSET_TAGS = (); }; };
-		CF43C17F1BCED1EF00E5B479 /* eagleforce_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CF43C17E1BCED1EF00E5B479 /* eagleforce_logo.png */; settings = {ASSET_TAGS = (); }; };
+		CF36E1561BBB2724000FB0EF /* login_title.png in Resources */ = {isa = PBXBuildFile; fileRef = CF36E1551BBB2724000FB0EF /* login_title.png */; };
+		CF36E1581BBB2DD6000FB0EF /* drug_list_photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF36E1571BBB2DD6000FB0EF /* drug_list_photo.jpg */; };
+		CF36E15A1BBB33D2000FB0EF /* profile_wall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF36E1591BBB33D2000FB0EF /* profile_wall.jpg */; };
+		CF36E15C1BBB36B3000FB0EF /* name_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF36E15B1BBB36B3000FB0EF /* name_background.jpg */; };
+		CF3A7CA91BCD61880009D7FA /* PickerTimesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3A7CA81BCD61880009D7FA /* PickerTimesViewController.m */; };
+		CF43C17D1BCED03800E5B479 /* CouponViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF43C17C1BCED03800E5B479 /* CouponViewController.m */; };
+		CF43C17F1BCED1EF00E5B479 /* eagleforce_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CF43C17E1BCED1EF00E5B479 /* eagleforce_logo.png */; };
 		CF4B80BF1BA32AC1004C250E /* female_default_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4B80BD1BA32AC1004C250E /* female_default_avatar.png */; };
 		CF4B80C01BA32AC1004C250E /* male_default_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4B80BE1BA32AC1004C250E /* male_default_avatar.png */; };
 		CF4B80C41BA35AD6004C250E /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4B80C31BA35AD6004C250E /* EditProfileViewController.m */; };
@@ -61,7 +61,7 @@
 		CFA9A0EE1BA9F322008D2F28 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA9A0ED1BA9F322008D2F28 /* SignUpViewController.m */; };
 		CFA9A0F41BAA0977008D2F28 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA9A0F31BAA0977008D2F28 /* Reachability.m */; };
 		CFA9A0F71BAA0996008D2F28 /* InternetConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA9A0F61BAA0996008D2F28 /* InternetConnection.m */; };
-		CFB8005E1BC8415400593B4B /* PickTimesTable.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB8005D1BC8415400593B4B /* PickTimesTable.m */; settings = {ASSET_TAGS = (); }; };
+		CFB8005E1BC8415400593B4B /* PickTimesTable.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB8005D1BC8415400593B4B /* PickTimesTable.m */; };
 		CFBB27CF1B972CC50034545C /* Reminder.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBB27CE1B972CC50034545C /* Reminder.m */; };
 		CFBB27D21B973E110034545C /* PatientProviderAssignment.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBB27D11B973E110034545C /* PatientProviderAssignment.m */; };
 		CFBB27D51B9746650034545C /* AlertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBB27D41B9746650034545C /* AlertCell.m */; };
@@ -69,15 +69,15 @@
 		CFC259561B94D9A600328D8B /* DoctorSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC259551B94D9A600328D8B /* DoctorSearchCell.m */; };
 		CFC259591B94E2BE00328D8B /* AFNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC259581B94E2BE00328D8B /* AFNetwork.m */; };
 		CFC2595C1B94E6F700328D8B /* DoctorDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC2595B1B94E6F700328D8B /* DoctorDetailsViewController.m */; };
-		CFC8FFD81BB44F4700EBAD59 /* RxDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8FFD71BB44F4700EBAD59 /* RxDetailsTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		CFD657D41BB981150085160C /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD657D21BB981150085160C /* account.png */; settings = {ASSET_TAGS = (); }; };
-		CFD657D51BB981150085160C /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD657D31BB981150085160C /* envelope.png */; settings = {ASSET_TAGS = (); }; };
-		CFD657D81BB9CDAD0085160C /* AdverseEventFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD657D71BB9CDAD0085160C /* AdverseEventFormViewController.m */; settings = {ASSET_TAGS = (); }; };
-		CFE598D71BBC1F4C00AE87C5 /* login.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFE598D61BBC1F4C00AE87C5 /* login.jpg */; settings = {ASSET_TAGS = (); }; };
-		CFEF60CF1BCEE0EE0071045E /* coupon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFEF60CE1BCEE0EE0071045E /* coupon.jpg */; settings = {ASSET_TAGS = (); }; };
-		CFEF60D21BCEE1D40071045E /* CouponsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEF60D11BCEE1D40071045E /* CouponsTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		CFEF60D51BCEE22D0071045E /* Coupon.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEF60D41BCEE22D0071045E /* Coupon.m */; settings = {ASSET_TAGS = (); }; };
-		CFEF60D81BCEE2730071045E /* CouponCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEF60D71BCEE2730071045E /* CouponCell.m */; settings = {ASSET_TAGS = (); }; };
+		CFC8FFD81BB44F4700EBAD59 /* RxDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8FFD71BB44F4700EBAD59 /* RxDetailsTableViewController.m */; };
+		CFD657D41BB981150085160C /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD657D21BB981150085160C /* account.png */; };
+		CFD657D51BB981150085160C /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD657D31BB981150085160C /* envelope.png */; };
+		CFD657D81BB9CDAD0085160C /* AdverseEventFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD657D71BB9CDAD0085160C /* AdverseEventFormViewController.m */; };
+		CFE598D71BBC1F4C00AE87C5 /* login.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFE598D61BBC1F4C00AE87C5 /* login.jpg */; };
+		CFEF60CF1BCEE0EE0071045E /* coupon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFEF60CE1BCEE0EE0071045E /* coupon.jpg */; };
+		CFEF60D21BCEE1D40071045E /* CouponsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEF60D11BCEE1D40071045E /* CouponsTableViewController.m */; };
+		CFEF60D51BCEE22D0071045E /* Coupon.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEF60D41BCEE22D0071045E /* Coupon.m */; };
+		CFEF60D81BCEE2730071045E /* CouponCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEF60D71BCEE2730071045E /* CouponCell.m */; };
 		F220824BA3D047BEBFBB2A4D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6928CCCCCB01ACA7FD60C5F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -777,6 +777,73 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CF169B3C1BF14D8300296D6E /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		CF169B3D1BF14D8300296D6E /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C3D9EBA66B598BA69FD3323 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yu Song (GPLF6PH5J4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yu Song (GPLF6PH5J4)";
+				INFOPLIST_FILE = MyRxTracking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "34ac0468-0212-4408-8465-912750f8d352";
+			};
+			name = Distribution;
+		};
+		CF169B3E1BF14D8300296D6E /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MyRxTrackingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyRxTracking.app/MyRxTracking";
+			};
+			name = Distribution;
+		};
 		CFA165701B8BB16100507D11 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -862,13 +929,13 @@
 			baseConfigurationReference = 5BE6299D3F2509542918CEC6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yu Song (GPLF6PH5J4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yu Song (GPLF6PH5J4)";
 				INFOPLIST_FILE = MyRxTracking/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "34ac0468-0212-4408-8465-912750f8d352";
 			};
 			name = Debug;
 		};
@@ -877,13 +944,13 @@
 			baseConfigurationReference = 7C3D9EBA66B598BA69FD3323 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yu Song (GPLF6PH5J4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yu Song (GPLF6PH5J4)";
 				INFOPLIST_FILE = MyRxTracking/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "34ac0468-0212-4408-8465-912750f8d352";
 			};
 			name = Release;
 		};
@@ -929,6 +996,7 @@
 			buildConfigurations = (
 				CFA165701B8BB16100507D11 /* Debug */,
 				CFA165711B8BB16100507D11 /* Release */,
+				CF169B3C1BF14D8300296D6E /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -938,6 +1006,7 @@
 			buildConfigurations = (
 				CFA165731B8BB16100507D11 /* Debug */,
 				CFA165741B8BB16100507D11 /* Release */,
+				CF169B3D1BF14D8300296D6E /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -947,6 +1016,7 @@
 			buildConfigurations = (
 				CFA165761B8BB16100507D11 /* Debug */,
 				CFA165771B8BB16100507D11 /* Release */,
+				CF169B3E1BF14D8300296D6E /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

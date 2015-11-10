@@ -15,7 +15,7 @@
     NSString *params = [NSString stringWithFormat:@"drug_name=%@", drug_name];
     NSString *res = [Get getRequest:[SERVER_URL stringByAppendingString: @"medications/search_drug?"] withParams:params];
     NSDictionary *res_dic = [NSJSONSerialization JSONObjectWithData:[JSONHandler StringToData: res] options:NSJSONReadingMutableContainers error:nil];
-    NSLog(@"drug_id : %@", res_dic[@"result"][@"drug_id"]);
+    //NSLog(@"drug_id : %@", res_dic[@"result"][@"drug_id"]);
     return res_dic;
 }
 @end

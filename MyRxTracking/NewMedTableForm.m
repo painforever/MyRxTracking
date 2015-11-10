@@ -134,7 +134,6 @@
 }
 
 -(IBAction)buttonClicked:(id)sender{
-    NSLog(@"sdsdsdsdsdsds");
 }
 
 -(IBAction)flip:(id)sender{
@@ -144,7 +143,6 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 6) {
-        NSLog(@"sasasaasasa %@", self.frequency.text);
         PickTimesTable *view = [self.storyboard instantiateViewControllerWithIdentifier:@"PickTimesTable"];
         view.data = [[NSMutableDictionary alloc] init];
         view.data = @{@"fre": self.frequency.text};
@@ -153,9 +151,7 @@
 }
 
 -(void)textFieldDidEndEditing:(UITextField *)textField{
-    NSLog(@"hjdgsdsh %@", self.frequency.text);
     if ([textField isEqual: self.frequency]) {
-        NSLog(@"hjdgsdsh %@", self.frequency.text);
     }
 }
 

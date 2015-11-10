@@ -52,7 +52,7 @@
     stringFromDate=[[stringFromDate stringByAppendingString:@" "] stringByAppendingString: time];
     [formater setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     NSDate *date=[formater dateFromString:stringFromDate];
-    NSLog(@"date: %@", date);
+    //NSLog(@"date: %@", date);
     return date;
 }
 
@@ -97,7 +97,7 @@
         for (NSDictionary *item in arr) {
             if (![item[@"time_of_day"] isEqual: [NSNull null]]) {
                 [self scheduleReminders: item[@"days_of_treatment"] withTimes: [item[@"time_of_day"] componentsSeparatedByString:@","] withDrugName: item[@"drug_name"]];
-                NSLog(@"Yue Le");
+                //NSLog(@"Yue Le");
             }
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *responseObject) {

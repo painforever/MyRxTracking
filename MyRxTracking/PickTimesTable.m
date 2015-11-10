@@ -17,7 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //self.frequency_count = 4;
-    NSLog(@"integer :%@", [self.data description]);
 }
 
 - (void)didReceiveMemoryWarning {

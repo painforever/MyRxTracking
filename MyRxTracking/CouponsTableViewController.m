@@ -25,7 +25,6 @@
     }
     self.table_data = [[NSMutableArray alloc] init];
     [[AFNetwork getAFManager] GET:[SERVER_URL stringByAppendingString:@"coupons"] parameters:@{@"patient_id": [userDefaults valueForKey:@"patient_id"]} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"adsasda %@", [responseObject description]);
         for (NSDictionary *coupon in (NSMutableArray *)responseObject) {
             Coupon *cp = [Coupon initWithProperties:coupon[@"brand_name"] withVendorName:coupon[@"coupon_vendor"] withNDC:coupon[@"ndc"] withExpirationDate:coupon[@"expiration_date"] withPercentDiscount:coupon[@"percent_discount"] withBIN:coupon[@"bin"] withPCN:coupon[@"pcn"]];
             [self.table_data addObject: cp];
@@ -65,8 +64,8 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    CouponViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"CouponViewController"];
-    [self.navigationController pushViewController:view animated:YES];
+//    CouponViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"CouponViewController"];
+//    [self.navigationController pushViewController:view animated:YES];
 }
 
 @end

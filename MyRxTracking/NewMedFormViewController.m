@@ -31,7 +31,7 @@
     [super viewDidAppear:animated];
     if ([self.pickerTimeView.timeControls count] > 0) {
         self.scheduledNotificationTimes = [self getUITextfieldTextInArray:self.pickerTimeView.timeControls];
-        NSLog(@"the times are : %@", [self.scheduledNotificationTimes description]);
+        //NSLog(@"the times are : %@", [self.scheduledNotificationTimes description]);
     }
 }
 
@@ -65,7 +65,7 @@
         return;
     }
     NSMutableDictionary *res_dic = [Drug searchDrug:self.medication_name.text];
-    NSLog(@"res_dic %@", [res_dic description]);
+    //NSLog(@"res_dic %@", [res_dic description]);
     if ([res_dic[@"msg"] isEqualToString:@"No"]) {
         [self showAlert:@"Cannot find this drug" withMessage:@"We are sorry but we cannot find this drug."];
         return;
@@ -85,7 +85,7 @@
     self.selected_drug_id = res_dic[@"result"][@"drug_id"];
     [[AFNetwork getAFManager] POST:[SERVER_URL stringByAppendingString:@"medications"] parameters:@{@"prm": @{@"patient_id": [userDefaults valueForKey:@"patient_id"], @"drug_id": self.selected_drug_id , @"dosage": self.dosage.text, @"prescribed_date": [NSDate date]}} success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *res_dic = (NSDictionary *)responseObject;
-        NSLog(@"dasasfdsds %@", [res_dic description]);
+        //NSLog(@"dasasfdsds %@", [res_dic description]);
         //see if it's remote url or local file name, if it's local file then do the upload
         NSRange http = [self.drug_image_file_name rangeOfString:@"http://"];
         NSRange https = [self.drug_image_file_name rangeOfString:@"https://"];
@@ -124,7 +124,7 @@
 #pragma UITetxfield stuffs
 -(void)textFieldDidEndEditing:(UITextField *)textField{
     if (textField == self.medication_name) {
-        NSLog(@"zheng yi zhong");
+        //NSLog(@"zheng yi zhong");
         //search for drugs from GoodRx and get the drug image after user onblur the textField
         [[AFNetwork getAFManager] GET:[SERVER_URL stringByAppendingString:@"medications/async_search_drug"] parameters:@{@"drug": self.medication_name.text} success:^(AFHTTPRequestOperation *operation, id responseObject) {
             NSDictionary *image_dic = (NSDictionary *)responseObject;

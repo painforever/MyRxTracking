@@ -15,7 +15,7 @@
 @implementation RxDetailsTableViewController
 -(void)viewDidLoad{
     self.drug_name = [NSString stringWithFormat:@"Name: %@", self.data[@"drug_name"]];
-    NSLog(@"drug photo: %@", self.data[@"drug_photo"]);
+    //NSLog(@"drug photo: %@", self.data[@"drug_photo"]);
     if ([self.data[@"drug_photo"][@"drug_photo"][@"url"] isEqual: [NSNull null]])
         self.drug_photo = @"no image";
     else self.drug_photo = self.data[@"drug_photo"][@"drug_photo"][@"url"];
@@ -55,8 +55,8 @@
     NSString *sectionTitle = [self.sections objectAtIndex:indexPath.section];
     NSArray *row = [self.rows objectForKey:sectionTitle];
     NSString *info = [row objectAtIndex:indexPath.row];
-    NSLog(@"info: %@", info);
-    NSLog(@"index: %d", indexPath.row);
+    //NSLog(@"info: %@", info);
+    //NSLog(@"index: %d", indexPath.row);
     if ([sectionTitle isEqualToString:@"Medication Info"] && indexPath.row == 0) {
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(5,5,200,200)];
         if ([info isEqualToString:@"no image"])
