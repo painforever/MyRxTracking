@@ -61,6 +61,12 @@
 		CFA9A0EE1BA9F322008D2F28 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA9A0ED1BA9F322008D2F28 /* SignUpViewController.m */; };
 		CFA9A0F41BAA0977008D2F28 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA9A0F31BAA0977008D2F28 /* Reachability.m */; };
 		CFA9A0F71BAA0996008D2F28 /* InternetConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA9A0F61BAA0996008D2F28 /* InternetConnection.m */; };
+		CFB5F6261BF63E0C00A6C2AB /* launch_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB5F6251BF63E0C00A6C2AB /* launch_screen.png */; };
+		CFB5F62C1BF63FE000A6C2AB /* logo-58.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB5F6271BF63FE000A6C2AB /* logo-58.png */; };
+		CFB5F62D1BF63FE000A6C2AB /* logo-80.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB5F6281BF63FE000A6C2AB /* logo-80.png */; };
+		CFB5F62E1BF63FE000A6C2AB /* logo-87.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB5F6291BF63FE000A6C2AB /* logo-87.png */; };
+		CFB5F62F1BF63FE000A6C2AB /* logo-120.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB5F62A1BF63FE000A6C2AB /* logo-120.png */; };
+		CFB5F6301BF63FE000A6C2AB /* logo-180.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB5F62B1BF63FE000A6C2AB /* logo-180.png */; };
 		CFB8005E1BC8415400593B4B /* PickTimesTable.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB8005D1BC8415400593B4B /* PickTimesTable.m */; };
 		CFBB27CF1B972CC50034545C /* Reminder.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBB27CE1B972CC50034545C /* Reminder.m */; };
 		CFBB27D21B973E110034545C /* PatientProviderAssignment.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBB27D11B973E110034545C /* PatientProviderAssignment.m */; };
@@ -184,6 +190,12 @@
 		CFA9A0F31BAA0977008D2F28 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Reachability/Reachability.m; sourceTree = "<group>"; };
 		CFA9A0F51BAA0996008D2F28 /* InternetConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InternetConnection.h; sourceTree = "<group>"; };
 		CFA9A0F61BAA0996008D2F28 /* InternetConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InternetConnection.m; sourceTree = "<group>"; };
+		CFB5F6251BF63E0C00A6C2AB /* launch_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launch_screen.png; path = Images/launch_screen.png; sourceTree = SOURCE_ROOT; };
+		CFB5F6271BF63FE000A6C2AB /* logo-58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-58.png"; path = "Images/logo-58.png"; sourceTree = SOURCE_ROOT; };
+		CFB5F6281BF63FE000A6C2AB /* logo-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-80.png"; path = "Images/logo-80.png"; sourceTree = SOURCE_ROOT; };
+		CFB5F6291BF63FE000A6C2AB /* logo-87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-87.png"; path = "Images/logo-87.png"; sourceTree = SOURCE_ROOT; };
+		CFB5F62A1BF63FE000A6C2AB /* logo-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-120.png"; path = "Images/logo-120.png"; sourceTree = SOURCE_ROOT; };
+		CFB5F62B1BF63FE000A6C2AB /* logo-180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-180.png"; path = "Images/logo-180.png"; sourceTree = SOURCE_ROOT; };
 		CFB8005C1BC8415400593B4B /* PickTimesTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickTimesTable.h; sourceTree = "<group>"; };
 		CFB8005D1BC8415400593B4B /* PickTimesTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickTimesTable.m; sourceTree = "<group>"; };
 		CFBB27CD1B972CC50034545C /* Reminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reminder.h; sourceTree = "<group>"; };
@@ -490,6 +502,12 @@
 		CFA165881B8BBCA200507D11 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CFB5F6271BF63FE000A6C2AB /* logo-58.png */,
+				CFB5F6281BF63FE000A6C2AB /* logo-80.png */,
+				CFB5F6291BF63FE000A6C2AB /* logo-87.png */,
+				CFB5F62A1BF63FE000A6C2AB /* logo-120.png */,
+				CFB5F62B1BF63FE000A6C2AB /* logo-180.png */,
+				CFB5F6251BF63E0C00A6C2AB /* launch_screen.png */,
 				CFEF60CE1BCEE0EE0071045E /* coupon.jpg */,
 				CF43C17E1BCED1EF00E5B479 /* eagleforce_logo.png */,
 				CFE598D61BBC1F4C00AE87C5 /* login.jpg */,
@@ -616,16 +634,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFB5F6261BF63E0C00A6C2AB /* launch_screen.png in Resources */,
+				CFB5F62F1BF63FE000A6C2AB /* logo-120.png in Resources */,
 				CF8397AD1B8E4C1C0014EF19 /* alerts.png in Resources */,
 				CFD657D51BB981150085160C /* envelope.png in Resources */,
 				CFA1658A1B8BBCAF00507D11 /* menu.png in Resources */,
 				CF36E1561BBB2724000FB0EF /* login_title.png in Resources */,
+				CFB5F6301BF63FE000A6C2AB /* logo-180.png in Resources */,
 				CF4B80BF1BA32AC1004C250E /* female_default_avatar.png in Resources */,
 				CFA1655E1B8BB16100507D11 /* Main.storyboard in Resources */,
 				CF8397B31B8E4C1C0014EF19 /* settings.png in Resources */,
+				CFB5F62D1BF63FE000A6C2AB /* logo-80.png in Resources */,
 				CFA165631B8BB16100507D11 /* LaunchScreen.xib in Resources */,
 				CF8397B11B8E4C1C0014EF19 /* profile.png in Resources */,
 				CF4B80C01BA32AC1004C250E /* male_default_avatar.png in Resources */,
+				CFB5F62C1BF63FE000A6C2AB /* logo-58.png in Resources */,
 				CF7210751B8F5C3F0042CB54 /* Podfile in Resources */,
 				CF8397B21B8E4C1C0014EF19 /* rx.png in Resources */,
 				CF36E15A1BBB33D2000FB0EF /* profile_wall.jpg in Resources */,
@@ -636,6 +659,7 @@
 				CF5329FC1BA1CE3500627BC3 /* default-drug-image.png in Resources */,
 				CFE598D71BBC1F4C00AE87C5 /* login.jpg in Resources */,
 				CF36E1581BBB2DD6000FB0EF /* drug_list_photo.jpg in Resources */,
+				CFB5F62E1BF63FE000A6C2AB /* logo-87.png in Resources */,
 				CF8397AE1B8E4C1C0014EF19 /* doctors.jpeg in Resources */,
 				CFEF60CF1BCEE0EE0071045E /* coupon.jpg in Resources */,
 				CF8397B01B8E4C1C0014EF19 /* medications.jpg in Resources */,
