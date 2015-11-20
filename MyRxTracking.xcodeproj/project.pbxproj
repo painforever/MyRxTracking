@@ -61,6 +61,8 @@
 		CFA9A0EE1BA9F322008D2F28 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA9A0ED1BA9F322008D2F28 /* SignUpViewController.m */; };
 		CFA9A0F41BAA0977008D2F28 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA9A0F31BAA0977008D2F28 /* Reachability.m */; };
 		CFA9A0F71BAA0996008D2F28 /* InternetConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA9A0F61BAA0996008D2F28 /* InternetConnection.m */; };
+		CFAF774E1BFFBA3D000E18E9 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFAF774D1BFFBA3D000E18E9 /* placeholder.jpg */; };
+		CFAF77501BFFBAF3000E18E9 /* drug_placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFAF774F1BFFBAF3000E18E9 /* drug_placeholder.jpg */; };
 		CFB5F6261BF63E0C00A6C2AB /* launch_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB5F6251BF63E0C00A6C2AB /* launch_screen.png */; };
 		CFB5F62C1BF63FE000A6C2AB /* logo-58.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB5F6271BF63FE000A6C2AB /* logo-58.png */; };
 		CFB5F62D1BF63FE000A6C2AB /* logo-80.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB5F6281BF63FE000A6C2AB /* logo-80.png */; };
@@ -190,6 +192,8 @@
 		CFA9A0F31BAA0977008D2F28 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Reachability/Reachability.m; sourceTree = "<group>"; };
 		CFA9A0F51BAA0996008D2F28 /* InternetConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InternetConnection.h; sourceTree = "<group>"; };
 		CFA9A0F61BAA0996008D2F28 /* InternetConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InternetConnection.m; sourceTree = "<group>"; };
+		CFAF774D1BFFBA3D000E18E9 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = placeholder.jpg; path = Images/placeholder.jpg; sourceTree = SOURCE_ROOT; };
+		CFAF774F1BFFBAF3000E18E9 /* drug_placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = drug_placeholder.jpg; path = Images/drug_placeholder.jpg; sourceTree = SOURCE_ROOT; };
 		CFB5F6251BF63E0C00A6C2AB /* launch_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launch_screen.png; path = Images/launch_screen.png; sourceTree = SOURCE_ROOT; };
 		CFB5F6271BF63FE000A6C2AB /* logo-58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-58.png"; path = "Images/logo-58.png"; sourceTree = SOURCE_ROOT; };
 		CFB5F6281BF63FE000A6C2AB /* logo-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-80.png"; path = "Images/logo-80.png"; sourceTree = SOURCE_ROOT; };
@@ -502,6 +506,8 @@
 		CFA165881B8BBCA200507D11 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CFAF774F1BFFBAF3000E18E9 /* drug_placeholder.jpg */,
+				CFAF774D1BFFBA3D000E18E9 /* placeholder.jpg */,
 				CFB5F6271BF63FE000A6C2AB /* logo-58.png */,
 				CFB5F6281BF63FE000A6C2AB /* logo-80.png */,
 				CFB5F6291BF63FE000A6C2AB /* logo-87.png */,
@@ -654,8 +660,10 @@
 				CF36E15A1BBB33D2000FB0EF /* profile_wall.jpg in Resources */,
 				CF8397AF1B8E4C1C0014EF19 /* logout.png in Resources */,
 				CF36E15C1BBB36B3000FB0EF /* name_background.jpg in Resources */,
+				CFAF774E1BFFBA3D000E18E9 /* placeholder.jpg in Resources */,
 				CF43C17F1BCED1EF00E5B479 /* eagleforce_logo.png in Resources */,
 				CFD657D41BB981150085160C /* account.png in Resources */,
+				CFAF77501BFFBAF3000E18E9 /* drug_placeholder.jpg in Resources */,
 				CF5329FC1BA1CE3500627BC3 /* default-drug-image.png in Resources */,
 				CFE598D71BBC1F4C00AE87C5 /* login.jpg in Resources */,
 				CF36E1581BBB2DD6000FB0EF /* drug_list_photo.jpg in Resources */,

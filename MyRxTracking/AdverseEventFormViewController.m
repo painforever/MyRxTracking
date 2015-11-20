@@ -25,11 +25,14 @@
     }];
 }
 - (IBAction)report_action:(id)sender {
+    if (![self globallyValidateUserInputs:@[self.adverse_events]]) {
+        return;
+    }
     [[AFNetwork getAFManager] POST:[SERVER_URL stringByAppendingString:@"adverse_event_reportings"] parameters:@{@"adverse_event_reporting": @{@"patient_id": [userDefaults valueForKey:@"patient_id"], @"drug_id": self.drug[@"drug_id"], @"side_effects": self.adverse_events.text}} success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [self showAlert:@"Report success" withMessage:@"Report success!"];
         //upload adverse event image
         NSDictionary *inserted_adv = (NSDictionary *)responseObject;
-        [self uploadAvatar:self.adverse_event_part_image.image withFileName:self.drug_image_file_name withID:inserted_adv[@"id"] withFileParamKeyName:@"photo" withUploadingURL: DRUG_PHOTO_URL];
+        [self uploadAvatar:self.adverse_event_part_image.image withFileName:self.drug_image_file_name withID:inserted_adv[@"id"] withFileParamKeyName:@"photo" withUploadingURL: ADVERSE_EVENT_PHOTO];
         self.adverse_events.text = @"";
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         

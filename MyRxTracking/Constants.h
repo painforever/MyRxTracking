@@ -25,6 +25,7 @@ extern NSUserDefaults *userDefaults;
 
 extern NSString * AVATAR_URL;
 extern NSString * DRUG_PHOTO_URL;
+extern NSString * ADVERSE_EVENT_PHOTO;
 
 extern int const THEME_COLOR_RED;
 extern int const THEME_COLOR_GREEN;

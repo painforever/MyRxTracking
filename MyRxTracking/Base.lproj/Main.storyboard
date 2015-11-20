@@ -1273,7 +1273,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default-drug-image.png" translatesAutoresizingMaskIntoConstraints="NO" id="K7p-TD-4q1">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="drug_placeholder.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="K7p-TD-4q1">
                                                     <rect key="frame" x="14" y="12" width="96" height="86"/>
                                                     <animations/>
                                                 </imageView>
@@ -1368,7 +1368,7 @@
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wfw-KH-KjH">
                                         <rect key="frame" x="17" y="207" width="340" height="179"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default-drug-image.png" translatesAutoresizingMaskIntoConstraints="NO" id="6OY-86-bvg">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6OY-86-bvg">
                                                 <rect key="frame" x="97" y="8" width="147" height="123"/>
                                                 <animations/>
                                             </imageView>
@@ -2044,11 +2044,11 @@
                                             <action selector="select_action:" destination="uwv-lf-Ldj" eventType="touchUpInside" id="fwW-Bb-ZNE"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default-drug-image.png" translatesAutoresizingMaskIntoConstraints="NO" id="pn1-Un-Jgj">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="drug_placeholder.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pn1-Un-Jgj">
                                         <rect key="frame" x="20" y="94" width="159" height="144"/>
                                         <animations/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default-drug-image.png" translatesAutoresizingMaskIntoConstraints="NO" id="NI3-5C-X1w">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NI3-5C-X1w">
                                         <rect key="frame" x="194" y="92" width="159" height="146"/>
                                         <animations/>
                                     </imageView>
@@ -2292,9 +2292,9 @@
     <resources>
         <image name="alerts.png" width="225" height="225"/>
         <image name="coupon.jpg" width="600" height="400"/>
-        <image name="default-drug-image.png" width="215" height="150"/>
         <image name="doctors.jpeg" width="2100" height="2557"/>
         <image name="drug_list_photo.jpg" width="675" height="1200"/>
+        <image name="drug_placeholder.jpg" width="564" height="341"/>
         <image name="login.jpg" width="1242" height="2208"/>
         <image name="login_title.png" width="1423" height="472"/>
         <image name="logout.png" width="512" height="512"/>
@@ -2302,6 +2302,7 @@
         <image name="medications.jpg" width="4961" height="3351"/>
         <image name="menu.png" width="28" height="20"/>
         <image name="name_background.jpg" width="675" height="179"/>
+        <image name="placeholder.jpg" width="1280" height="800"/>
         <image name="profile.png" width="2000" height="2333"/>
         <image name="profile_wall.jpg" width="675" height="439"/>
         <image name="rx.png" width="256" height="256"/>
