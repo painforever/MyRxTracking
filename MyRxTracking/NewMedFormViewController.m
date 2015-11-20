@@ -23,8 +23,9 @@
     self.cameraView.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     self.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: @"http://bipolarhappens.com/bhblog/wp-content/uploads/med-question6.gif"]]];
     self.medication_name.delegate = self;
+    self.scrollView.delegate = self;
     //[self setScrollViewSiseForAllKindsOfDevices: self.scrollView withView: self.view3];
-    self.scrollView.contentSize = CGSizeMake(375, self.view.frame.origin.y+50);
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view3.frame.origin.y+self.view3.frame.size.height+300);
 }
 
 -(void)viewDidAppear:(BOOL)animated{

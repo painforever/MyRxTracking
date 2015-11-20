@@ -94,7 +94,8 @@
     self.side_effects.delegate = self;
     self.adverse_events_arr_for_submit = [[NSMutableArray alloc] init];
     self.scrollView.delegate = self;
-    [self setScrollViewSiseForAllKindsOfDevices:self.scrollView withView: self.report_btn];
+    //[self setScrollViewSiseForAllKindsOfDevices:self.scrollView withView: self.report_btn];
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.report_btn.frame.origin.y+self.report_btn.frame.size.height+200);
     [self setAllViewCenterAlign: @[self.drug_image, self.drug_name, self.adverse_event_part_image, self.adverse_events, self.take_picture_for_adverse_event_btn, self.report_btn] withParentView: self.scrollView];
     [self displayAndStyleDrugImage: [NSNull null] withImageView:self.adverse_event_part_image withImageKeyName:@""];
 }

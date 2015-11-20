@@ -89,7 +89,7 @@
     //scrollView
     self.scrollView.delegate = self;
     self.scrollView.scrollEnabled = YES;
-    self.scrollView.contentSize = CGSizeMake(400, 800);
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.insurance_view.frame.origin.y+self.insurance_view.frame.size.height+300);
 }
 - (IBAction)edit_profile_action:(id)sender {
     self.edit_profile_view = [self.storyboard instantiateViewControllerWithIdentifier:@"EditProfileViewController"];
