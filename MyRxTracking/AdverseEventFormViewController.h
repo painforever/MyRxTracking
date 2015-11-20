@@ -8,13 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "Manifest.h"
+#import "UIViewController+CameraMethods.h"
 
-@interface AdverseEventFormViewController : UIViewController <UIActionSheetDelegate, UITextFieldDelegate>
+@interface AdverseEventFormViewController : UIViewController <UIActionSheetDelegate, UITextFieldDelegate, UIPickerViewDataSource,UIPickerViewDelegate, UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *drug_image;
 
 @property (weak, nonatomic) IBOutlet UIImageView *adverse_event_part_image;
 
 @property (weak, nonatomic) IBOutlet UILabel *drug_name;
+
+@property (nonatomic) NSString *drug_image_file_name;
 
 @property (weak, nonatomic) IBOutlet UITextField *adverse_events;
 
@@ -33,6 +36,8 @@
 @property (strong, nonatomic) NSMutableArray *adverse_events_arr_for_submit;
 @property (weak, nonatomic) IBOutlet UIButton *take_picture_for_adverse_event_btn;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
+@property (nonatomic) UIImagePickerController *cameraView;
 
 
 - (IBAction)report_action:(id)sender;

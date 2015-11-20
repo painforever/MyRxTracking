@@ -38,6 +38,7 @@
         else if ([ele isKindOfClass: [UIImageView class]]){
             UIImageView *imageView = (UIImageView *)ele;
             imageView.image = [UIImage imageNamed:@"default-drug-image.png"];
+            //imageView.image = nil;
         }
         else{
             //button and NSString

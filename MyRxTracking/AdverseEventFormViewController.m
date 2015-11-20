@@ -27,6 +27,9 @@
 - (IBAction)report_action:(id)sender {
     [[AFNetwork getAFManager] POST:[SERVER_URL stringByAppendingString:@"adverse_event_reportings"] parameters:@{@"adverse_event_reporting": @{@"patient_id": [userDefaults valueForKey:@"patient_id"], @"drug_id": self.drug[@"drug_id"], @"side_effects": self.adverse_events.text}} success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [self showAlert:@"Report success" withMessage:@"Report success!"];
+        //upload adverse event image
+        NSDictionary *inserted_adv = (NSDictionary *)responseObject;
+        [self uploadAvatar:self.adverse_event_part_image.image withFileName:self.drug_image_file_name withID:inserted_adv[@"id"] withFileParamKeyName:@"photo" withUploadingURL: DRUG_PHOTO_URL];
         self.adverse_events.text = @"";
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
@@ -49,7 +52,28 @@
     [self.actionSheet showInView:self.view];
 }
 
+#pragma Pick Photos
 - (IBAction)take_picture_action:(id)sender {
+    self.cameraView = [[UIImagePickerController alloc] init];
+    self.cameraView.delegate = self;
+    self.cameraView.allowsEditing = YES;
+    self.cameraView.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:self.cameraView animated:YES completion:NULL];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    self.adverse_event_part_image.image = chosenImage;
+    //NSURL *url = [NSURL URLWithString: photo_upload_url];
+    // And dismiss the image picker.
+    [self dismissViewControllerAnimated:TRUE completion:nil];
+    NSString *filename = [NSString stringWithFormat:@"%@.jpg", [JSONHandler md5:[JSONHandler microtime]]];
+    self.drug_image_file_name = filename;
+    NSLog(@"take photo finished!");
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{

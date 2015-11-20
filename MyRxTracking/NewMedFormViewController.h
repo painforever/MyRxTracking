@@ -14,7 +14,7 @@
 #import "CouponViewController.h"
 #import "CouponsTableViewController.h"
 
-@interface NewMedFormViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
+@interface NewMedFormViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *medication_name;
 @property (strong, nonatomic) IBOutlet UITextField *dosage;
 @property (strong, nonatomic) IBOutlet UIButton *take_photo_btn;
