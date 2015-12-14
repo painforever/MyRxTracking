@@ -42,7 +42,7 @@
         [self scheduleReminder: alert_msg  withAlertSound:@"Alarm_1.mp3" withTime: self.time.text];
         self.time.text = @"";self.reminder_name.text = @"";self.repeat_times.text = @"";
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"failed");
+        //NSLog(@"failed");
     }];
 }
 

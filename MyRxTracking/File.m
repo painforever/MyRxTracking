@@ -42,11 +42,11 @@
     NSError *error;
     BOOL success = [fileManager removeItemAtPath:filePath error:&error];
     if (success){
-        NSLog(@"trip file deleted!");
+        //NSLog(@"trip file deleted!");
         return YES;
     }
     else{
-        NSLog(@"Could not delete file -:%@ ",[error localizedDescription]);
+        //NSLog(@"Could not delete file -:%@ ",[error localizedDescription]);
         return NO;
     }
 }

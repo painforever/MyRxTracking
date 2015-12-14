@@ -135,7 +135,7 @@
                                        [self showAlert:@"Email cannot be blank!" withMessage:@"Email cannot be blank!"];
                                        return;
                                    }
-                                   NSLog(@"email send to: %@", self.forgetpassword_email);
+                                   //NSLog(@"email send to: %@", self.forgetpassword_email);
                                    [[AFNetwork getAFManager] POST:[SERVER_URL stringByAppendingString:@"users/add_temp_password"] parameters:@{@"email": self.forgetpassword_email} success:^(AFHTTPRequestOperation *operation, id responseObject) {
                                        [self showAlert:@"Email sent." withMessage:@"A temp password is already sent ot your email, you can use either the temp one or the original one to login."];
                                    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

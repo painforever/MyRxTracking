@@ -96,7 +96,7 @@
     self.avatar.image = chosenImage;
     [self uploadAvatar:self.selected_image withFileName: filename withID: [userDefaults valueForKey:@"user_id"] withFileParamKeyName:@"avatar" withUploadingURL: AVATAR_URL];
 //    self.avatar.image = [NSString stringWithFormat:@"%@/%@/%@/%@", BASE_URL, @"uploads/user/avatar", [userDefaults valueForKey:@"user_id"], filename];
-    NSLog(@"take photo finished!");
+    //NSLog(@"take photo finished!");
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {

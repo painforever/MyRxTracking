@@ -31,7 +31,7 @@
         }
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"failed");
+        //NSLog(@"failed");
     }];
 }
 

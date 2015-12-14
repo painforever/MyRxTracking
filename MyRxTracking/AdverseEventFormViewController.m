@@ -21,7 +21,7 @@
         [self displayAndStyleDrugImage:self.drug[@"remote_drug_photo_url"] withImageView: self.drug_image withImageKeyName: @"remote_drug_photo_url"];
         self.adverse_events_arr = [drug_data[@"side_effects"] componentsSeparatedByString:@","];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"failed");
+        //NSLog(@"failed");
     }];
 }
 - (IBAction)report_action:(id)sender {
@@ -72,7 +72,7 @@
     [self dismissViewControllerAnimated:TRUE completion:nil];
     NSString *filename = [NSString stringWithFormat:@"%@.jpg", [JSONHandler md5:[JSONHandler microtime]]];
     self.drug_image_file_name = filename;
-    NSLog(@"take photo finished!");
+    //NSLog(@"take photo finished!");
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
