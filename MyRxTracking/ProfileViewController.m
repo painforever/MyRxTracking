@@ -48,7 +48,7 @@
 -(void)loadContactInfo: (NSMutableDictionary *)all_info{
     contact_info = all_info[@"contact_info"];
     self.avatar_url = [NSString stringWithFormat:@"%@%@", BASE_URL, contact_info[@"avatar"][@"url"]];
-    self.avatar.image = [UIImage imageWithData:[NSData dataWithContentsOfURL: [NSURL URLWithString: self.avatar_url]]];
+    [self.avatar sd_setImageWithURL:[NSURL URLWithString: self.avatar_url] placeholderImage:[UIImage imageNamed:@"male_default_avatar"]];
     
     self.full_name.text = [NSString stringWithFormat:@"%@ %@", contact_info[@"fname"], contact_info[@"lname"]];
     self.city.text = [NSString stringWithFormat:@"City: %@", contact_info[@"city"]];
@@ -74,10 +74,14 @@
     self.insurance_plan_name.numberOfLines = 10;
     insurance_info = all_info[@"insurance_info"];
     plan_info = all_info[@"plan"];
-    self.insurance_company_name.text = [NSString stringWithFormat:@"Company Name: %@", plan_info[@"org_name"]];
-    self.group_number.text = [NSString stringWithFormat:@"Group ID: %@", insurance_info[@"group_id"]];
-    self.insurance_plan_name.text = [NSString stringWithFormat:@"Plan Name: %@", plan_info[@"plan_name"]];
-    self.ssn.text = [NSString stringWithFormat:@"SSN: %@", all_info[@"patient"][@"ssn"]];
+    if (![plan_info isEqual:[NSNull null]]) {
+         self.insurance_company_name.text = [NSString stringWithFormat:@"Company Name: %@", [self nilOrIntToString: plan_info[@"org_name"]]];
+        self.insurance_plan_name.text = [NSString stringWithFormat:@"Plan Name: %@", plan_info[@"plan_name"]];
+    }
+    if (![insurance_info isEqual: [NSNull null]]) {
+        self.group_number.text = [NSString stringWithFormat:@"Group ID: %@", insurance_info[@"group_id"]];
+    }
+    self.ssn.text = [NSString stringWithFormat:@"SSN: %@", [self nilOrIntToString: all_info[@"patient"][@"ssn"]]];
 }
 
 -(void)setUpStyle{

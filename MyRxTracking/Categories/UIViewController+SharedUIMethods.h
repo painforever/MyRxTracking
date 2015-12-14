@@ -52,5 +52,7 @@
 
 -(UIView *)getUIViewByTagFromArray: (int)tag withArray: (NSMutableArray *)array;
 
+-(NSString *)nilOrIntToString: (NSString *)input;
+
 -(void)getSelf;
 @end

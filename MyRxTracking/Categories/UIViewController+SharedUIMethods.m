@@ -205,6 +205,14 @@
     return nil;
 }
 
+-(NSString *)nilOrIntToString:(NSString *)input{
+    if ([input isEqual: [NSNull null]])
+        return @"";
+    else if ([input isKindOfClass: [NSNumber class]])
+        return [NSString stringWithFormat:@"%@", input];
+    else return input;
+}
+
 -(void)getSelf{
     NSLog(@"self: %@", [[self class] description]);
 }

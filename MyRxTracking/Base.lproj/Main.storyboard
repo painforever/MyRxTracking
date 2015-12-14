@@ -1683,26 +1683,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reminder title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Liz-vE-rdk">
-                                <rect key="frame" x="60" y="103" width="254" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Reminder title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Liz-vE-rdk">
+                                <rect key="frame" x="60" y="103" width="254" height="48"/>
                                 <animations/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="JhP-ba-Eaj"/>
+                                    <constraint firstAttribute="width" constant="254" id="YAp-GP-U73"/>
+                                </constraints>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ljs-iI-jtf">
-                                <rect key="frame" x="60" y="182" width="254" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Time" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ljs-iI-jtf">
+                                <rect key="frame" x="60" y="182" width="254" height="48"/>
                                 <animations/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat times" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZTL-qQ-6wN">
-                                <rect key="frame" x="60" y="260" width="254" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Repeat times" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZTL-qQ-6wN">
+                                <rect key="frame" x="60" y="260" width="254" height="48"/>
                                 <animations/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3LT-iG-XBt">
-                                <rect key="frame" x="131" y="326" width="113" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3LT-iG-XBt">
+                                <rect key="frame" x="60" y="326" width="254" height="45"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.15169835400000001" green="0.71221715490000004" blue="0.83854166669999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Add">
@@ -1715,6 +1723,27 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.75948326529999999" green="1" blue="0.73417204150000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Liz-vE-rdk" firstAttribute="height" secondItem="3LT-iG-XBt" secondAttribute="height" id="3xT-yD-2j3"/>
+                            <constraint firstItem="Liz-vE-rdk" firstAttribute="trailing" secondItem="ljs-iI-jtf" secondAttribute="trailing" id="5SF-2M-ZZK"/>
+                            <constraint firstItem="Liz-vE-rdk" firstAttribute="trailing" secondItem="3LT-iG-XBt" secondAttribute="trailing" id="Day-P0-GYb"/>
+                            <constraint firstItem="Liz-vE-rdk" firstAttribute="width" secondItem="3LT-iG-XBt" secondAttribute="width" id="IbP-53-Iga"/>
+                            <constraint firstItem="ZTL-qQ-6wN" firstAttribute="centerX" secondItem="otn-Fa-kZo" secondAttribute="centerX" id="JII-Zv-H3f"/>
+                            <constraint firstItem="Liz-vE-rdk" firstAttribute="height" secondItem="ZTL-qQ-6wN" secondAttribute="height" id="MVN-5a-kHZ"/>
+                            <constraint firstItem="3LT-iG-XBt" firstAttribute="centerX" secondItem="otn-Fa-kZo" secondAttribute="centerX" id="Nby-Dv-0PJ"/>
+                            <constraint firstItem="Liz-vE-rdk" firstAttribute="width" secondItem="ZTL-qQ-6wN" secondAttribute="width" id="Ozg-wI-oGr"/>
+                            <constraint firstItem="Liz-vE-rdk" firstAttribute="width" secondItem="ljs-iI-jtf" secondAttribute="width" id="PAm-tn-DZm"/>
+                            <constraint firstItem="ljs-iI-jtf" firstAttribute="top" secondItem="Liz-vE-rdk" secondAttribute="bottom" constant="31" id="RiJ-Vg-6Zm"/>
+                            <constraint firstItem="Liz-vE-rdk" firstAttribute="leading" secondItem="ljs-iI-jtf" secondAttribute="leading" id="UHc-IE-WG2"/>
+                            <constraint firstItem="Liz-vE-rdk" firstAttribute="leading" secondItem="3LT-iG-XBt" secondAttribute="leading" id="Vyi-1C-Hrf"/>
+                            <constraint firstItem="3LT-iG-XBt" firstAttribute="top" secondItem="Liz-vE-rdk" secondAttribute="bottom" constant="175" id="bcH-pb-lMm"/>
+                            <constraint firstItem="Liz-vE-rdk" firstAttribute="trailing" secondItem="ZTL-qQ-6wN" secondAttribute="trailing" id="hls-xa-fpa"/>
+                            <constraint firstItem="Liz-vE-rdk" firstAttribute="leading" secondItem="ZTL-qQ-6wN" secondAttribute="leading" id="iRV-ZY-QaT"/>
+                            <constraint firstItem="ljs-iI-jtf" firstAttribute="centerX" secondItem="otn-Fa-kZo" secondAttribute="centerX" id="mbU-B4-T62"/>
+                            <constraint firstItem="ZTL-qQ-6wN" firstAttribute="top" secondItem="Liz-vE-rdk" secondAttribute="bottom" constant="109" id="trI-X7-hAA"/>
+                            <constraint firstItem="Liz-vE-rdk" firstAttribute="centerX" secondItem="otn-Fa-kZo" secondAttribute="centerX" id="vH2-w7-8Z2"/>
+                            <constraint firstItem="Liz-vE-rdk" firstAttribute="height" secondItem="ljs-iI-jtf" secondAttribute="height" id="vur-Kb-33y"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>

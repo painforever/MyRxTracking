@@ -23,6 +23,9 @@ PODS:
   - CWPopup (1.2.6)
   - IQKeyboardManager (3.3.1)
   - MBMenuController (2.0.3)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
   - SocketRocket (0.4.1)
   - Underscore.m (0.2.1)
 
@@ -31,6 +34,7 @@ DEPENDENCIES:
   - CWPopup (~> 1.2.4)
   - IQKeyboardManager
   - MBMenuController (~> 2.0.3)
+  - SDWebImage (~> 3.7)
   - SocketRocket
   - Underscore.m
 
@@ -39,7 +43,8 @@ SPEC CHECKSUMS:
   CWPopup: 3f8b0704a9914813d90372d66525d31f24b27d49
   IQKeyboardManager: 860a5b9df32cc1435a3e967a08ed87de3e59c12e
   MBMenuController: 3bc06d28f505b5f472b22b424feda663b9e6647d
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SocketRocket: ee0b5c34182d37bb4f1f8d628bbe737718126daa
   Underscore.m: b86ca364d60509a39eb9c7886443c063b793aaba
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

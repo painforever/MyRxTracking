@@ -5,4 +5,5 @@ pod 'MBMenuController', '~>2.0.3'
 pod 'IQKeyboardManager'
 pod 'Underscore.m'
 pod "SocketRocket"
-pod 'MaryPopin'
+#pod 'MaryPopin'
+pod 'SDWebImage', '~>3.7'
